@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 }
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+}

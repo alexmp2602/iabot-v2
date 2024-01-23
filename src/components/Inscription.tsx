@@ -8,7 +8,9 @@ export default function Inscription() {
           ¡Descubre los cupos disponibles y regístrate en nuestro formulario de
           inscripción! ¡No te pierdas esta gran oportunidad!
         </h4>
+        <a href="/Inscripcion">
         <Button className="bg-white text-green-600">INSCRIBETE</Button>
+        </a>
       </div>
     </section>
   );
