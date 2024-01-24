@@ -5,7 +5,7 @@ export default function About() {
         <h2 className="text-4xl font-bold mb-4">ACERCA DE</h2>
         <h1 className="text-6xl font-bold mb-4">IA BOT</h1>
         <p className="text-xl font-semibold">
-          CONOCE MÁS SOBRE NUESTRA MISIÓN, VISIÓN Y VALORES
+          CONOCE MÁS SOBRE NOSOTROS
         </p>
       </header>
       <main>
