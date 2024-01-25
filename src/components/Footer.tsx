@@ -31,7 +31,7 @@ export default function Footer() {
             <WhatsappIcon />
           </a>
         </div>
-        <p>Estamos en C 23 N 336, Mercedes, Provincia de Buenos Aires</p>
+        <p>Estamos en C 21 N 336, Mercedes, Provincia de Buenos Aires</p>
       </div>
     </footer>
   );
