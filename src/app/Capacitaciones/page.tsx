@@ -2,9 +2,9 @@ import { CardContent, Card } from "@/components/ui/card";
 
 export default function Component() {
   return (
-    <div className="bg-white">
+    <div className="bg-white text-black">
       <header className="text-black text-center py-20 px-4 bg-[#d9e778]">
-        <h2 className="text-4xl font-bold mb-4">Capacitaciones</h2>
+        <h2 className="text-4xl font-bold mb-4">CAPACITACIONES</h2>
         <p className="text-xl font-semibold">
           Transforma la Educación con Nuestro Servicio de Asesoramiento y
           Capacitación en Robótica Educativa

@@ -1,7 +1,10 @@
+import { CardContent, Card } from "@/components/ui/card";
+
 import HeartIcon from "@/components/icons/Heart";
 import LightbulbIcon from "@/components/icons/Lightbulb";
 import SmileIcon from "@/components/icons/Smile";
 import StarIcon from "@/components/icons/Star";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -58,10 +61,13 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="py-16 bg-[#f8f8f8]">
-          <div className="px-8">
-            <h2 className="text-2xl font-bold mb-4">CONOCE A NUESTRO EQUIPO</h2>
-            <p className="mb-8">
+
+        <section className="bg-[#f8f8f8]">
+          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
+              CONOCE A NUESTRO EQUIPO
+            </h2>
+            <p className="text-gray-500 text-center mb-12">
               En IABOT, contamos con un equipo altamente capacitado y
               comprometido con la educación y la robótica. Nos capacitamos
               continuamente en nuevas tecnologías. Además, nuestros cursos se
@@ -69,25 +75,73 @@ export default function About() {
               experiencia educativa a cada alumno. Siempre trabajamos de manera
               transversal con otras áreas para enriquecer el aprendizaje.
             </p>
-            <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">Franco</h3>
-                <p>
-                  Técnico en Informática. Profesor de Tecnología, (Postítulo en
-                  Programación y Robótica Educativa, UNER).
-                </p>
-              </div>
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">Adrián</h3>
-                <p>
-                  Profesor de Matemática y Tecnología, (Postítulo en
-                  Programación y Robótica Educativa, UNER).
-                </p>
-              </div>
-              <div className="bg-white p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">Alex</h3>
-                <p>Desarrollador Web, (Certificaciones Lego Education Academy).</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="w-full py-8 bg-gray-100 dark:bg-gray-500">
+                <CardContent>
+                  <Image
+                    alt="Franco"
+                    className="rounded-full w-48 h-48 object-cover mx-auto"
+                    height="200"
+                    src="/placeholder.svg"
+                    style={{
+                      aspectRatio: "200/200",
+                      objectFit: "cover",
+                    }}
+                    width="200"
+                  />
+                  <h3 className="mt-4 text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                    Franco
+                  </h3>
+                  <p className="mt-2 text-base text-gray-500 dark:text-white">
+                    Técnico en Informática. Profesor de Tecnología, (Postítulo
+                    en Programación y Robótica Educativa, UNER).
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="w-full py-8 bg-gray-100 dark:bg-gray-500">
+                <CardContent>
+                  <Image
+                    alt="Adrián"
+                    className="rounded-full w-48 h-48 object-cover mx-auto"
+                    height="200"
+                    src="/placeholder.svg"
+                    style={{
+                      aspectRatio: "200/200",
+                      objectFit: "cover",
+                    }}
+                    width="200"
+                  />
+                  <h3 className="mt-4 text-lg leading-6 font-medium text-gray-500 dark:text-white">
+                    Adrián
+                  </h3>
+                  <p className="mt-2 text-base text-gray-500 dark:text-white">
+                    Profesor de Matemática y Tecnología, (Postítulo en
+                    Programación y Robótica Educativa, UNER).
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="w-full py-8 bg-gray-100 dark:bg-gray-500">
+                <CardContent>
+                  <Image
+                    alt="Alex"
+                    className="rounded-full w-48 h-48 object-cover mx-auto"
+                    height="200"
+                    src="/placeholder.svg"
+                    style={{
+                      aspectRatio: "200/200",
+                      objectFit: "cover",
+                    }}
+                    width="200"
+                  />
+                  <h3 className="mt-4 text-lg leading-6 font-medium text-gray-500 dark:text-white">
+                    Alex
+                  </h3>
+                  <p className="mt-2 text-base text-gray-500 dark:text-white">
+                    Desarrollador Web, (Certificaciones Lego Education Academy).
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>

@@ -33,17 +33,17 @@ export default function Index() {
               aprovechando los recursos pedagógicos e innovadores de LEGO
               EDUCATION como nuestra herramienta principal.
             </p>
-            <h2 className="text-4xl font-bold text-center mb-8 text-green-500">
+            <h2 className="text-4xl font-bold text-center mb-8">
               Recursos Didácticos y Capacitaciones
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center px-4 md:px-0 mx-auto max-w-7xl">
-              <Card className="w-full md:w-[280px] bg-[#1F2937] rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center px-4 md:px-0 mx-auto max-w-7xl">
+              <Card className="w-full md:w-[280px] bg-gray-100 dark:bg-gray-400 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
                 <div>
                   <CardHeader className="p-4">
                     <CardTitle className="text-2xl font-semibold">
                       Introducción a la Robótica con LEGO WeDo 2.0
                     </CardTitle>
-                    <CardDescription className="text-sm text-gray-300">
+                    <CardDescription className="text-sm text-gray-300 dark:text-white">
                       Requisitos: Tener entre 6 y 12 años de edad.
                     </CardDescription>
                   </CardHeader>
@@ -56,13 +56,13 @@ export default function Index() {
                   <Button>Inscribirse</Button>
                 </CardFooter>
               </Card>
-              <Card className="w-full md:w-[280px] bg-[#1F2937] rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+              <Card className="w-full md:w-[280px] bg-gray-100 dark:bg-gray-500 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
                 <div>
                   <CardHeader className="p-4">
                     <CardTitle className="text-2xl font-semibold">
                       Robótica avanzada con LEGO Spike Essential
                     </CardTitle>
-                    <CardDescription className="text-sm text-gray-300">
+                    <CardDescription className="text-sm text-gray-300 dark:text-white">
                       Requisitos: 1er año secundario o Introducción a Robótica
                       con LEGO WeDo 2.0.
                     </CardDescription>
@@ -76,13 +76,13 @@ export default function Index() {
                   <Button>Inscribirse</Button>
                 </CardFooter>
               </Card>
-              <Card className="w-full md:w-[280px] bg-[#1F2937] rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+              <Card className="w-full md:w-[280px] bg-gray-100 dark:bg-gray-600 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
                 <div>
                   <CardHeader className="p-4">
                     <CardTitle className="text-2xl font-semibold">
                       Robótica experta con LEGO Spike Prime
                     </CardTitle>
-                    <CardDescription className="text-sm text-gray-300">
+                    <CardDescription className="text-sm text-gray-300 dark:text-white">
                       Requisitos: Robótica avanzada con LEGO Spike Essential.
                     </CardDescription>
                   </CardHeader>
@@ -95,13 +95,13 @@ export default function Index() {
                   <Button>Inscribirse</Button>
                 </CardFooter>
               </Card>
-              <Card className="w-full md:w-[280px] bg-[#1F2937] rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+              <Card className="w-full md:w-[280px] bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
                 <div>
                   <CardHeader className="p-4">
                     <CardTitle className="text-2xl font-semibold">
                       Robótica Experta con EV3
                     </CardTitle>
-                    <CardDescription className="text-sm text-gray-300">
+                    <CardDescription className="text-sm text-gray-300 dark:text-white">
                       Requisitos: Robótica avanzada con LEGO Spike Essential.
                     </CardDescription>
                   </CardHeader>
@@ -114,13 +114,13 @@ export default function Index() {
                   <Button>Inscribirse</Button>
                 </CardFooter>
               </Card>
-              <Card className="w-full md:w-[280px] bg-[#1F2937] rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
+              <Card className="w-full md:w-[280px] bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between">
                 <div>
                   <CardHeader className="p-4">
                     <CardTitle className="text-2xl font-semibold">
                       Capacitación para Docentes
                     </CardTitle>
-                    <CardDescription className="text-sm text-gray-300">
+                    <CardDescription className="text-sm text-gray-300 dark:text-white">
                       Capacitación y asesoramiento especializado para docentes
                       de instituciones
                     </CardDescription>

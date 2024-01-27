@@ -1,12 +1,13 @@
 import { CardContent, Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button";
 
 export default function Contacto() {
   return (
-    <div className="bg-white">
+    <div className="bg-white text-black">
       <header className="text-center py-20 bg-[#d9e778]">
-        <h2 className="text-4xl font-bold mb-4">Contáctanos</h2>
+        <h2 className="text-4xl font-bold mb-4">CONTÁCTANOS</h2>
         <p className="text-xl font-semibold">
           Completa el formulario para ponerte en contacto con nosotros
         </p>
@@ -65,7 +66,7 @@ export default function Contacto() {
                   className="w-full mb-8 bg-white border border-gray-300 rounded-md"
                   placeholder="Asunto"
                 />
-                <textarea
+                <Textarea
                   className="w-full mb-8 bg-white border border-gray-300 rounded-md"
                   placeholder="Mensaje"
                   rows={4}
