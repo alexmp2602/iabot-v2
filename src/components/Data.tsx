@@ -13,7 +13,7 @@ export default function Data() {
             <div>
               <h5 className="text-2xl font-bold mb-2">2021</h5>
               <p className="text-lg">
-                Año en el que comenzamos a dictar talleres de robótica
+                Año en el que dimos inicio a nuestra academia educativa
               </p>
             </div>
           </div>
