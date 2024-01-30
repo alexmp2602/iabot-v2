@@ -1,8 +1,27 @@
 import Cursos from "@/components/Cursos";
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+import { cookies } from 'next/headers'
+import Link from 'next/link';
 
 interface SvgProps extends React.SVGProps<SVGSVGElement> {}
 
-export default function Index() {
+export default async function Index() {
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({cookies: () => cookieStore});
+
+  const {data: {user}} = await supabase.auth.getUser()
+
+  if (!user){
+    return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <Link href={'/Login'}>
+          You are not logged in. Click here to go login.
+        </Link>
+      </main>
+    )
+  }
+
+
   return (
     <div className="bg-white text-black">
       <header className="text-center py-20 bg-[#d9e778]">
