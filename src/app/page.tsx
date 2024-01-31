@@ -1,32 +1,17 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Inscription from "@/components/Inscription";
+import Data from "@/components/Data";
 import Cursos from "@/components/Cursos";
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
-import { cookies } from 'next/headers'
-import Link from 'next/link';
 
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-export default async function Index() {
-  const cookieStore = cookies();
-  const supabase = createServerComponentClient({cookies: () => cookieStore});
-
-  const {data: {user}} = await supabase.auth.getUser()
-
-  if (!user){
-    return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <Link href={'/Login'}>
-          You are not logged in. Click here to go login.
-        </Link>
-      </main>
-    )
-  }
-
-
+export default function Home() {
   return (
+    <div>
+      <Navbar />
     <div className="bg-white text-black">
       <header className="text-center py-20 bg-[#d9e778]">
         <h2 className="text-4xl font-bold mb-4">BIENVENIDOS A</h2>
-        <h1 className="text-6xl font-bold mb-4">IA BOT</h1>
+        <h1 className="text-6xl font-bold mb-4">IABOT</h1>
         <p className="text-xl font-semibold">ROBÓTICA EDUCATIVA</p>
       </header>
       <main>
@@ -53,6 +38,12 @@ export default async function Index() {
           <Cursos />
         </section>
       </main>
+      
+      <Inscription />
+      <Data />
+      <Footer />
+    </div>
+    
     </div>
   );
 }
