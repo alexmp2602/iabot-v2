@@ -2,7 +2,6 @@ import '@/app/globals.css'
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Data from "@/components/Data";
 
 export const metadata = {
   title: "IABOT - Inscripción",
