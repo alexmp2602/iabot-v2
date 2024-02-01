@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-white">
-      <nav className="lg:text-center bg-[#f8f8f8] p-4">
+      <nav className="lg:text-center bg-[#f8f8f8] px-4 py-2">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <a href="/">
@@ -32,7 +32,7 @@ export default function Navbar() {
                 alt="IA Bot Logo"
                 className="h-10 text-black"
                 height="40"
-                src="/assets/img/logo.png"
+                src="/assets/img/logo/PNG/iabot-PNG-06.png"
                 style={{
                   aspectRatio: "100/40",
                   objectFit: "cover",
