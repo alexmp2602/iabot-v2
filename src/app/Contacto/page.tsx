@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function Contacto() {
   return (
     <div className="bg-white text-black">
-      <header className="text-center py-20 bg-[#d9e778]">
+      <header className="text-center py-20 bg-verde-iabot">
         <h2 className="text-4xl font-bold mb-4">CONTÁCTANOS</h2>
         <p className="text-xl font-semibold">
           Completa el formulario para ponerte en contacto con nosotros

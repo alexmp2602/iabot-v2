@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="bg-white text-black">
-      <header className="text-center py-20 bg-[#d9e778]">
+      <header className="text-center py-20 bg-verde-iabot">
         <h2 className="text-4xl font-bold mb-4">ACERCA DE</h2>
         <h1 className="text-6xl font-bold mb-4">IA BOT</h1>
         <p className="text-xl font-semibold">CONOCE MÁS SOBRE NOSOTROS</p>
@@ -82,11 +82,11 @@ export default function About() {
                     alt="Franco"
                     className="rounded-full w-48 h-48 object-cover mx-auto"
                     height="200"
-                    src="/assets/img/fran-modified.png"
+                    src="/assets/img/equipo/fran-modified.png"
                     style={{
                       aspectRatio: "200/200",
                       objectFit: "cover",
-                      backgroundColor: "white"
+                      backgroundColor: "white",
                     }}
                     width="200"
                   />
@@ -100,17 +100,17 @@ export default function About() {
                 </CardContent>
               </Card>
 
-              <Card className="w-full py-8 bg-gray-100 dark:bg-gray-700">
+              <Card className="w-full py-8 bg-gray-100 dark:bg-gray-700 ">
                 <CardContent>
                   <Image
                     alt="Adrián"
                     className="rounded-full w-48 h-48 object-cover mx-auto"
                     height="200"
-                    src="/assets/img/adri-modified.png"
+                    src="/assets/img/equipo/adri-modified.png"
                     style={{
                       aspectRatio: "200/200",
                       objectFit: "cover",
-                      backgroundColor: "white"
+                      backgroundColor: "white",
                     }}
                     width="200"
                   />
@@ -129,11 +129,11 @@ export default function About() {
                     alt="Alex"
                     className="rounded-full w-48 h-48 object-cover mx-auto"
                     height="200"
-                    src="/assets/img/alex-modified.png"
+                    src="/assets/img/equipo/alex-modified.png"
                     style={{
                       aspectRatio: "200/200",
                       objectFit: "cover",
-                      backgroundColor: "white"
+                      backgroundColor: "white",
                     }}
                     width="200"
                   />

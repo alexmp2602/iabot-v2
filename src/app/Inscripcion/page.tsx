@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 export default function Inscripcion() {
   return (
     <div className="bg-white text-black">
-      <header className="text-center py-20 bg-[#d9e778]">
+      <header className="text-center py-20 bg-verde-iabot">
         <h2 className="text-4xl font-bold mb-4">INSCRIPCIONES</h2>
         <p className="text-xl font-semibold">
           Completa el formulario para inscribir a tu hijo/a en uno de nuestros cursos

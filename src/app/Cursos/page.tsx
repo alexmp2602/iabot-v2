@@ -3,7 +3,7 @@ import Cursos from "@/components/Cursos";
 export default function Component() {
   return (
     <div className="bg-white text-black">
-      <header className="text-center py-20 bg-[#d9e778]">
+      <header className="text-center py-20 bg-verde-iabot">
         <h2 className="text-4xl font-bold mb-4">NUESTROS CURSOS</h2>
         <p className="text-xl font-semibold">
           Explora nuestros cursos y encuentra el que más te interesa

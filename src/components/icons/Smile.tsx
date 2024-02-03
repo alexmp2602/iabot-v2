@@ -10,7 +10,7 @@ export default function SmileIcon() {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-[#6cc644] mb-4 h-12 w-12"
+        className="color-verde-iabot mb-4 h-12 w-12"
       >
         <circle cx="12" cy="12" r="10" />
         <path d="M8 14s1.5 2 4 2 4-2 4-2" />
