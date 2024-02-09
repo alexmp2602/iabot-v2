@@ -28,8 +28,8 @@ export default function Capacitaciones() {
           <h2 className="text-4xl font-bold text-center mb-12">
             Nuestros servicios
           </h2>
-          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-8">
+            <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-100 dark:border-grey dark:text-black">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold text-pretty mb-6">
                   Asesoramiento personalizado
@@ -40,7 +40,7 @@ export default function Capacitaciones() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+            <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-100 dark:border-grey dark:text-black">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold text-pretty mb-6">
                   Capacitación Docente
@@ -52,7 +52,7 @@ export default function Capacitaciones() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+            <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-100 dark:border-grey dark:text-black">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold text-pretty mb-6">
                   Recursos Didácticos Innovadores
@@ -64,7 +64,7 @@ export default function Capacitaciones() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+            <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-100 dark:border-grey dark:text-black">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold text-pretty mb-6">
                   Seguimiento y Evaluación Continua
@@ -101,13 +101,6 @@ export default function Capacitaciones() {
                 un mundo digital y tecnológico en constante evolución.{" "}
               </li>
             </ul>
-            <div className="container mx-auto px-4 pt-12">
-              <h3 className="text-2xl font-bold text-center">
-                Transforma la experiencia educativa en tu institución con
-                nuestro servicio de asesoramiento y capacitación en robótica
-                educativa.
-              </h3>
-            </div>
           </div>
         </section>
       </main>
