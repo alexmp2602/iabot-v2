@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div className="bg-white text-black">
-        <header className="text-center py-20 bg-[#d9e778]">
+        <header className="text-center py-20 bg-verde-iabot">
           <h2 className="text-4xl font-bold mb-4">BIENVENIDOS A</h2>
           <h1 className="text-6xl font-bold mb-4">IABOT</h1>
           <p className="text-xl font-semibold">ROBÓTICA EDUCATIVA</p>

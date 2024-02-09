@@ -8,7 +8,7 @@ export default function Inscription() {
           ¡Descubre los cupos disponibles y regístrate en nuestro formulario de
           inscripción! ¡No te pierdas esta gran oportunidad!
         </h4>
-        <a href="/Inscripcion">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform" target="_blank" rel="noopener noreferrer">
         <Button>INSCRIBETE</Button>
         </a>
       </div>

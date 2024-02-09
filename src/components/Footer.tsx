@@ -24,14 +24,20 @@ export default function Footer() {
             <InstagramIcon />
           </a>
           <a
-          href="https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1s?%20%F0%9F%98%8A%20Estamos%20interesados%20en%20inscribir%20a%20nuestros%20hijos%20en%20los%20talleres%20de%20rob%C3%B3tica.%20%C2%BFPodr%C3%ADas%20proporcionarnos%20informaci%C3%B3n%20sobre%20los%20cupos%20disponibles?%20%C2%A1Agradecemos%20su%20ayuda!"
+            href="https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1s?%20%F0%9F%98%8A%20Estamos%20interesados%20en%20inscribir%20a%20nuestros%20hijos%20en%20los%20talleres%20de%20rob%C3%B3tica.%20%C2%BFPodr%C3%ADas%20proporcionarnos%20informaci%C3%B3n%20sobre%20los%20cupos%20disponibles?%20%C2%A1Agradecemos%20su%20ayuda!"
             target="_blank"
             rel="noopener noreferrer"
           >
             <WhatsappIcon />
           </a>
         </div>
-        <p>Estamos en C 21 N 336, Mercedes, Provincia de Buenos Aires</p>
+        <a
+          href="https://www.google.com.ar/maps/place/C.+21+336,+Mercedes,+Provincia+de+Buenos+Aires/@-34.6550336,-59.4293762,586m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bc730b045eab23:0xda1891be9a9ab566!8m2!3d-34.6550336!4d-59.4293762!16s%2Fg%2F11h7s0b1vd?entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Estamos en C 21 N 336, Mercedes, Provincia de Buenos Aires
+        </a>
       </div>
     </footer>
   );
