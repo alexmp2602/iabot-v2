@@ -1,7 +1,4 @@
 import { CardContent, Card, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 
 export default function Contacto() {
   return (
@@ -33,7 +30,7 @@ export default function Contacto() {
               <div className="col-span-2">
                 <h2 className="text-lg font-semibold">Dirección</h2>
                 <p className="mt-1">
-                  C. 23 336, Mercedes, Provincia de Buenos Aires
+                  C. 21 336, Mercedes, Provincia de Buenos Aires
                 </p>
               </div>
             </div>

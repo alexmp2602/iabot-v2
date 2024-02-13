@@ -9,11 +9,21 @@ export default function Home() {
     <div>
       <Navbar />
       <div className="bg-white text-black">
-        <header className="text-center py-20 bg-verde-iabot">
-          <h2 className="text-4xl font-bold mb-4">BIENVENIDOS A</h2>
-          <h1 className="text-6xl font-bold mb-4">IABOT</h1>
-          <p className="text-xl font-semibold">ROBÓTICA EDUCATIVA</p>
-        </header>
+      <header className="relative text-center py-20 bg-verde-iabot overflow-hidden">
+    <video
+        autoPlay
+        muted
+        loop
+        className="absolute inset-0 w-full h-full object-cover transform scale-125"
+    >
+        <source src="assets/video-header.mp4" type="video/mp4" />
+    </video>
+    <div className="relative z-10">
+        <h2 className="text-4xl font-bold mb-6"><span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl ">BIENVENIDOS A</span></h2>
+        <h1 className="text-6xl font-bold mb-6"><span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl">IABOT</span></h1>
+        <p className="text-xl font-semibold"><span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl">ROBÓTICA EDUCATIVA</span></p>
+    </div>
+</header>
         <main>
           <section className="pt-16">
             <div className="container mx-auto px-6">
