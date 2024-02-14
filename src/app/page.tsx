@@ -18,10 +18,10 @@ export default function Home() {
     >
         <source src="assets/video-header.mp4" type="video/mp4" />
     </video>
-    <div className="relative z-10">
-        <h2 className="text-4xl font-bold mb-6"><span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl ">BIENVENIDOS A</span></h2>
-        <h1 className="text-6xl font-bold mb-6"><span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl">IABOT</span></h1>
-        <p className="text-xl font-semibold"><span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl">ROBÓTICA EDUCATIVA</span></p>
+    <div className="relative z-2">
+        <h2 className="text-4xl font-bold mb-8"><span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl ">BIENVENIDOS A</span></h2>
+        <h1 className="text-6xl font-bold mb-8"><span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl">IABOT</span></h1>
+        <p className="text-xl font-semibold"><span className="bg-white bg-opacity-30 px-3 py-1 rounded-2xl">ROBÓTICA EDUCATIVA</span></p>
     </div>
 </header>
         <main>
