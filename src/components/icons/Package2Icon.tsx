@@ -1,6 +1,7 @@
-export default function BookIcon() {
+export default function Package2Icon() {
   return (
     <svg
+      className="w-6 h-6"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -10,9 +11,10 @@ export default function BookIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="color-verde-iabot h-12 w-12"
     >
-      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+      <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+      <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+      <path d="M12 3v6" />
     </svg>
   );
 }
