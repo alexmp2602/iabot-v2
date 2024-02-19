@@ -1,4 +1,5 @@
 import {useChat} from "ai/react";
+import { cn } from "@/lib/utils";
 
 interface AiChatBotProps {
     open: boolean;
