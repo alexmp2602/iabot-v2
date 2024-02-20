@@ -1,75 +1,137 @@
 import { CardContent, Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Cursos() {
   return (
-    <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg py-4">
-        <CardContent className="dark:text-black pb-2">
-          <h2 className="text-2xl font-bold mb-2">
+    <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
+        <CardContent className="dark:text-black p-4">
+          <Image
+            src="/assets/img/cursos/lego-wedo.jpg"
+            alt="Introducción a la Robótica con LEGO WeDo 2.0"
+            layout='responsive'
+            height="150"
+            width="300"
+          />
+          <h3 className="font-bold mt-2">
             Introducción a la Robótica con LEGO WeDo 2.0
-          </h2>
-          <p className="text-sm mb-4">
+          </h3>
+          <p className="text-sm mt-4">
             Requisitos: Tener entre 6 y 12 años de edad.
           </p>
-          <Button className="bg-verde-iabot dark:bg-verde-iabot text-white">
-            Inscribirse
-          </Button>
-        </CardContent>
-      </Card>
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg py-4">
-        <CardContent className="dark:text-black pb-2">
-          <h2 className="text-2xl font-bold mb-2">
-            Robótica Avanzada con LEGO Spike Essential
-          </h2>
-          <p className="text-sm mb-4">
-            Requisitos: 1er año secundario o Introducción a Robótica con LEGO
-            WeDo 2.0
-          </p>
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-verde-iabot dark:bg-verde-iabot text-white">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
               Inscribirse
             </Button>
           </a>
         </CardContent>
       </Card>
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg py-4">
-        <CardContent className="dark:text-black pb-2">
-          <h2 className="text-2xl font-bold mb-2">
-            Robótica Experta con LEGO Spike Prime
-          </h2>
-          <p className="text-sm mb-4">
-            Requisitos: Robótica Avanzada con LEGO Spike Essential.
+      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
+        <CardContent className="dark:text-black p-4">
+          <Image
+            src="/assets/img/cursos/lego-spike-essential.jpg"
+            alt="Robótica Avanzada con LEGO Spike Essential"
+            layout='responsive'
+            height="150"
+            width="300"
+          />
+          <h3 className="font-bold mt-2">
+            Robótica Avanzada con LEGO Spike Essential
+          </h3>
+          <p className="text-sm mt-4">
+            Requisitos: 1er año secundario o Introducción a Robótica con LEGO
+            WeDo 2.0
           </p>
-          <Button className="bg-verde-iabot dark:bg-verde-iabot text-white">
-            Inscribirse
-          </Button>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+              Inscribirse
+            </Button>
+          </a>
         </CardContent>
       </Card>
-      <Card className=" dark:border-grey bg-white dark:bg-white shadow-lg py-4">
-        <CardContent className="dark:text-black pb-2">
-          <h2 className="text-2xl font-bold mb-2">Robótica con Lego EV3</h2>
-          <p className="text-sm mb-4">
+      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
+        <CardContent className="dark:text-black p-4">
+          <Image
+            src="/assets/img/cursos/lego-spike-prime.jpg"
+            alt="Robótica Experta con LEGO Spike Prime"
+            layout='responsive'
+            height="150"
+            width="300"
+          />
+          <h3 className="font-bold mt-2">
+            Robótica Experta con LEGO Spike Prime
+          </h3>
+          <p className="text-sm mt-4">
+            Requisitos: Robótica Avanzada con LEGO Spike Essential.
+          </p>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+              Inscribirse
+            </Button>
+          </a>
+        </CardContent>
+      </Card>
+      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
+        <CardContent className="dark:text-black p-4">
+          <Image
+            src="/assets/img/cursos/lego-ev3.jpg"
+            alt="Robótica con Lego EV3"
+            layout='responsive'
+            height="150"
+            width="300"
+          />
+          <h3 className="font-bold mt-2">Robótica con Lego EV3</h3>
+          <p className="text-sm mt-4">
             Requisitos: 2do año secundario o haber cursado todos los niveles
             anteriores.
           </p>
-          <Button className="bg-verde-iabot dark:bg-verde-iabot text-white">
-            Inscribirse
-          </Button>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+              Inscribirse
+            </Button>
+          </a>
         </CardContent>
       </Card>
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg py-4">
-        <CardContent className="dark:text-black pb-2">
-          <h2 className="text-2xl font-bold mb-2">
-            Capacitación para Docentes
-          </h2>
-          <p className="text-sm mb-4">
+      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
+        <CardContent className="dark:text-black p-4">
+          <Image
+            src="/assets/img/cursos/lego-education.jpg"
+            alt="Capacitación para Docentes"
+            layout='responsive'
+            height="150"
+            width="300"
+          />
+          <h3 className="font-bold mt-2">Capacitación para Docentes</h3>
+          <p className="text-sm mt-4">
             Capacitación y asesoramiento especializado para docentes de
             instituciones
           </p>
-          <Button className="bg-verde-iabot dark:bg-verde-iabot text-white">
-            Inscribirse
-          </Button>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+              Inscribirse
+            </Button>
+          </a>
         </CardContent>
       </Card>
     </div>

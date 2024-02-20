@@ -64,12 +64,6 @@ export default function Navbar() {
             </Link>
             <Link
               className=" text-green-600 hover:text-green-700"
-              href="/Inscripcion"
-            >
-              INSCRIPCIÓN
-            </Link>
-            <Link
-              className=" text-green-600 hover:text-green-700"
               href="/Contacto"
             >
               CONTACTO
