@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   return (
-      <nav className="lg:text-center bg-[#f8f8f8]  px-4 py-2">
+      <nav className="sticky top-0 z-50 lg:text-center bg-[#f8f8f8]  px-4 py-2">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4 ">
             <a href="/">

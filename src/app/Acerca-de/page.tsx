@@ -16,7 +16,7 @@ export default function About() {
       </header>
       <main>
         <section>
-          <div className="bg-[#f4f4f4] pt-16">
+          <div className="bg-white pt-16">
             <h2 className="text-center text-4xl font-bold mb-12">
               Nuestra Misión y Valores
             </h2>

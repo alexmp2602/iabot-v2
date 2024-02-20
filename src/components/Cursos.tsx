@@ -2,138 +2,78 @@ import { CardContent, Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+const cursos = [
+  {
+    imgSrc: "/assets/img/cursos/lego-wedo.jpg",
+    alt: "Introducción a la Robótica con LEGO WeDo 2.0",
+    title: "Introducción a la Robótica con LEGO WeDo 2.0",
+    requisitos: "Requisitos: Tener entre 6 y 12 años de edad.",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
+  },
+  {
+    imgSrc: "/assets/img/cursos/lego-spike-essential.jpg",
+    alt: "Robótica Avanzada con LEGO Spike Essential",
+    title: "Robótica Avanzada con LEGO Spike Essential",
+    requisitos:
+      "Requisitos: 1er año secundario o Introducción a Robótica con LEGO WeDo 2.0",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
+  },
+  {
+    imgSrc: "/assets/img/cursos/lego-spike-prime.jpg",
+    alt: "Robótica Experta con LEGO Spike Prime",
+    title: "Robótica Experta con LEGO Spike Prime",
+    requisitos: "Requisitos: Robótica Avanzada con LEGO Spike Essential",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
+  },
+  {
+    imgSrc: "/assets/img/cursos/lego-ev3.jpg",
+    alt: "Robótica con Lego EV3",
+    title: "Robótica con Lego EV3",
+    requisitos:
+      "Requisitos: 2do año secundario o haber cursado todos los niveles anteriores",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
+  },
+  {
+    imgSrc: "/assets/img/cursos/lego-education.jpg",
+    alt: "Capacitación para Docentes",
+    title: "Capacitación para Docentes",
+    requisitos:
+      "Capacitación y asesoramiento especializado para docentes de instituciones",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
+  },
+];
+
 export default function Cursos() {
   return (
-    <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
-        <CardContent className="dark:text-black p-4">
-          <Image
-            src="/assets/img/cursos/lego-wedo.jpg"
-            alt="Introducción a la Robótica con LEGO WeDo 2.0"
-            layout='responsive'
-            height="150"
-            width="300"
-          />
-          <h3 className="font-bold mt-2">
-            Introducción a la Robótica con LEGO WeDo 2.0
-          </h3>
-          <p className="text-sm mt-4">
-            Requisitos: Tener entre 6 y 12 años de edad.
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
-              Inscribirse
-            </Button>
-          </a>
-        </CardContent>
-      </Card>
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
-        <CardContent className="dark:text-black p-4">
-          <Image
-            src="/assets/img/cursos/lego-spike-essential.jpg"
-            alt="Robótica Avanzada con LEGO Spike Essential"
-            layout='responsive'
-            height="150"
-            width="300"
-          />
-          <h3 className="font-bold mt-2">
-            Robótica Avanzada con LEGO Spike Essential
-          </h3>
-          <p className="text-sm mt-4">
-            Requisitos: 1er año secundario o Introducción a Robótica con LEGO
-            WeDo 2.0
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
-              Inscribirse
-            </Button>
-          </a>
-        </CardContent>
-      </Card>
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
-        <CardContent className="dark:text-black p-4">
-          <Image
-            src="/assets/img/cursos/lego-spike-prime.jpg"
-            alt="Robótica Experta con LEGO Spike Prime"
-            layout='responsive'
-            height="150"
-            width="300"
-          />
-          <h3 className="font-bold mt-2">
-            Robótica Experta con LEGO Spike Prime
-          </h3>
-          <p className="text-sm mt-4">
-            Requisitos: Robótica Avanzada con LEGO Spike Essential.
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
-              Inscribirse
-            </Button>
-          </a>
-        </CardContent>
-      </Card>
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
-        <CardContent className="dark:text-black p-4">
-          <Image
-            src="/assets/img/cursos/lego-ev3.jpg"
-            alt="Robótica con Lego EV3"
-            layout='responsive'
-            height="150"
-            width="300"
-          />
-          <h3 className="font-bold mt-2">Robótica con Lego EV3</h3>
-          <p className="text-sm mt-4">
-            Requisitos: 2do año secundario o haber cursado todos los niveles
-            anteriores.
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
-              Inscribirse
-            </Button>
-          </a>
-        </CardContent>
-      </Card>
-      <Card className="dark:border-grey bg-white dark:bg-white shadow-lg rounded">
-        <CardContent className="dark:text-black p-4">
-          <Image
-            src="/assets/img/cursos/lego-education.jpg"
-            alt="Capacitación para Docentes"
-            layout='responsive'
-            height="150"
-            width="300"
-          />
-          <h3 className="font-bold mt-2">Capacitación para Docentes</h3>
-          <p className="text-sm mt-4">
-            Capacitación y asesoramiento especializado para docentes de
-            instituciones
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
-              Inscribirse
-            </Button>
-          </a>
-        </CardContent>
-      </Card>
+    <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {cursos.map((curso, index) => (
+        <Card
+          key={index}
+          className="dark:border-grey bg-[#E8F5E9] dark:bg-[#E8F5E9] shadow-lg rounded"
+        >
+          <CardContent className="dark:text-black p-5 space-y-2">
+            <Image
+              src={curso.imgSrc}
+              alt={curso.alt}
+              layout="responsive"
+              height="150"
+              width="300"
+            />
+            <h3 className="font-bold text-lg mt-2">{curso.title}</h3>
+            <p className="text-sm mt-4">{curso.requisitos}</p>
+            <a href={curso.formLink} target="_blank" rel="noopener noreferrer">
+              <Button className="mt-4 bg-[#FF9800] dark:bg-[#FF9800] hover:bg-[#FB8C00] dark:hover:bg-[#FB8C00] text-white dark:text-white transition-colors duration-200">
+                Inscribirse
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
+      ))}
     </div>
   );
 }

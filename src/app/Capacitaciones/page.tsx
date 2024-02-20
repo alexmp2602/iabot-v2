@@ -3,7 +3,7 @@ import { CardContent, Card } from "@/components/ui/card";
 export default function Capacitaciones() {
   return (
     <div className="bg-white text-black">
-      <header className="text-black text-center py-20 px-4 bg-green-600 dark:bg-green-600 text-white dark:text-white">
+      <header className="text-center py-20 px-4 bg-green-600 dark:bg-green-600 text-white dark:text-white">
         <h2 className="text-4xl font-bold mb-4">CAPACITACIONES</h2>
         <p className="text-xl font-semibold">
           Transforma la Educación con Nuestro Servicio de Asesoramiento y
@@ -11,7 +11,7 @@ export default function Capacitaciones() {
         </p>
       </header>
       <main>
-        <section className="text-black pt-16">
+        <section className="text-black pt-12">
           <div className="container mx-auto px-4">
             <p className="text-xl text-center">
               En IABOT nos enorgullece ofrecer un servicio integral de
@@ -24,11 +24,11 @@ export default function Capacitaciones() {
           </div>
         </section>
 
-        <section className="py-16">
+        <section className="py-12 pb-4">
           <h2 className="text-4xl font-bold text-center mb-12">
             Nuestros servicios
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8">
             <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-100 dark:border-grey dark:text-black">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold text-pretty mb-6">
@@ -77,7 +77,7 @@ export default function Capacitaciones() {
               </CardContent>
             </Card>
           </div>
-          <div className="container mx-auto px-4 pt-20">
+          <div className="container mx-auto px-4 pt-14">
             <h1 className="text-3xl font-bold text-center mb-12">
               Beneficios para las instituciones
             </h1>
