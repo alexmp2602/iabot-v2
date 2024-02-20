@@ -25,7 +25,7 @@ export default function Cursos() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
               Inscribirse
             </Button>
           </a>
@@ -52,7 +52,7 @@ export default function Cursos() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
               Inscribirse
             </Button>
           </a>
@@ -78,7 +78,7 @@ export default function Cursos() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
               Inscribirse
             </Button>
           </a>
@@ -103,7 +103,7 @@ export default function Cursos() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
               Inscribirse
             </Button>
           </a>
@@ -128,7 +128,7 @@ export default function Cursos() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="mt-4 bg-verde-iabot dark:bg-verde-iabot text-white">
+            <Button className="mt-4 bg-verde-iabot bg-green-500 dark:bg-green-500 dark:hover:bg-green-600 text-white dark:text-white">
               Inscribirse
             </Button>
           </a>

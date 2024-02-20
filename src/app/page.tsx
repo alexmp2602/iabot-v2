@@ -8,24 +8,25 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      <header className="sticky top-0 z-10 bg-white shadow">
+        <Navbar />
+      </header>
+
       <div className="bg-white text-black">
-        <header className="relative text-left py-20 bg-verde-iabot overflow-hidden">
+        <header className="relative text-left py-12 overflow-hidden">
           <video
             autoPlay
             muted
             loop
-            className="absolute inset-0 w-full h-full object-cover transform scale-125"
+            className="absolute inset-0 w-full h-full object-cover transform scale-125 opacity-50"
           >
             <source src="assets/video-header.mp4" type="video/mp4" />
           </video>
-          <div className="flex flex-col relative z-2 items-center lg:items-start lg:mx-8">
-            <h2 className="text-4xl font-bold mb-8">
-              <span className="bg-white bg-opacity-50 px-3 py-1 rounded-2xl ">
-                BIENVENIDOS A
-              </span>
+          <div className="flex flex-col relative z-2 items-center">
+            <h2 className="text-4xl font-bold">
+              <span>BIENVENIDOS A</span>
             </h2>
-            <div className="bg-white bg-opacity-50 mb-8 px-3 rounded-2xl">
+            <div>
               <Image
                 src="/assets/img/logo/PNG/iabot-PNG-06.png"
                 alt="IABOT"
@@ -34,15 +35,13 @@ export default function Home() {
               />
             </div>
             <p className="text-xl font-semibold">
-              <span className="bg-white bg-opacity-30 px-3 py-1 rounded-2xl">
-                ROBÓTICA EDUCATIVA
-              </span>
+              <span>ROBÓTICA EDUCATIVA</span>
             </p>
           </div>
         </header>
 
         <main>
-          <section className="pt-16">
+          <section className="pt-12">
             <div className="container mx-auto px-6">
               <p className="text-pretty text-center">
                 En IABOT, exploramos el emocionante mundo de la Robótica
@@ -62,7 +61,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="py-16">
+          <section className="py-12">
             <h2 className="text-4xl font-bold text-center mb-12">
               Recursos Didácticos y Capacitaciones
             </h2>

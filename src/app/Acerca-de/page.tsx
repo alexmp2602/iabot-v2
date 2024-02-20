@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="bg-white text-black">
-      <header className="text-center py-20 bg-verde-iabot">
+      <header className="text-center py-20 bg-green-600 dark:bg-green-600 text-white dark:text-white">
         <h2 className="text-4xl font-bold mb-4">ACERCA DE</h2>
         <h1 className="text-6xl font-bold mb-4">IA BOT</h1>
         <p className="text-xl font-semibold">CONOCE MÁS SOBRE NOSOTROS</p>

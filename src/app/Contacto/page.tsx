@@ -3,7 +3,7 @@ import { CardContent, Card, CardHeader, CardTitle } from "@/components/ui/card";
 export default function Contacto() {
   return (
     <div className="bg-white text-black">
-      <header className="text-center py-20 bg-verde-iabot">
+      <header className="text-center py-20 bg-green-600 dark:bg-green-600 text-white dark:text-white">
         <h2 className="text-4xl font-bold">CONTÁCTANOS</h2>
         <p className="mt-4 text-lg">
           ¿Tienes alguna duda o consulta? Escríbenos y te responderemos a la

@@ -3,7 +3,7 @@ import { CardContent, Card } from "@/components/ui/card";
 export default function Capacitaciones() {
   return (
     <div className="bg-white text-black">
-      <header className="text-black text-center py-20 px-4 bg-verde-iabot">
+      <header className="text-black text-center py-20 px-4 bg-green-600 dark:bg-green-600 text-white dark:text-white">
         <h2 className="text-4xl font-bold mb-4">CAPACITACIONES</h2>
         <p className="text-xl font-semibold">
           Transforma la Educación con Nuestro Servicio de Asesoramiento y

@@ -6,7 +6,7 @@ interface SvgProps extends React.SVGProps<SVGSVGElement> {}
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-700 text-white py-6">
+    <footer className="text-black bg-gray-100 dark:bg-gray-700 dark:text-white py-6">
       <div className="container mx-auto px-4 text-center">
         <div className="flex justify-center space-x-4 mb-4">
           <a

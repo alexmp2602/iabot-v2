@@ -22,7 +22,6 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-white">
       <nav className="lg:text-center bg-[#f8f8f8]  px-4 py-2">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4 ">
@@ -126,7 +125,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
   );
 }
 
