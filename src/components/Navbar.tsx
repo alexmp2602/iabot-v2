@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useState } from "react";
+import AIChatButton from "./AIChatButton";
 
 interface SvgProps {
   className?: string;
@@ -40,6 +41,7 @@ export default function Navbar() {
             </a>
           </div>
           <div className="hidden md:flex space-x-4 items-center">
+          <AIChatButton />
             <Link className=" text-green-600 hover:text-green-700" href="/">
               INICIO
             </Link>
@@ -67,6 +69,7 @@ export default function Navbar() {
             >
               CONTACTO
             </Link>
+            
           </div>
           <div className="md:hidden">
             <button

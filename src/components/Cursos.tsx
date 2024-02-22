@@ -61,6 +61,8 @@ export default function Cursos() {
               src={curso.imgSrc}
               alt={curso.alt}
               layout="responsive"
+              width={300}
+              height={150}
             />
             <h3 className="font-bold text-lg mt-2">{curso.title}</h3>
             <p className="text-sm mt-4">{curso.requisitos}</p>
