@@ -30,6 +30,7 @@ export default function Home() {
               <img
                 src="assets/img/logo/PNG/iabot-PNG-06.png"
                 alt="IABOT"
+                style={{ width: '200px', height: 'auto' }}
               ></img>
             </div>
             <p className="text-xl font-semibold">
