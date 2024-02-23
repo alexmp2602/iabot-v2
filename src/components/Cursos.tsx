@@ -56,16 +56,15 @@ export default function Cursos() {
           key={index}
           className="dark:border-grey bg-[#E8F5E9] dark:bg-[#E8F5E9] shadow-lg rounded"
         >
-          <CardContent className="dark:text-black p-5 space-y-2">
-            <Image
-              src={curso.imgSrc}
-              alt={curso.alt}
-              layout="responsive"
-              width={300}
-              height={150}
-            />
-            <h3 className="font-bold text-lg mt-2">{curso.title}</h3>
-            <p className="text-sm mt-4">{curso.requisitos}</p>
+          <CardContent className="dark:text-black p-5 space-y-2 flex flex-col justify-between h-full">
+            <div>
+              <img
+                src={curso.imgSrc}
+                alt={curso.alt}
+              />
+              <h3 className="font-bold text-lg mt-2">{curso.title}</h3>
+              <p className="text-sm mt-4">{curso.requisitos}</p>
+            </div>
             <a href={curso.formLink} target="_blank" rel="noopener noreferrer">
               <Button className="mt-4 bg-[#FF9800] dark:bg-[#FF9800] hover:bg-[#FB8C00] dark:hover:bg-[#FB8C00] text-white dark:text-white transition-colors duration-200">
                 Inscribirse
