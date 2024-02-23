@@ -27,12 +27,10 @@ export default function Home() {
               <span>BIENVENIDOS A</span>
             </h2>
             <div>
-              <Image
-                src="/assets/img/logo/PNG/iabot-PNG-06.png"
+              <img
+                src="assets/img/logo/PNG/iabot-PNG-06.png"
                 alt="IABOT"
-                width={250}
-                height={250}
-              />
+              ></img>
             </div>
             <p className="text-xl font-semibold">
               <span>ROBÓTICA EDUCATIVA</span>
