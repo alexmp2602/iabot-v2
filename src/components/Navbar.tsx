@@ -41,7 +41,7 @@ export default function Navbar() {
             </a>
           </div>
           <div className="hidden md:flex space-x-4 items-center">
-          <AIChatButton />
+            
             <Link className=" text-green-600 hover:text-green-700" href="/">
               INICIO
             </Link>
@@ -87,6 +87,9 @@ export default function Navbar() {
                   <PanelTopCloseIcon className="h-6 w-6" />
                 </button>
                 <div className="flex flex-col items-end">
+                  <div className="mb-4">
+                    <AIChatButton />
+                  </div>
                   <Link
                     className="mb-4 text-green-600 hover:text-green-700"
                     href="/"

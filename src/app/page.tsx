@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Inscription from "@/components/Inscription";
 import Data from "@/components/Data";
 import Cursos from "@/components/Cursos";
-import Image from "next/image";
+import AIChatButton from "@/components/AIChatButton";
 
 export default function Home() {
   return (
@@ -71,6 +71,7 @@ export default function Home() {
         <Inscription />
         <Data />
         <Footer />
+        <AIChatButton />
       </div>
     </div>
   );

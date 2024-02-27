@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
-import AIChatBot from './AIChatBot';
-import { Button } from './ui/button';
-import { Bot } from 'lucide-react';
+"use client";
+
+import { Bot } from "lucide-react";
+import { useState } from "react";
+import AIChatBox from "./AIChatBox";
 
 export default function AIChatButton() {
-    const [ChatBotOpen, SetChatBotOpen] = useState(false);
+  const [chatBoxOpen, setChatBoxOpen] = useState(false);
 
-    return (
-        <>
-            <Button onClick={() => SetChatBotOpen(true) }> 
-                <Bot size={24} className="mr-2" />
-                AI Chat
-            </Button>
-
-            <AIChatBot open={ChatBotOpen} onClose={() => SetChatBotOpen(false)} />
-        </>
-    )
+  return (
+    <>
+      <button
+        onClick={() => setChatBoxOpen(true)}
+        className="fixed bottom-4 right-4 z-50 bg-green-500 p-3 rounded-full shadow-lg text-white"
+      >
+        <Bot size={24} />
+      </button>
+      <AIChatBox open={chatBoxOpen} onClose={() => setChatBoxOpen(false)} />
+    </>
+  );
 }

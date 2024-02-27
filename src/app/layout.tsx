@@ -7,11 +7,11 @@ export const metadata = {
     "IABOT es una empresa dedicada a la robótica educativa y a la capacitación de docentes.",
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <Head>
@@ -23,3 +23,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;
