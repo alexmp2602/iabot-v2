@@ -5,6 +5,12 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 
+interface Message {
+  id: string;
+  role: string;
+  content: string;
+}
+
 interface AIChatBoxProps {
   open: boolean;
   onClose: () => void;
@@ -46,13 +52,15 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
       )}
     >
       <button onClick={onClose} className="mb-1 ms-auto block">
-        <XCircle size={30} className="rounded-full bg-background" />
+        <XCircle size={30} className="bg-background rounded-full" />
       </button>
-      <div className="flex h-[300px] lg:h-[600px] flex-col rounded border bg-green-300 shadow-xl">
+      <div className="flex h-[300px] flex-col rounded border bg-green-300 shadow-xl lg:h-[600px]">
         <div className="mt-3 h-full overflow-y-auto px-3" ref={scrollRef}>
-          {messages.map((message) => (
-            <ChatMessage message={message} key={message.id} />
-          ))}
+          {messages.map(
+            (message: { id: string; role: string; content: string }) => (
+              <ChatMessage message={message} key={message.id} />
+            ),
+          )}
           {isLoading && lastMessageIsUser && (
             <ChatMessage
               message={{
@@ -78,8 +86,9 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                 ¡Hola! Soy el chatbot de IABOT.
               </p>
               <p>
-                ¿En qué puedo ayudarte? Puedes preguntarme sobre nuestros cursos,
-                capacitaciones, o cualquier otra cosa que necesites saber.
+                ¿En qué puedo ayudarte? Puedes preguntarme sobre nuestros
+                cursos, capacitaciones, o cualquier otra cosa que necesites
+                saber.
               </p>
             </div>
           )}
@@ -97,7 +106,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
             value={input}
             onChange={handleInputChange}
             placeholder="Escribe un mensaje..."
-            className="grow rounded border bg-background px-3 py-2"
+            className="bg-background grow rounded border px-3 py-2"
             ref={inputRef}
           />
           <button
