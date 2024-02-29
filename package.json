@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate && next build",
+    "b": "next build",
+    "generate": "npx ts-node ./scripts/generate.ts",
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },

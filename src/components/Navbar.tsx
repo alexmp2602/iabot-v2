@@ -23,114 +23,109 @@ export default function Navbar() {
   };
 
   return (
-      <nav className="sticky top-0 z-50 lg:text-center bg-[#f8f8f8]  px-4 py-2">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-4 ">
-            <a href="/">
-              <Image
-                alt="IA Bot Logo"
-                className="h-10 text-black"
-                height="40"
-                src="/assets/img/logo/PNG/iabot-PNG-06.png"
-                style={{
-                  aspectRatio: "100/40",
-                  objectFit: "cover",
-                }}
-                width="100"
-              />
-            </a>
-          </div>
-          <div className="hidden md:flex space-x-4 items-center">
-            
-            <Link className=" text-green-600 hover:text-green-700" href="/">
-              INICIO
-            </Link>
-            <Link
-              className=" text-green-600 hover:text-green-700"
-              href="/Acerca-de"
-            >
-              ACERCA DE
-            </Link>
-            <Link
-              className=" text-green-600 hover:text-green-700"
-              href="/Cursos"
-            >
-              CURSOS
-            </Link>
-            <Link
-              className=" text-green-600 hover:text-green-700"
-              href="/Capacitaciones"
-            >
-              CAPACITACIONES
-            </Link>
-            <Link
-              className=" text-green-600 hover:text-green-700"
-              href="/Contacto"
-            >
-              CONTACTO
-            </Link>
-            
-          </div>
-          <div className="md:hidden">
-            <button
-              className=" text-green-600 hover:text-green-700"
-              onClick={toggleMobileMenu}
-            >
-              <MenuIcon className="h-6 w-6" />
-            </button>
-            {isMobileMenuOpen && (
-              <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white z-10 flex flex-col p-4 items-end">
-                <button
+    <nav className="sticky top-0 z-50 bg-[#f8f8f8] px-4  py-2 lg:text-center">
+      <div className="container mx-auto flex items-center justify-between">
+        <div className="flex items-center space-x-4 ">
+          <a href="/">
+            <img
+              alt="IA Bot Logo"
+              className="h-10 text-black"
+              height="40"
+              src="/assets/img/logo/PNG/iabot-PNG-06.png"
+              style={{
+                aspectRatio: "100/40",
+                objectFit: "cover",
+              }}
+              width="100"
+            ></img>
+          </a>
+        </div>
+        <div className="hidden items-center space-x-4 md:flex">
+          <Link className=" text-green-600 hover:text-green-700" href="/">
+            INICIO
+          </Link>
+          <Link
+            className=" text-green-600 hover:text-green-700"
+            href="/Acerca-de"
+          >
+            ACERCA DE
+          </Link>
+          <Link className=" text-green-600 hover:text-green-700" href="/Cursos">
+            CURSOS
+          </Link>
+          <Link
+            className=" text-green-600 hover:text-green-700"
+            href="/Capacitaciones"
+          >
+            CAPACITACIONES
+          </Link>
+          <Link
+            className=" text-green-600 hover:text-green-700"
+            href="/Contacto"
+          >
+            CONTACTO
+          </Link>
+        </div>
+        <div className="md:hidden">
+          <button
+            className=" text-green-600 hover:text-green-700"
+            onClick={toggleMobileMenu}
+          >
+            <MenuIcon className="h-6 w-6" />
+          </button>
+          {isMobileMenuOpen && (
+            <div className="absolute left-0 top-0 z-10 flex h-screen w-full flex-col items-end bg-white p-4 md:hidden">
+              <button
+                className="mb-4 text-green-600 hover:text-green-700"
+                onClick={closeMobileMenu}
+              >
+                <PanelTopCloseIcon className="h-6 w-6" />
+              </button>
+              <div className="flex flex-col items-end">
+                <div className="mb-4">
+                  <AIChatButton />
+                </div>
+                <Link
                   className="mb-4 text-green-600 hover:text-green-700"
+                  href="/"
                   onClick={closeMobileMenu}
                 >
-                  <PanelTopCloseIcon className="h-6 w-6" />
-                </button>
-                <div className="flex flex-col items-end">
-                  <div className="mb-4">
-                    <AIChatButton />
-                  </div>
-                  <Link
-                    className="mb-4 text-green-600 hover:text-green-700"
-                    href="/"
-                    onClick={closeMobileMenu}
-                  >
-                    INICIO
-                  </Link>
-                  <Link
-                    className="mb-4 text-green-600 hover:text-green-700"
-                    href="/Acerca-de"
-                    onClick={closeMobileMenu}
-                  >
-                    ACERCA DE
-                  </Link>
-                  <Link
-                    className="mb-4 text-green-600 hover:text-green-700"
-                    href="/Cursos"
-                    onClick={closeMobileMenu}
-                  >
-                    CURSOS
-                  </Link>
-                  <Link
-                    className="mb-4 text-green-600 hover:text-green-700"
-                    href="/Capacitaciones"
-                    onClick={closeMobileMenu}
-                  >
-                    CAPACITACIONES
-                  </Link>
-                  <Link
-                    className="mb-4 text-green-600 hover:text-green-700"
-                    href="/Contacto"
-                    onClick={closeMobileMenu}
-                  >
-                    CONTACTO
-                  </Link>
-                </div>
+                  INICIO
+                </Link>
+                <Link
+                  className="mb-4 text-green-600 hover:text-green-700"
+                  href="/Acerca-de"
+                  onClick={closeMobileMenu}
+                >
+                  ACERCA DE
+                </Link>
+                <Link
+                  className="mb-4 text-green-600 hover:text-green-700"
+                  href="/Cursos"
+                  onClick={closeMobileMenu}
+                >
+                  CURSOS
+                </Link>
+                <Link
+                  className="mb-4 text-green-600 hover:text-green-700"
+                  href="/Capacitaciones"
+                  onClick={closeMobileMenu}
+                >
+                  CAPACITACIONES
+                </Link>
+                <Link
+                  className="mb-4 text-green-600 hover:text-green-700"
+                  href="/Contacto"
+                  onClick={closeMobileMenu}
+                >
+                  CONTACTO
+                </Link>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
-      </nav>
+      </div>
+    </nav>
   );
 }
 
