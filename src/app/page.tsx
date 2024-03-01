@@ -71,7 +71,7 @@ export default function Home() {
         <Inscription />
         <Data />
         <Footer />
-        <AIChatButton />
+
       </div>
     </div>
   );
