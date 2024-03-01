@@ -4,6 +4,7 @@ import Inscription from "@/components/Inscription";
 import Data from "@/components/Data";
 import Cursos from "@/components/Cursos";
 import AIChatButton from "@/components/AIChatButton";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,25 +14,19 @@ export default function Home() {
       </header>
 
       <div className="bg-white text-black">
-        <header className="relative text-left py-12 overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            className="absolute inset-0 w-full h-full object-cover transform scale-125 opacity-50"
-          >
-            <source src="assets/video-header.mp4" type="video/mp4" />
-          </video>
-          <div className="flex flex-col relative z-2 items-center">
+        <header className="relative overflow-hidden py-12 text-left bg-gray-200">
+          
+          <div className="z-2 relative flex flex-col items-center">
             <h2 className="text-4xl font-bold">
               <span>BIENVENIDOS A</span>
             </h2>
             <div>
-              <img
-                src="assets/img/logo/PNG/iabot-PNG-06.png"
+              <Image
+                src="/assets/img/logo/PNG/iabot-PNG-06.png"
                 alt="IABOT"
-                style={{ width: '200px', height: 'auto' }}
-              ></img>
+                width="200"
+                height="80"
+              />
             </div>
             <p className="text-xl font-semibold">
               <span>ROBÓTICA EDUCATIVA</span>
@@ -61,7 +56,7 @@ export default function Home() {
           </section>
 
           <section className="py-12">
-            <h2 className="text-4xl font-bold text-center mb-12">
+            <h2 className="mb-12 text-center text-4xl font-bold">
               Recursos Didácticos y Capacitaciones
             </h2>
             <Cursos />
@@ -71,7 +66,6 @@ export default function Home() {
         <Inscription />
         <Data />
         <Footer />
-
       </div>
     </div>
   );

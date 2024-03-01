@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-4 ">
           <a href="/">
-            <img
+            <Image
               alt="IA Bot Logo"
               className="h-10 text-black"
               height="40"
@@ -37,7 +37,7 @@ export default function Navbar() {
                 objectFit: "cover",
               }}
               width="100"
-            ></img>
+            />
           </a>
         </div>
         <div className="hidden items-center space-x-4 md:flex">

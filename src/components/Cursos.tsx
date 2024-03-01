@@ -1,5 +1,6 @@
 import { CardContent, Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const cursos = [
   {
@@ -57,9 +58,11 @@ export default function Cursos() {
         >
           <CardContent className="dark:text-black p-5 space-y-2 flex flex-col justify-between h-full">
             <div>
-              <img
+              <Image
                 src={curso.imgSrc}
                 alt={curso.alt}
+                width="400"
+                height="200"
               />
               <h3 className="font-bold text-lg mt-2">{curso.title}</h3>
               <p className="text-sm mt-4">{curso.requisitos}</p>
