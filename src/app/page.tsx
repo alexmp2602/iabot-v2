@@ -14,8 +14,15 @@ export default function Home() {
       </header>
 
       <div className="bg-white text-black">
-        <header className="relative overflow-hidden py-12 text-left bg-gray-200">
-          
+        <header className="relative overflow-hidden py-12 text-left">
+          <video
+            autoPlay
+            muted
+            loop
+            className="absolute inset-0 h-full w-full scale-125 transform object-cover opacity-50"
+          >
+            <source src="assets/video-header.mp4" type="video/mp4" />
+          </video>
           <div className="z-2 relative flex flex-col items-center">
             <h2 className="text-4xl font-bold">
               <span>BIENVENIDOS A</span>
