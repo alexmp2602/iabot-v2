@@ -10,7 +10,7 @@ export default function Data() {
             <div className="flex flex-col items-center">
               <div className="flex items-center space-x-2 mb-2">
                 <UsersIcon />
-                <h5 className="text-2xl font-bold">+200</h5>
+                <h5 className="text-2xl font-bold">+300</h5>
               </div>
               <p className="text-lg">
                 Alumnos pasaron por nuestros talleres desde nuestros comienzos
