@@ -1,4 +1,8 @@
-export default function InstagramIcon() {
+import React from 'react';
+
+interface SvgProps extends React.SVGProps<SVGSVGElement> {}
+
+export default function InstagramIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,11 +10,12 @@ export default function InstagramIcon() {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      stroke-width="2"
+      strokeWidth="2" // Cambia a strokeWidth (camelCase)
       stroke="currentColor"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round" // Cambia a strokeLinecap (camelCase)
+      strokeLinejoin="round" // Cambia a strokeLinejoin (camelCase)
+      {...props} // Pasa todas las props al elemento SVG
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />

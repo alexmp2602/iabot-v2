@@ -8,13 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#78eb2c", // Color principal
+        secondary: "#32cddb", // Color secundario
+        text: "#000000", // Color del texto
+        background: "#f9f9f9", // Color de fondo
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "custom-radial": "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0))",
+      },
+      fontFamily: {
+        bruno: ['Bruno Ace', 'sans-serif'],
+        avenir: ['Avenir LT Std', 'sans-serif'],
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 };
+
 export default config;

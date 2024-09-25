@@ -1,46 +1,60 @@
 import InstagramIcon from "./icons/Instagram";
 import FacebookIcon from "./icons/Facebook";
 import WhatsappIcon from "./icons/Whatsapp";
+import LinkedInIcon from "./icons/LinkedIn";
 
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/iabot.robotica/",
+    Icon: FacebookIcon,
+    label: "Facebook",
+  },
+  {
+    href: "https://www.instagram.com/iabot.robotica/",
+    Icon: InstagramIcon,
+    label: "Instagram",
+  },
+  {
+    href: "https://www.linkedin.com/company/iabot-robotica/",
+    Icon: LinkedInIcon,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1s?%20%F0%9F%98%8A%20Estamos%20interesados%20en%20inscribir%20a%20nuestros%20hijos%20en%20los%20talleres%20de%20rob%C3%B3tica.%20%C2%BFPodr%C3%ADas%20proporcionarnos%20informaci%C3%B3n%20sobre%20los%20cupos%20disponibles?%20%C2%A1Agradecemos%20su%20ayuda!",
+    Icon: WhatsappIcon,
+    label: "WhatsApp",
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="text-black bg-[#333333] dark:bg-[#333333] dark:text-white py-6">
+    <footer className="bg-[#333333] py-6 text-white">
       <div className="container mx-auto px-4 text-center">
-        <div className="flex justify-center space-x-4 mb-4">
-          <a
-            className="hover:text-[#4CAF50]"
-            href="https://www.facebook.com/iabot.robotica/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FacebookIcon />
-          </a>
-          <a
-            className="hover:text-[#4CAF50]"
-            href="https://www.instagram.com/iabot.robotica/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon />
-          </a>
-          <a
-            className="hover:text-[#4CAF50]"
-            href="https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1s?%20%F0%9F%98%8A%20Estamos%20interesados%20en%20inscribir%20a%20nuestros%20hijos%20en%20los%20talleres%20de%20rob%C3%B3tica.%20%C2%BFPodr%C3%ADas%20proporcionarnos%20informaci%C3%B3n%20sobre%20los%20cupos%20disponibles?%20%C2%A1Agradecemos%20su%20ayuda!"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <WhatsappIcon />
-          </a>
+        {/* Sección de Redes Sociales */}
+        <div className="mb-4 flex justify-center space-x-6">
+          {socialLinks.map(({ href, Icon, label }) => (
+            <a
+              key={href}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="transition-colors duration-300 hover:text-[#78eb2c]"
+            >
+              <Icon className="h-6 w-6" aria-hidden="true" />
+            </a>
+          ))}
         </div>
+        
+        {/* Dirección */}
         <a
-          className="hover:text-[#4CAF50]"
-          href="https://www.google.com.ar/maps/place/C.+21+336,+Mercedes,+Provincia+de+Buenos+Aires/@-34.6550336,-59.4293762,586m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bc730b045eab23:0xda1891be9a9ab566!8m2!3d-34.6550336!4d-59.4293762!16s%2Fg%2F11h7s0b1vd?entry=ttu"
+          href="https://www.google.com.ar/maps/place/C.+9+374,+Mercedes,+Provincia+de+Buenos+Aires/@-34.6555113,-59.4235156,19z/data=!3m1!4b1!4m6!3m5!1s0x95bc73a126fdd949:0xfd5456eb2b3bd4f7!8m2!3d-34.6555124!4d-59.4228719!16s%2Fg%2F11gbl3jz4b?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Dirección de Iabot"
+          className="text-white transition-colors duration-300 hover:text-[#78eb2c]"
         >
-          Estamos en C 21 N 336, Mercedes, Provincia de Buenos Aires
+          Estamos en C. 9 N 374, Mercedes, Provincia de Buenos Aires
         </a>
       </div>
     </footer>

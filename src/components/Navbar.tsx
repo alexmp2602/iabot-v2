@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
-import { useState } from "react";
-import AIChatButton from "./AIChatButton";
+import { useState, useEffect } from "react";
 
 interface SvgProps {
   className?: string;
@@ -22,99 +20,88 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  // Deshabilitar scroll al abrir el menú móvil
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isMobileMenuOpen]);
+
+  const linkClass = "mb-4 text-green-600 hover:text-green-700 transition-colors duration-300";
+
   return (
-    <nav className="sticky top-0 z-50 bg-[#f8f8f8] px-4  py-2 lg:text-center">
+    <nav className="sticky top-0 z-50 bg-[#f8f8f8] px-4 py-2 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-4 ">
-          <a href="/">
-            <Image
-              alt="IA Bot Logo"
-              className="h-10 text-black"
-              height="40"
-              src="/assets/img/logo/PNG/iabot-PNG-06.png"
-              style={{
-                aspectRatio: "100/40",
-                objectFit: "cover",
-              }}
-              width="100"
-            />
-          </a>
-        </div>
-        <div className="hidden items-center space-x-4 md:flex">
-          <Link className=" text-green-600 hover:text-green-700" href="/">
+        {/* Logo */}
+        <Link href="/" aria-label="Ir a inicio" className="flex items-center space-x-4">
+          <Image
+            alt="IA Bot Logo"
+            src="/assets/img/logo/PNG/iabot-PNG-06.png"
+            width={100}
+            height={40}
+            priority={true}
+            className="h-10 object-cover"
+            style={{ aspectRatio: "100/40" }}
+          />
+        </Link>
+
+        {/* Links del menú en versión de escritorio */}
+        <div className="hidden md:flex md:items-center md:space-x-4">
+          <Link className={linkClass} href="/" aria-label="Ir a inicio">
             INICIO
           </Link>
-          <Link
-            className=" text-green-600 hover:text-green-700"
-            href="/Acerca-de"
-          >
+          <Link className={linkClass} href="/Acerca-de" aria-label="Ir a Acerca de">
             ACERCA DE
           </Link>
-          <Link className=" text-green-600 hover:text-green-700" href="/Cursos">
+          <Link className={linkClass} href="/Cursos" aria-label="Ir a Cursos">
             CURSOS
           </Link>
-          <Link
-            className=" text-green-600 hover:text-green-700"
-            href="/Capacitaciones"
-          >
+          <Link className={linkClass} href="/Capacitaciones" aria-label="Ir a Capacitaciones">
             CAPACITACIONES
           </Link>
-          <Link
-            className=" text-green-600 hover:text-green-700"
-            href="/Contacto"
-          >
+          <Link className={linkClass} href="/Contacto" aria-label="Ir a Contacto">
             CONTACTO
           </Link>
         </div>
+
+        {/* Menú móvil */}
         <div className="md:hidden">
           <button
-            className=" text-green-600 hover:text-green-700"
+            className="text-green-600 hover:text-green-700 transition-transform duration-300"
             onClick={toggleMobileMenu}
+            aria-label="Abrir menú"
+            aria-expanded={isMobileMenuOpen}
           >
             <MenuIcon className="h-6 w-6" />
           </button>
+
           {isMobileMenuOpen && (
-            <div className="absolute left-0 top-0 z-10 flex h-screen w-full flex-col items-end bg-white p-4 md:hidden">
-              <button
-                className="mb-4 text-green-600 hover:text-green-700"
-                onClick={closeMobileMenu}
-              >
-                <PanelTopCloseIcon className="h-6 w-6" />
-              </button>
-              <div className="flex flex-col items-end">
-                <Link
+            <div className="absolute right-0 top-0 z-10 h-screen w-full bg-white p-4 transition-transform duration-300">
+              <div className="flex justify-end">
+                <button
                   className="mb-4 text-green-600 hover:text-green-700"
-                  href="/"
                   onClick={closeMobileMenu}
+                  aria-label="Cerrar menú"
                 >
+                  <PanelTopCloseIcon className="h-6 w-6" />
+                </button>
+              </div>
+              <div className="flex flex-col items-end">
+                <Link className={linkClass} href="/" onClick={closeMobileMenu} aria-label="Ir a inicio">
                   INICIO
                 </Link>
-                <Link
-                  className="mb-4 text-green-600 hover:text-green-700"
-                  href="/Acerca-de"
-                  onClick={closeMobileMenu}
-                >
+                <Link className={linkClass} href="/Acerca-de" onClick={closeMobileMenu} aria-label="Ir a Acerca de">
                   ACERCA DE
                 </Link>
-                <Link
-                  className="mb-4 text-green-600 hover:text-green-700"
-                  href="/Cursos"
-                  onClick={closeMobileMenu}
-                >
+                <Link className={linkClass} href="/Cursos" onClick={closeMobileMenu} aria-label="Ir a Cursos">
                   CURSOS
                 </Link>
-                <Link
-                  className="mb-4 text-green-600 hover:text-green-700"
-                  href="/Capacitaciones"
-                  onClick={closeMobileMenu}
-                >
+                <Link className={linkClass} href="/Capacitaciones" onClick={closeMobileMenu} aria-label="Ir a Capacitaciones">
                   CAPACITACIONES
                 </Link>
-                <Link
-                  className="mb-4 text-green-600 hover:text-green-700"
-                  href="/Contacto"
-                  onClick={closeMobileMenu}
-                >
+                <Link className={linkClass} href="/Contacto" onClick={closeMobileMenu} aria-label="Ir a Contacto">
                   CONTACTO
                 </Link>
               </div>
@@ -161,9 +148,8 @@ function PanelTopCloseIcon(props: SvgProps) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-      <line x1="3" x2="21" y1="9" y2="9" />
-      <path d="m9 16 3-3 3 3" />
+      <line x1="18" x2="6" y1="6" y2="18" />
+      <line x1="6" x2="18" y1="6" y2="18" />
     </svg>
   );
 }
