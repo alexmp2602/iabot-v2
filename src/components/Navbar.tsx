@@ -3,10 +3,52 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 interface SvgProps {
   className?: string;
   style?: React.CSSProperties;
+}
+
+function MenuIcon(props: SvgProps) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </svg>
+  );
+}
+
+function PanelTopCloseIcon(props: SvgProps) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="18" x2="6" y1="6" y2="18" />
+      <line x1="6" x2="18" y1="6" y2="18" />
+    </svg>
+  );
 }
 
 export default function Navbar() {
@@ -29,7 +71,7 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen]);
 
-  const linkClass = "mb-4 text-green-600 hover:text-green-700 transition-colors duration-300";
+  const linkClass = "text-green-600 hover:text-green-700 transition-colors duration-300";
 
   return (
     <nav className="sticky top-0 z-50 bg-[#f8f8f8] px-4 py-2 shadow-md">
@@ -76,7 +118,6 @@ export default function Navbar() {
           >
             <MenuIcon className="h-6 w-6" />
           </button>
-
           {isMobileMenuOpen && (
             <div className="absolute right-0 top-0 z-10 h-screen w-full bg-white p-4 transition-transform duration-300">
               <div className="flex justify-end">
@@ -110,46 +151,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  );
-}
-
-function MenuIcon(props: SvgProps) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  );
-}
-
-function PanelTopCloseIcon(props: SvgProps) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="18" x2="6" y1="6" y2="18" />
-      <line x1="6" x2="18" y1="6" y2="18" />
-    </svg>
   );
 }

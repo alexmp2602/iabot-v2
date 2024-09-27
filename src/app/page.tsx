@@ -10,6 +10,7 @@ import Cursos from "@/components/Cursos";
 import Image from "next/image";
 
 export default function Home() {
+  console.log("Página de inicio montada");
   return (
     <div className="bg-custom-radial text-text relative">
       <header className="sticky top-0 z-20 bg-white shadow">
@@ -97,7 +98,6 @@ export default function Home() {
                     width="100%"
                     height="100%"
                     style={{ position: "absolute", top: 0, left: 0, border: "none", objectFit: 'contain' }}
-                    scrolling="no"
                     allow="encrypted-media"
                     title={`Reel ${index + 1}`}
                     className="rounded-lg shadow-md"
