@@ -105,21 +105,3 @@ export default function Component() {
     </div>
   );
 }
-
-// SEO Metadata
-export function Head() {
-  return (
-    <>
-      <title>Nuestros Cursos - IABOT</title>
-      <meta
-        name="description"
-        content="Descubre nuestros cursos de robótica, programación y STEM para todas las edades."
-      />
-      <meta
-        name="keywords"
-        content="cursos, robótica, programación, STEM, educación"
-      />
-      <link rel="canonical" href="https://www.tusitio.com/cursos" />
-    </>
-  );
-}

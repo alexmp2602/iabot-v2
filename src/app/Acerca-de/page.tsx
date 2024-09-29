@@ -3,6 +3,7 @@ import HeartIcon from "@/components/icons/Heart";
 import LightbulbIcon from "@/components/icons/Lightbulb";
 import SmileIcon from "@/components/icons/Smile";
 import StarIcon from "@/components/icons/Star";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -22,51 +23,44 @@ export default function About() {
               Nuestra Misión y Valores
             </h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="flex flex-col items-center text-center">
-                <LightbulbIcon aria-label="Innovación" />
-                <h3 className="mb-4 font-bruno text-2xl font-semibold">
-                  Innovación
-                </h3>
-                <p className="lg:pb-12">
-                  Nos mantenemos al día en las últimas tendencias y tecnologías
-                  de la robótica para ofrecer a nuestros estudiantes una
-                  educación de calidad en esta disciplina en constante
-                  evolución.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <HeartIcon aria-label="Pasión" />
-                <h3 className="mb-4 font-bruno text-2xl font-semibold">
-                  Pasión
-                </h3>
-                <p className="lg:pb-12">
-                  Transmitimos nuestra pasión por la robótica y la educación,
-                  motivando a nuestros estudiantes y fomentando su interés en
-                  ciencia y tecnología.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <StarIcon aria-label="Excelencia" />
-                <h3 className="mb-4 font-bruno text-2xl font-semibold">
-                  Excelencia
-                </h3>
-                <p className="lg:pb-12">
-                  Nos dedicamos a brindar un servicio excepcional, cuidando cada
-                  detalle, desde el diseño del curso hasta la atención a
-                  nuestros estudiantes y sus familias.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <SmileIcon aria-label="Diversión" />
-                <h3 className="mb-4 font-bruno text-2xl font-semibold">
-                  Diversión
-                </h3>
-                <p className="lg:pb-12">
-                  Creamos un ambiente de enseñanza amigable y relajado, donde
-                  los estudiantes se sienten cómodos y disfrutan de un
-                  aprendizaje divertido.
-                </p>
-              </div>
+              {/* Misión y valores */}
+              {[
+                {
+                  icon: <LightbulbIcon aria-label="Innovación" />,
+                  title: "Innovación",
+                  description:
+                    "Nos mantenemos al día en las últimas tendencias y tecnologías de la robótica para ofrecer a nuestros estudiantes una educación de calidad en esta disciplina en constante evolución.",
+                },
+                {
+                  icon: <HeartIcon aria-label="Pasión" />,
+                  title: "Pasión",
+                  description:
+                    "Transmitimos nuestra pasión por la robótica y la educación, motivando a nuestros estudiantes y fomentando su interés en ciencia y tecnología.",
+                },
+                {
+                  icon: <StarIcon aria-label="Excelencia" />,
+                  title: "Excelencia",
+                  description:
+                    "Nos dedicamos a brindar un servicio excepcional, cuidando cada detalle, desde el diseño del curso hasta la atención a nuestros estudiantes y sus familias.",
+                },
+                {
+                  icon: <SmileIcon aria-label="Diversión" />,
+                  title: "Diversión",
+                  description:
+                    "Creamos un ambiente de enseñanza amigable y relajado, donde los estudiantes se sienten cómodos y disfrutan de un aprendizaje divertido.",
+                },
+              ].map((value, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center"
+                >
+                  {value.icon}
+                  <h3 className="mb-4 font-bruno text-2xl font-semibold">
+                    {value.title}
+                  </h3>
+                  <p className="lg:pb-12">{value.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -110,10 +104,10 @@ export default function About() {
                   key={member.name}
                 >
                   <CardContent>
-                    <img
+                    <Image
                       alt={member.name}
                       className="mx-auto h-48 w-48 rounded-full object-cover"
-                      height="200"
+                      height={200}
                       loading="lazy"
                       src={member.image}
                       style={{
@@ -121,7 +115,7 @@ export default function About() {
                         objectFit: "cover",
                         backgroundColor: "white",
                       }}
-                      width="200"
+                      width={200}
                     />
                     <h3 className="mt-4 text-center text-lg font-medium leading-6 text-gray-900">
                       {member.name}
@@ -145,7 +139,7 @@ export default function About() {
               {[
                 {
                   quote:
-                    "las clases de robótica son espectaculares! Mi hijo empezó con 5 años. Es la única actividad de la semana que Espera con tanto entusiasmo! El profe es una masa, todas las clases vuelve con nuevas ideas, feliz de participar. Recomiendo! 👏",
+                    "Las clases de robótica son espectaculares! Mi hijo empezó con 5 años. Es la única actividad de la semana que espera con tanto entusiasmo! El profe es una masa, todas las clases vuelve con nuevas ideas, feliz de participar. Recomiendo! 👏",
                   author: "Sara, Madre de Estudiante",
                 },
                 {
@@ -159,7 +153,7 @@ export default function About() {
                   className="rounded-lg border bg-[#E8F5E9] p-6 dark:bg-[#E8F5E9]"
                 >
                   <p className="text-lg italic text-gray-700">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
                   <p className="mt-4 text-right text-sm font-semibold text-gray-900">
                     - {testimonial.author}
