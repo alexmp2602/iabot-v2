@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#78eb2c", // Color principal
+        "text-primary": "#78eb2c", // Color del texto principal
         secondary: "#32cddb", // Color secundario
         text: "#000000", // Color del texto
         background: "#f9f9f9", // Color de fondo

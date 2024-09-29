@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 
 export default function Inscripcion() {
   return (
-    <div className="bg-white text-black">
+    <div className="bg-custom-radial text-black">
       <header className="text-center py-20 bg-verde-iabot">
         <h2 className="text-4xl font-bold mb-4">INSCRIPCIONES</h2>
         <p className="text-xl font-semibold">

@@ -62,7 +62,6 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   };
 
-  // Deshabilitar scroll al abrir el menú móvil
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -71,7 +70,7 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen]);
 
-  const linkClass = "text-green-600 hover:text-green-700 transition-colors duration-300";
+  const linkClass = "text-green-600 hover:text-green-700 transition-colors duration-300 py-2";
 
   return (
     <nav className="sticky top-0 z-50 bg-[#f8f8f8] px-4 py-2 shadow-md">
@@ -91,27 +90,17 @@ export default function Navbar() {
 
         {/* Links del menú en versión de escritorio */}
         <div className="hidden md:flex md:items-center md:space-x-4">
-          <Link className={linkClass} href="/" aria-label="Ir a inicio">
-            INICIO
-          </Link>
-          <Link className={linkClass} href="/Acerca-de" aria-label="Ir a Acerca de">
-            ACERCA DE
-          </Link>
-          <Link className={linkClass} href="/Cursos" aria-label="Ir a Cursos">
-            CURSOS
-          </Link>
-          <Link className={linkClass} href="/Capacitaciones" aria-label="Ir a Capacitaciones">
-            CAPACITACIONES
-          </Link>
-          <Link className={linkClass} href="/Contacto" aria-label="Ir a Contacto">
-            CONTACTO
-          </Link>
+          <Link className={linkClass} href="/" aria-label="Ir a inicio">INICIO</Link>
+          <Link className={linkClass} href="/Acerca-de" aria-label="Ir a Acerca de">ACERCA DE</Link>
+          <Link className={linkClass} href="/Cursos" aria-label="Ir a Cursos">CURSOS</Link>
+          <Link className={linkClass} href="/Capacitaciones" aria-label="Ir a Capacitaciones">CAPACITACIONES</Link>
+          <Link className={linkClass} href="/Contacto" aria-label="Ir a Contacto">CONTACTO</Link>
         </div>
 
         {/* Menú móvil */}
         <div className="md:hidden">
           <button
-            className="text-green-600 hover:text-green-700 transition-transform duration-300"
+            className="text-primary hover:text-secondary transition-transform duration-300"
             onClick={toggleMobileMenu}
             aria-label="Abrir menú"
             aria-expanded={isMobileMenuOpen}
@@ -119,7 +108,7 @@ export default function Navbar() {
             <MenuIcon className="h-6 w-6" />
           </button>
           {isMobileMenuOpen && (
-            <div className="absolute right-0 top-0 z-10 h-screen w-full bg-white p-4 transition-transform duration-300">
+            <div className="absolute right-0 top-0 z-10 h-screen w-full bg-white p-4 transition-transform duration-300 shadow-lg">
               <div className="flex justify-end">
                 <button
                   className="mb-4 text-green-600 hover:text-green-700"
@@ -129,22 +118,12 @@ export default function Navbar() {
                   <PanelTopCloseIcon className="h-6 w-6" />
                 </button>
               </div>
-              <div className="flex flex-col items-end">
-                <Link className={linkClass} href="/" onClick={closeMobileMenu} aria-label="Ir a inicio">
-                  INICIO
-                </Link>
-                <Link className={linkClass} href="/Acerca-de" onClick={closeMobileMenu} aria-label="Ir a Acerca de">
-                  ACERCA DE
-                </Link>
-                <Link className={linkClass} href="/Cursos" onClick={closeMobileMenu} aria-label="Ir a Cursos">
-                  CURSOS
-                </Link>
-                <Link className={linkClass} href="/Capacitaciones" onClick={closeMobileMenu} aria-label="Ir a Capacitaciones">
-                  CAPACITACIONES
-                </Link>
-                <Link className={linkClass} href="/Contacto" onClick={closeMobileMenu} aria-label="Ir a Contacto">
-                  CONTACTO
-                </Link>
+              <div className="flex flex-col items-end space-y-4">
+                <Link className={linkClass} href="/" onClick={closeMobileMenu} aria-label="Ir a inicio">INICIO</Link>
+                <Link className={linkClass} href="/Acerca-de" onClick={closeMobileMenu} aria-label="Ir a Acerca de">ACERCA DE</Link>
+                <Link className={linkClass} href="/Cursos" onClick={closeMobileMenu} aria-label="Ir a Cursos">CURSOS</Link>
+                <Link className={linkClass} href="/Capacitaciones" onClick={closeMobileMenu} aria-label="Ir a Capacitaciones">CAPACITACIONES</Link>
+                <Link className={linkClass} href="/Contacto" onClick={closeMobileMenu} aria-label="Ir a Contacto">CONTACTO</Link>
               </div>
             </div>
           )}

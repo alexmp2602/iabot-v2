@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 interface SmileIconProps {
-  className?: string; // Define el tipo para className como una cadena opcional
+  className?: string;
 }
 
 const SmileIcon: React.FC<SmileIconProps> = ({ className }) => {
@@ -16,7 +16,7 @@ const SmileIcon: React.FC<SmileIconProps> = ({ className }) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`text-green-600 mb-4 h-12 w-12 ${className}`} // Usa className para personalización
+      className={`mb-4 h-12 w-12 text-primary ${className}`}
     >
       <circle cx="12" cy="12" r="10" />
       <path d="M8 14s1.5 2 4 2 4-2 4-2" />

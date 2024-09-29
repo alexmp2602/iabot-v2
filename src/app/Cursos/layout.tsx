@@ -8,7 +8,14 @@ import Data from "@/components/Data";
 export const metadata = {
   title: "IABOT - Cursos",
   description:
-    "IABOT es una empresa dedicada a la robótica educativa y a la capacitación de docente",
+    "Descubre nuestros cursos de robótica educativa en IABOT, diseñados para capacitar docentes y estudiantes con las últimas tecnologías.",
+  keywords: "cursos, robótica educativa, capacitación docente, IABOT",
+  authors: "IABOT Team",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: "1",
 };
 
 export default function RootLayout({
