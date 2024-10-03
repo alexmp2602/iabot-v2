@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
 const config: Config = {
   content: [
@@ -16,11 +18,12 @@ const config: Config = {
         background: "#f9f9f9", // Color de fondo
       },
       backgroundImage: {
-        "custom-radial": "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0))",
+        "custom-radial":
+          "radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0))",
       },
       fontFamily: {
-        bruno: ['"Bruno Ace"', 'sans-serif'],
-        avenir: ['Avenir LT Std', 'sans-serif'],
+        bruno: ['"Bruno Ace"', "sans-serif"],
+        avenir: ["Avenir LT Std", "sans-serif"],
       },
     },
   },
