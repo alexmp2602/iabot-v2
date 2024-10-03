@@ -1,10 +1,20 @@
+"use client";
+
 import { CardContent, Card } from "@/components/ui/card";
+import { useEffect } from "react";
 
 export default function Capacitaciones() {
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+  }, []);
   return (
     <div className="bg-custom-radial text-black">
       <header className="text-dark bg-primary px-4 py-20 text-center">
-        <h2 className="mb-4 font-bruno text-4xl font-bold">CAPACITACIONES</h2>
+        <h2 className="mb-4 font-bruno text-3xl font-bold">CAPACITACIONES</h2>
         <p className="text-xl font-semibold">
           Transforma la educación con nuestro servicio de asesoramiento y
           capacitación en robótica educativa.
@@ -24,7 +34,7 @@ export default function Capacitaciones() {
         </section>
 
         <section className="py-12 pb-4">
-          <h2 className="mb-12 text-center font-bruno text-4xl font-bold">
+          <h2 className="mb-12 px-4 text-center font-bruno text-4xl font-bold">
             Nuestros Servicios
           </h2>
           <div className="grid grid-cols-1 gap-6 px-8 md:grid-cols-2 lg:grid-cols-4">

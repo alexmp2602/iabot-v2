@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { cn } from "@/lib/utils";
 
 interface SvgProps {
   className?: string;
@@ -70,37 +69,63 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen]);
 
-  const linkClass = "text-green-600 hover:text-green-700 transition-colors duration-300 py-2";
+  const linkClass =
+    "text-green-600 transition-colors duration-300 py-2 hover:text-green-700";
 
   return (
     <nav className="sticky top-0 z-50 bg-[#f8f8f8] px-4 py-2 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" aria-label="Ir a inicio" className="flex items-center space-x-4">
+        <Link
+          href="/"
+          aria-label="Ir a inicio"
+          className="flex items-center space-x-4"
+        >
           <Image
             alt="IA Bot Logo"
             src="/assets/img/logo/PNG/iabot-PNG-06.png"
             width={100}
             height={40}
             priority={true}
-            className="h-10 object-cover"
-            style={{ aspectRatio: "100/40" }}
+            className="object-cover"
           />
         </Link>
 
         {/* Links del menú en versión de escritorio */}
         <div className="hidden md:flex md:items-center md:space-x-4">
-          <Link className={linkClass} href="/" aria-label="Ir a inicio">INICIO</Link>
-          <Link className={linkClass} href="/Acerca-de" aria-label="Ir a Acerca de">ACERCA DE</Link>
-          <Link className={linkClass} href="/Cursos" aria-label="Ir a Cursos">CURSOS</Link>
-          <Link className={linkClass} href="/Capacitaciones" aria-label="Ir a Capacitaciones">CAPACITACIONES</Link>
-          <Link className={linkClass} href="/Contacto" aria-label="Ir a Contacto">CONTACTO</Link>
+          <Link className={linkClass} href="/" aria-label="Ir a inicio">
+            INICIO
+          </Link>
+          <Link
+            className={linkClass}
+            href="/Acerca-de"
+            aria-label="Ir a Acerca de"
+          >
+            ACERCA DE
+          </Link>
+          <Link className={linkClass} href="/Cursos" aria-label="Ir a Cursos">
+            CURSOS
+          </Link>
+          <Link
+            className={linkClass}
+            href="/Capacitaciones"
+            aria-label="Ir a Capacitaciones"
+          >
+            CAPACITACIONES
+          </Link>
+          <Link
+            className={linkClass}
+            href="/Contacto"
+            aria-label="Ir a Contacto"
+          >
+            CONTACTO
+          </Link>
         </div>
 
         {/* Menú móvil */}
         <div className="md:hidden">
           <button
-            className="text-primary hover:text-secondary transition-transform duration-300"
+            className="text-primary transition-transform duration-300 hover:text-secondary"
             onClick={toggleMobileMenu}
             aria-label="Abrir menú"
             aria-expanded={isMobileMenuOpen}
@@ -108,7 +133,7 @@ export default function Navbar() {
             <MenuIcon className="h-6 w-6" />
           </button>
           {isMobileMenuOpen && (
-            <div className="absolute right-0 top-0 z-10 h-screen w-full bg-white p-4 transition-transform duration-300 shadow-lg">
+            <div className="absolute right-0 top-0 z-10 h-screen w-full bg-white p-4 shadow-lg transition-transform duration-300">
               <div className="flex justify-end">
                 <button
                   className="mb-4 text-green-600 hover:text-green-700"
@@ -119,11 +144,46 @@ export default function Navbar() {
                 </button>
               </div>
               <div className="flex flex-col items-end space-y-4">
-                <Link className={linkClass} href="/" onClick={closeMobileMenu} aria-label="Ir a inicio">INICIO</Link>
-                <Link className={linkClass} href="/Acerca-de" onClick={closeMobileMenu} aria-label="Ir a Acerca de">ACERCA DE</Link>
-                <Link className={linkClass} href="/Cursos" onClick={closeMobileMenu} aria-label="Ir a Cursos">CURSOS</Link>
-                <Link className={linkClass} href="/Capacitaciones" onClick={closeMobileMenu} aria-label="Ir a Capacitaciones">CAPACITACIONES</Link>
-                <Link className={linkClass} href="/Contacto" onClick={closeMobileMenu} aria-label="Ir a Contacto">CONTACTO</Link>
+                <Link
+                  className={linkClass}
+                  href="/"
+                  onClick={closeMobileMenu}
+                  aria-label="Ir a inicio"
+                >
+                  INICIO
+                </Link>
+                <Link
+                  className={linkClass}
+                  href="/Acerca-de"
+                  onClick={closeMobileMenu}
+                  aria-label="Ir a Acerca de"
+                >
+                  ACERCA DE
+                </Link>
+                <Link
+                  className={linkClass}
+                  href="/Cursos"
+                  onClick={closeMobileMenu}
+                  aria-label="Ir a Cursos"
+                >
+                  CURSOS
+                </Link>
+                <Link
+                  className={linkClass}
+                  href="/Capacitaciones"
+                  onClick={closeMobileMenu}
+                  aria-label="Ir a Capacitaciones"
+                >
+                  CAPACITACIONES
+                </Link>
+                <Link
+                  className={linkClass}
+                  href="/Contacto"
+                  onClick={closeMobileMenu}
+                  aria-label="Ir a Contacto"
+                >
+                  CONTACTO
+                </Link>
               </div>
             </div>
           )}

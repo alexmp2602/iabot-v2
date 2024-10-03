@@ -1,27 +1,28 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import { Button } from "@/components/ui/button";
-import ArrowRightIcon from "@/components/icons/Arrow";
-import Inscription from "@/components/Inscription";
-import Data from "@/components/Data";
+import { useEffect } from "react";
 import Cursos from "@/components/Cursos";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "lucide-react";
 
 export default function Home() {
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+  }, []);
   return (
-    <div className="relative bg-custom-radial text-text">
-      <header className="sticky top-0 z-20 bg-white shadow">
-        <Navbar />
-      </header>
-
+    <>
       {/* Video de Presentación */}
       <section className="relative flex items-center justify-center overflow-hidden pb-8 pt-16 text-left">
         <video
           autoPlay
           muted
           loop
+          preload="auto"
           className="absolute inset-0 h-auto max-h-[60vh] w-full scale-125 transform object-cover opacity-50"
         >
           <source src="assets/video-header.mp4" type="video/mp4" />
@@ -33,9 +34,9 @@ export default function Home() {
           </h2>
           <Image
             src="/assets/img/logo/PNG/iabot-PNG-06.png"
-            alt="IABOT"
-            width="200"
-            height="80"
+            alt="Logo de IABOT - Robótica Educativa"
+            width={200}
+            height={200}
             className="my-2"
           />
         </div>
@@ -68,7 +69,7 @@ export default function Home() {
                   href="https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Formulario de inscripción"
+                  aria-label="Formulario de inscripción para los cursos de robótica"
                 >
                   <Button className="text-dark flex transform items-center justify-center bg-[#78eb2c] text-lg font-bold shadow-md transition-transform duration-500 ease-in-out hover:scale-105 hover:bg-[#32cddb] hover:shadow-lg dark:bg-[#78eb2c] dark:hover:bg-[#32cddb]">
                     INSCRIBETE
@@ -126,10 +127,6 @@ export default function Home() {
           <Cursos />
         </section>
       </main>
-
-      <Inscription />
-      <Data />
-      <Footer />
-    </div>
+    </>
   );
 }

@@ -7,8 +7,8 @@ export default function Inscription() {
       <div className="container mx-auto max-w-2xl text-center">
         {/* Título */}
         <h2 className="mb-8 text-2xl font-bold">
-          ¡Descubre los cupos disponibles y regístrate en nuestro formulario de
-          inscripción! ¡No te pierdas esta gran oportunidad!
+          ¡Consulta los cupos disponibles y completa nuestro formulario de
+          inscripción! ¡No dejes pasar esta oportunidad!
         </h2>
 
         {/* Botón de Inscripción */}
@@ -19,8 +19,8 @@ export default function Inscription() {
             rel="noopener noreferrer"
             aria-label="Formulario de inscripción"
           >
-            <Button className="flex items-center justify-center transform dark:bg-[#78eb2c] bg-[#78eb2c] text-lg font-bold text-white shadow-md transition-transform duration-300 hover:scale-105 hover:bg-[#32cddb] dark:hover:bg-[#32cddb] hover:shadow-lg">
-              INSCRÍBETE
+            <Button className="flex transform items-center justify-center bg-[#78eb2c] text-lg font-bold text-white shadow-md transition-transform duration-300 hover:scale-105 hover:bg-[#32cddb] hover:shadow-lg dark:bg-[#78eb2c] dark:hover:bg-[#32cddb]">
+              INSCRIBETE
               <ArrowRightIcon className="ml-2 h-6 w-6" aria-hidden="true" />
             </Button>
           </a>

@@ -2,6 +2,7 @@
 
 import Cursos from "@/components/Cursos";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const faqs = [
   {
@@ -49,6 +50,13 @@ const faqs = [
 ];
 
 export default function Component() {
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+  }, []);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -58,7 +66,7 @@ export default function Component() {
   return (
     <div className="bg-custom-radial text-black">
       <header className="text-dark bg-primary px-4 py-20 text-center">
-        <h2 className="mb-4 font-bruno text-4xl font-bold">NUESTROS CURSOS</h2>
+        <h2 className="mb-4 font-bruno text-3xl font-bold">NUESTROS CURSOS</h2>
         <p className="font-bruno text-xl font-semibold">
           Explora nuestros cursos y encuentra el que más te interesa
         </p>
@@ -68,7 +76,7 @@ export default function Component() {
           <h2 className="mb-8 text-center font-bruno text-3xl font-extrabold text-secondary">
             Descubre Nuestros Cursos
           </h2>
-          <p className="mb-12 text-center text-gray-500">
+          <p className="mb-12  text-center text-gray-500">
             Cada uno de nuestros cursos está diseñado para brindar la mejor
             experiencia de aprendizaje, adaptándose a las necesidades y niveles
             de cada estudiante.

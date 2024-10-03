@@ -1,15 +1,25 @@
+"use client";
+
 import { CardContent, Card } from "@/components/ui/card";
 import HeartIcon from "@/components/icons/Heart";
 import LightbulbIcon from "@/components/icons/Lightbulb";
 import SmileIcon from "@/components/icons/Smile";
 import StarIcon from "@/components/icons/Star";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+  }, []);
   return (
     <div className="bg-custom-radial text-black">
       <header className="text-dark bg-primary py-16 text-center">
-        <h2 className="mb-4 font-bruno text-4xl font-bold">ACERCA DE</h2>
+        <h2 className="mb-4 font-bruno text-3xl font-bold">ACERCA DE</h2>
         <h1 className="mb-4 font-bruno text-6xl font-bold">IABOT</h1>
         <p className="font-bruno text-xl font-semibold">
           CONOCE MÁS SOBRE NOSOTROS

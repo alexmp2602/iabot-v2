@@ -20,7 +20,7 @@ const socialLinks = [
     label: "LinkedIn",
   },
   {
-    href: "https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1s?%20%F0%9F%98%8A%20Estamos%20interesados%20en%20inscribir%20a%20nuestros%20hijos%20en%20los%20talleres%20de%20rob%C3%B3tica.%20%C2%BFPodr%C3%ADas%20proporcionarnos%20informaci%C3%B3n%20sobre%20los%20cupos%20disponibles?%20%C2%A1Agradecemos%20su%20ayuda!",
+    href: "https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20quiero%20consultar%20sobre%20los%20talleres%20de%20robótica%20para%20nuestros%20hijos.%20¿Podrías%20informarnos%20sobre%20los%20cupos%20disponibles?%20¡Gracias!",
     Icon: WhatsappIcon,
     label: "WhatsApp",
   },
@@ -45,7 +45,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        
+
         {/* Dirección */}
         <a
           href="https://www.google.com.ar/maps/place/C.+9+374,+Mercedes,+Provincia+de+Buenos+Aires/@-34.6555113,-59.4235156,19z/data=!3m1!4b1!4m6!3m5!1s0x95bc73a126fdd949:0xfd5456eb2b3bd4f7!8m2!3d-34.6555124!4d-59.4228719!16s%2Fg%2F11gbl3jz4b?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"

@@ -1,35 +1,43 @@
 import "@/app/globals.css";
+import { Bruno_Ace } from "next/font/google";
+import { Metadata } from "next";
 
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Inscription from "@/components/Inscription";
-import Data from "@/components/Data";
+const brunoAce = Bruno_Ace({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "IABOT - Capacitaciones en Robótica Educativa",
   description:
     "En IABOT, ofrecemos capacitaciones especializadas en robótica educativa para docentes, brindando herramientas y recursos innovadores para transformar el aprendizaje en el aula.",
-  keywords: "capacitaciones, robótica educativa, formación docente, IABOT",
-  authors: "IABOT Team",
+  keywords: [
+    "capacitaciones",
+    "robótica educativa",
+    "formación docente",
+    "IABOT",
+  ],
+  authors: [{ name: "IABOT Team", url: "https://www.iabot.com.ar" }],
+  robots: "index, follow",
+  metadataBase: new URL("https://www.iabot.com.ar"),
 };
 
 export const viewport = {
   width: "device-width",
-  initialScale: "1",
+  initialScale: 1,
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <>
-      <Navbar />
-      {children}
-      <Inscription />
-      <Data />
-      <Footer />
+      <main>{children}</main>
     </>
   );
-}
+};
+
+export default RootLayout;
