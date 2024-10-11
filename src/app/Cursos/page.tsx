@@ -47,6 +47,11 @@ const faqs = [
     answer:
       "Sí, ofrecemos cursos de capacitación en robótica y programación para docentes.",
   },
+  {
+    question: "¿Otorgan algún tipo de certificado?",
+    answer:
+      "Sí, entregamos un certificado digital de participación por cada nivel completado.",
+  },
 ];
 
 export default function Component() {

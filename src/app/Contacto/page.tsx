@@ -17,8 +17,7 @@ export default function Contacto() {
       <header className="bg-primary py-20 text-center">
         <h2 className="font-bruno text-3xl font-bold">CONTÁCTANOS</h2>
         <p className="mt-4 text-lg">
-          ¿Tienes alguna duda o consulta? Escríbenos y te responderemos a la
-          brevedad.
+          ¿Tienes alguna duda o consulta? Escribinos y te responderemos a la brevedad.
         </p>
       </header>
       <main className="container mx-auto px-4 py-8">

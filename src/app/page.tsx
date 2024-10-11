@@ -47,21 +47,13 @@ export default function Home() {
         <section className="pb-8 pt-12">
           <div className="container mx-auto px-6">
             <p className="mb-4 text-pretty text-center font-avenir text-text">
-              En IABOT, exploramos el emocionante mundo de la Robótica Educativa
-              a través de los innovadores kits de LEGO, líderes en la industria.
-              Estos kits no solo desatan la creatividad de los alumnos, sino que
-              también les permiten desarrollar habilidades esenciales al
-              construir y programar robots.
+              En IABOT, exploramos el emocionante mundo de la Robótica Educativa a través de los innovadores kits de LEGO, líderes en la industria. Estos kits no solo desatan la creatividad de los alumnos, sino que también les permiten desarrollar habilidades esenciales al construir y programar robots.
             </p>
             <p className="mb-4 text-pretty text-center font-avenir text-text">
-              Nuestra misión es cultivar destrezas clave para el futuro a través
-              de clases educativas de alta calidad. Utilizamos los recursos
-              pedagógicos e innovadores de LEGO EDUCATION como nuestra
-              herramienta principal.
+              Nuestra misión es cultivar destrezas clave para el futuro a través de clases educativas de alta calidad. Utilizamos los recursos pedagógicos e innovadores de LEGO EDUCATION como nuestra herramienta principal.
             </p>
             <p className="text-center font-avenir text-lg text-text">
-              ¡Únete a nosotros y descubre el fascinante universo de la Robótica
-              Educativa! <br />
+              ¡Unite a nosotros y descubrí el fascinante universo de la Robótica Educativa! <br />
             </p>
             <div className="container mx-auto max-w-2xl text-center">
               <div className="mt-8 flex justify-center">
@@ -72,7 +64,7 @@ export default function Home() {
                   aria-label="Formulario de inscripción para los cursos de robótica"
                 >
                   <Button className="text-dark flex transform items-center justify-center bg-[#78eb2c] text-lg font-bold shadow-md transition-transform duration-500 ease-in-out hover:scale-105 hover:bg-[#32cddb] hover:shadow-lg dark:bg-[#78eb2c] dark:hover:bg-[#32cddb]">
-                    INSCRIBETE
+                    INSCRIBITE
                     <ArrowRightIcon
                       className="ml-2 h-6 w-6"
                       aria-hidden="true"
