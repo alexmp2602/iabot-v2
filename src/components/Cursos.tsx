@@ -4,25 +4,25 @@ import Image from "next/image";
 
 const cursos = [
   {
-    imgSrc: "/assets/img/cursos/lego-wedo.jpg",
+    imgSrc: "/assets/img/cursos/webp/lego-wedo.webp",
     alt: "Introducción a la Robótica con LEGO WeDo 2.0",
     title: "Introducción a la Robótica con LEGO WeDo 2.0",
     requisitos:
-      "Requisitos: 1° año secundario o Introducción a Robótica con LEGO WeDo 2.0",
+      "Requisitos: 6 años de edad o experiencia en clases de Robótica básica",
     formLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
   },
   {
-    imgSrc: "/assets/img/cursos/lego-spike-essential.jpg",
+    imgSrc: "/assets/img/cursos/webp/lego-spike-essential.webp",
     alt: "Robótica Avanzada con LEGO Spike Essential",
     title: "Robótica Avanzada con LEGO Spike Essential",
     requisitos:
-      "Requisitos: 1er año secundario o Introducción a Robótica con LEGO WeDo 2.0",
+      "Requisitos: 1º año secundario o Introducción a Robótica con LEGO WeDo 2.0",
     formLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
   },
   {
-    imgSrc: "/assets/img/cursos/lego-spike-prime.jpg",
+    imgSrc: "/assets/img/cursos/webp/lego-spike-prime.webp",
     alt: "Robótica Experta con LEGO Spike Prime",
     title: "Robótica Experta con LEGO Spike Prime",
     requisitos: "Requisitos: Robótica Avanzada con LEGO Spike Essential",
@@ -30,16 +30,16 @@ const cursos = [
       "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
   },
   {
-    imgSrc: "/assets/img/cursos/lego-ev3.jpg",
+    imgSrc: "/assets/img/cursos/webp/lego-ev3.webp",
     alt: "Robótica Aplicada con Lego EV3",
-    title: "Robótica con Lego EV3",
+    title: "Robotica Aplicada con Lego EV3",
     requisitos:
       "Requisitos: 2° año secundario o haber cursado todos los niveles anteriores",
     formLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform",
   },
   {
-    imgSrc: "/assets/img/cursos/capacitaciones.jpg",
+    imgSrc: "/assets/img/cursos/webp/capacitaciones.webp",
     alt: "Capacitación para Docentes",
     title: "Capacitación para Docentes",
     requisitos:
@@ -48,7 +48,7 @@ const cursos = [
       "https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20quiero%20consultar%20por%20las%20capacitaciones%20para%20docentes.%20¿Podrías%20darme%20más%20información%20sobre%20los%20cursos%20disponibles?%20¡Gracias!",
   },
   {
-    imgSrc: "/assets/img/cursos/family-day.jpg",
+    imgSrc: "/assets/img/cursos/webp/family-day.webp",
     alt: "Family Day: Experiencia de Robótica Educativa para Empresas",
     title: "Family Day: Experiencia de Robótica Educativa para Empresas",
     requisitos:
@@ -72,7 +72,7 @@ export default function Cursos() {
                 src={curso.imgSrc}
                 alt={curso.alt}
                 width="400"
-                height="200"
+                height="400"
                 className="rounded-lg object-cover object-center"
               />
               <h3 className="mt-2 text-lg font-bold">{curso.title}</h3>
@@ -81,7 +81,7 @@ export default function Cursos() {
             <a href={curso.formLink} target="_blank" rel="noopener noreferrer">
               <Button className="mt-4 bg-[#78eb2c] text-white transition-colors duration-200 hover:bg-[#32cddb] dark:bg-[#78eb2c] dark:hover:bg-[#32cddb]">
                 {curso.title === "Capacitación para Docentes" ||
-                curso.title.startsWith("Family Day")
+                  curso.title.startsWith("Family Day")
                   ? "Consúltanos"
                   : "Inscribirse"}
               </Button>

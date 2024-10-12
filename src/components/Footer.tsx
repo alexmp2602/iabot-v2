@@ -28,7 +28,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#333333] py-6 text-white">
+    <footer className="bg-darkBackground py-6 text-white">
       <div className="container mx-auto px-4 text-center">
         {/* Sección de Redes Sociales */}
         <div className="mb-4 flex justify-center space-x-6">

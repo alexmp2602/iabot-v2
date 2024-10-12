@@ -77,8 +77,8 @@ export default function Component() {
         </p>
       </header>
       <main>
-        <section className="py-12">
-          <h2 className="mb-8 text-center font-bruno text-3xl font-extrabold text-secondary">
+        <section >
+          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-secondary bg-darkBackground">
             Descubre Nuestros Cursos
           </h2>
           <p className="mb-12  text-center text-gray-500">
@@ -90,7 +90,7 @@ export default function Component() {
         </section>
 
         <section className="bg-[#f8f8f8] py-12">
-          <h2 className="mb-8 text-center font-bruno text-3xl font-extrabold text-secondary">
+          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-secondary bg-darkBackground">
             Preguntas Frecuentes
           </h2>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

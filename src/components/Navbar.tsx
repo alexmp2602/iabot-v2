@@ -125,7 +125,7 @@ export default function Navbar() {
         {/* Menú móvil */}
         <div className="md:hidden">
           <button
-            className="text-primary transition-transform duration-300 hover:text-secondary"
+            className="text-primary transition-transform duration-300 hover:text-secondary hover:bg-darkBackground"
             onClick={toggleMobileMenu}
             aria-label="Abrir menú"
             aria-expanded={isMobileMenuOpen}

@@ -1,21 +1,22 @@
+import { nextui } from '@nextui-org/theme';
+import tailwindcssAnimate from 'tailwindcss-animate';
 import type { Config } from "tailwindcss";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#78eb2c", // Color principal
-        "text-primary": "#78eb2c", // Color del texto principal
-        secondary: "#32cddb", // Color secundario
-        text: "#000000", // Color del texto
-        background: "#f9f9f9", // Color de fondo
+        primary: "#78eb2c",
+        secondary: "#32cddb",
+        text: "#000000",
+        background: "#f9f9f9",
+        darkBackground: "#4A4A4A",
       },
       backgroundImage: {
         "custom-radial":
@@ -27,7 +28,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate, nextui()],
 };
 
 export default config;

@@ -20,7 +20,7 @@ export default function Inscription() {
             aria-label="Formulario de inscripción"
           >
             <Button className="flex transform items-center justify-center bg-[#78eb2c] text-lg font-bold text-white shadow-md transition-transform duration-300 hover:scale-105 hover:bg-[#32cddb] hover:shadow-lg dark:bg-[#78eb2c] dark:hover:bg-[#32cddb]">
-              INSCRIBETE
+              INSCRIBITE
               <ArrowRightIcon className="ml-2 h-6 w-6" aria-hidden="true" />
             </Button>
           </a>

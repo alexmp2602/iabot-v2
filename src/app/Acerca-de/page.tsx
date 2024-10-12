@@ -28,8 +28,8 @@ export default function About() {
 
       <main>
         <section>
-          <div className="bg-white pt-16">
-            <h2 className="mb-12 text-center font-bruno text-4xl font-bold text-secondary">
+          <div className="bg-white">
+            <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-secondary bg-darkBackground">
               Nuestra Misión y Valores
             </h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 lg:grid-cols-4">
@@ -76,10 +76,10 @@ export default function About() {
         </section>
 
         <section className="bg-[#f8f8f8]">
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <h2 className="mb-8 text-center font-bruno text-3xl font-extrabold text-secondary">
+          <h2 className=" mb-6 py-12 text-center font-bruno text-4xl font-bold text-secondary bg-darkBackground">
               CONOCE A NUESTRO EQUIPO
-            </h2>
+          </h2>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <p className="mb-12 text-center text-gray-500">
               En IABOT, contamos con un equipo altamente capacitado y
               comprometido con la educación y la robótica. Nos capacitamos
@@ -141,7 +141,7 @@ export default function About() {
         </section>
 
         <section className="bg-white py-12">
-          <h2 className="mb-8 text-center font-bruno text-3xl font-extrabold text-secondary">
+          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-secondary bg-darkBackground">
             Testimonios
           </h2>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
