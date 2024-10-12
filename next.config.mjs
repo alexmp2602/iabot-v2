@@ -4,15 +4,21 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.instagram.com',
+        hostname: '**.cdninstagram.com',
         port: '',
-        pathname: '/p/**',
+        pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'scontent.cdninstagram.com',
+        hostname: 'instagram.f**.fbcdn.net',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.instagram.com',
+        port: '',
+        pathname: '/p/**',
       },
     ],
   },

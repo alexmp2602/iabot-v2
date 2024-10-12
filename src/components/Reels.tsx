@@ -34,11 +34,14 @@ const Reels = () => {
               onClick={() => openModal(reelId)}
             >
               <Image
-                src={`https://www.instagram.com/p/${reelId}/media/?size=l`}
+                src={`/assets/img/reels/${reelId}.jpg`}
                 alt={`Reel ${index + 1}`}
                 width={250}
                 height={250}
                 className="rounded-lg shadow-md object-cover opacity-95 hover:opacity-70 transition-opacity duration-300"
+                onError={(e) => {
+                  e.currentTarget.src = '/assets/img/reels/default.jpg'; // Imagen predeterminada si no se encuentra la imagen
+                }}
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 rounded-lg">
                 <svg
@@ -82,7 +85,11 @@ const Reels = () => {
             )}
           </ModalBody>
           <ModalFooter className="flex justify-center">
-            <Button onPress={closeModal} className="bg-[#78eb2c] text-black hover:bg-[#32cddb] focus:ring">
+            <Button 
+              onPress={closeModal} 
+              className="bg-[#78eb2c] text-black hover:bg-[#32cddb] focus:ring" 
+              aria-label="Cerrar el modal de reel de Instagram"
+            >
               Cerrar
             </Button>
           </ModalFooter>
