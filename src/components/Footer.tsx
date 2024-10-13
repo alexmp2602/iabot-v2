@@ -1,34 +1,34 @@
-import InstagramIcon from "./icons/Instagram";
-import FacebookIcon from "./icons/Facebook";
-import WhatsappIcon from "./icons/Whatsapp";
-import LinkedInIcon from "./icons/LinkedIn";
+import InstagramIcon from './icons/Instagram';
+import FacebookIcon from './icons/Facebook';
+import WhatsappIcon from './icons/Whatsapp';
+import LinkedInIcon from './icons/LinkedIn';
 
 const socialLinks = [
   {
-    href: "https://www.facebook.com/iabot.robotica/",
+    href: 'https://www.facebook.com/iabot.robotica/',
     Icon: FacebookIcon,
-    label: "Facebook",
+    label: 'Facebook',
   },
   {
-    href: "https://www.instagram.com/iabot.robotica/",
+    href: 'https://www.instagram.com/iabot.robotica/',
     Icon: InstagramIcon,
-    label: "Instagram",
+    label: 'Instagram',
   },
   {
-    href: "https://www.linkedin.com/company/iabot-robotica/",
+    href: 'https://www.linkedin.com/company/iabot-robotica/',
     Icon: LinkedInIcon,
-    label: "LinkedIn",
+    label: 'LinkedIn',
   },
   {
-    href: "https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20quiero%20consultar%20sobre%20los%20talleres%20de%20robótica%20para%20nuestros%20hijos.%20¿Podrías%20informarnos%20sobre%20los%20cupos%20disponibles?%20¡Gracias!",
+    href: 'https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20quiero%20consultar%20sobre%20los%20talleres%20de%20robótica%20para%20nuestros%20hijos.%20¿Podrías%20informarnos%20sobre%20los%20cupos%20disponibles?%20¡Gracias!',
     Icon: WhatsappIcon,
-    label: "WhatsApp",
+    label: 'WhatsApp',
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-darkBackground py-6 text-white">
+    <footer className="bg-charcoalGray py-6 text-white">
       <div className="container mx-auto px-4 text-center">
         {/* Sección de Redes Sociales */}
         <div className="mb-4 flex justify-center space-x-6">
@@ -39,7 +39,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="transition-colors duration-300 hover:text-[#78eb2c]"
+              className="transition-colors duration-300 hover:text-primary"
             >
               <Icon className="h-6 w-6" aria-hidden="true" />
             </a>
@@ -52,7 +52,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Dirección de Iabot"
-          className="text-white transition-colors duration-300 hover:text-[#78eb2c]"
+          className="text-white transition-colors duration-300 hover:text-primary"
         >
           Estamos en C. 9 N 374, Mercedes, Provincia de Buenos Aires
         </a>

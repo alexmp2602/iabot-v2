@@ -1,8 +1,6 @@
 import React from 'react';
 
-interface SvgProps extends React.SVGProps<SVGSVGElement> {}
-
-export default function FacebookIcon(props: SvgProps) {
+export default function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

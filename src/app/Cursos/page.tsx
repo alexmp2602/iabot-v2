@@ -1,67 +1,67 @@
-"use client";
+'use client';
 
-import Cursos from "@/components/Cursos";
-import { useState } from "react";
-import { useEffect } from "react";
+import Cursos from '@/components/Cursos';
+import { useState, useEffect } from 'react';
 
 const faqs = [
   {
-    question: "¿Qué cursos ofrecen?",
+    question: '¿Qué cursos ofrecen?',
     answer:
-      "Ofrecemos cursos de robótica, programación y STEM para todas las edades.",
+      'Ofrecemos cursos de robótica, programación y STEM para todas las edades.',
   },
   {
-    question: "¿Cómo puedo inscribirme?",
+    question: '¿Cómo puedo inscribirme?',
     answer:
-      "Puedes inscribirte completando el formulario de inscripción en nuestra página web. También puedes contactarnos por correo electrónico o teléfono para más información.",
+      'Puedes inscribirte completando el formulario de inscripción en nuestra página web. También puedes contactarnos por correo electrónico o teléfono para más información.',
   },
   {
-    question: "¿Cuál es la duración de los cursos?",
+    question: '¿Cuál es la duración de los cursos?',
     answer:
-      "La duración de nuestros cursos varía según el nivel y la temática.",
+      'La duración de nuestros cursos varía según el nivel y la temática.',
   },
   {
-    question: "¿Cuál es la edad mínima para participar en los cursos?",
-    answer: "La edad mínima para participar en nuestros cursos es de 6 años.",
+    question: '¿Cuál es la edad mínima para participar en los cursos?',
+    answer: 'La edad mínima para participar en nuestros cursos es de 6 años.',
   },
   {
-    question: "¿Qué materiales necesito para los cursos?",
+    question: '¿Qué materiales necesito para los cursos?',
     answer:
-      "Proporcionamos todos los materiales necesarios para nuestros cursos. No necesitas traer nada.",
+      'Proporcionamos todos los materiales necesarios para nuestros cursos. No necesitas traer nada.',
   },
   {
-    question: "¿Cuál es el horario de los cursos?",
+    question: '¿Cuál es el horario de los cursos?',
     answer:
-      "Los horarios de los cursos varían según el nivel y la temática. Consulta por los horarios disponibles.",
+      'Los horarios de los cursos varían según el nivel y la temática. Consulta por los horarios disponibles.',
   },
   {
-    question: "¿Hay descuentos para grupos?",
-    answer: "Sí, ofrecemos descuentos especiales para grupos de estudiantes.",
+    question: '¿Hay descuentos para grupos?',
+    answer: 'Sí, ofrecemos descuentos especiales para grupos de estudiantes.',
   },
   {
-    question: "¿Qué métodos de pago aceptan?",
-    answer: "Aceptamos pagos en efectivo y transferencias bancarias.",
+    question: '¿Qué métodos de pago aceptan?',
+    answer: 'Aceptamos pagos en efectivo y transferencias bancarias.',
   },
   {
-    question: "¿Ofrecen cursos para docentes?",
+    question: '¿Ofrecen cursos para docentes?',
     answer:
-      "Sí, ofrecemos cursos de capacitación en robótica y programación para docentes.",
+      'Sí, ofrecemos cursos de capacitación en robótica y programación para docentes.',
   },
   {
-    question: "¿Otorgan algún tipo de certificado?",
+    question: '¿Otorgan algún tipo de certificado?',
     answer:
-      "Sí, entregamos un certificado digital de participación por cada nivel completado.",
+      'Sí, entregamos un certificado digital de participación por cada nivel completado.',
   },
 ];
 
 export default function Component() {
   useEffect(() => {
-    const link = document.createElement("link");
+    const link = document.createElement('link');
     link.href =
-      "https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap";
-    link.rel = "stylesheet";
+      'https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap';
+    link.rel = 'stylesheet';
     document.head.appendChild(link);
   }, []);
+
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -69,19 +69,22 @@ export default function Component() {
   };
 
   return (
-    <div className="bg-custom-radial text-black">
-      <header className="text-dark bg-primary px-4 py-20 text-center">
-        <h2 className="mb-4 font-bruno text-3xl font-bold">NUESTROS CURSOS</h2>
-        <p className="font-bruno text-xl font-semibold">
+    <div className="bg-lightGray text-gray-800">
+      <header className="bg-primary px-4 py-20 text-center">
+        <h2 className="mb-4 font-bruno text-4xl font-bold text-gray-900">
+          NUESTROS CURSOS
+        </h2>
+        <p className="font-bruno text-2xl font-semibold text-gray-700">
           Explora nuestros cursos y encuentra el que más te interesa
         </p>
       </header>
+
       <main>
-        <section >
-          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-secondary bg-darkBackground">
+        <section>
+          <h2 className="mb-6 py-12 text-center font-bruno text-5xl font-bold text-primary">
             Descubre Nuestros Cursos
           </h2>
-          <p className="mb-12  text-center text-gray-500">
+          <p className="mb-12 text-center text-xl text-gray-600">
             Cada uno de nuestros cursos está diseñado para brindar la mejor
             experiencia de aprendizaje, adaptándose a las necesidades y niveles
             de cada estudiante.
@@ -89,8 +92,8 @@ export default function Component() {
           <Cursos />
         </section>
 
-        <section className="bg-[#f8f8f8] py-12">
-          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-secondary bg-darkBackground">
+        <section className="bg-lightGray py-12">
+          <h2 className="mb-6 py-12 text-center font-bruno text-5xl font-bold text-primary">
             Preguntas Frecuentes
           </h2>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -98,15 +101,16 @@ export default function Component() {
               <div key={index} className="mb-4">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="flex w-full justify-between rounded-lg bg-white p-4 shadow-md hover:bg-gray-100"
+                  className="flex w-full justify-between rounded-lg bg-white p-4 shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-secondary"
+                  aria-expanded={openIndex === index}
                 >
-                  <span className="text-left font-semibold">
+                  <span className="text-left font-semibold text-lg text-gray-900">
                     {faq.question}
                   </span>
-                  <span>{openIndex === index ? "-" : "+"}</span>
+                  <span>{openIndex === index ? '-' : '+'}</span>
                 </button>
                 {openIndex === index && (
-                  <div className="mt-2 rounded-lg bg-gray-100 p-4">
+                  <div className="mt-2 rounded-lg bg-gray-100 p-4 text-lg text-gray-700">
                     <p>{faq.answer}</p>
                   </div>
                 )}

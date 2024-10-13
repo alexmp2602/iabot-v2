@@ -1,28 +1,28 @@
-import "@/app/globals.css";
+import '@/app/globals.css';
 
-import { Bruno_Ace } from "next/font/google";
-import { Metadata } from "next";
-import type { Viewport } from "next";
+import { Bruno_Ace } from 'next/font/google';
+import { Metadata } from 'next';
+import type { Viewport } from 'next';
 
 const brunoAce = Bruno_Ace({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "IABOT - Cursos",
+  title: 'IABOT - Cursos',
   description:
-    "Descubre nuestros cursos de robótica educativa en IABOT, diseñados para capacitar docentes y estudiantes con las últimas tecnologías.",
-  keywords: ["cursos", "robótica educativa", "capacitación docente", "IABOT"],
-  authors: [{ name: "IABOT Team", url: "https://www.iabot.com.ar" }],
-  robots: "index, follow",
-  metadataBase: new URL("https://www.iabot.com.ar"),
+    'Descubre nuestros cursos de robótica educativa en IABOT, diseñados para capacitar docentes y estudiantes con las últimas tecnologías.',
+  keywords: ['cursos', 'robótica educativa', 'capacitación docente', 'IABOT'],
+  authors: [{ name: 'IABOT Team', url: 'https://www.iabot.com.ar' }],
+  robots: 'index, follow',
+  metadataBase: new URL('https://www.iabot.com.ar'),
 };
 
 // Exporta el viewport
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
 };
 
@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <main>{children}</main>
+      <main className={brunoAce.className}>{children}</main>
     </>
   );
 }

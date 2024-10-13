@@ -1,5 +1,5 @@
 // icons/Arrow.tsx
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export default function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -13,7 +13,7 @@ export default function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...props}  // Esto permitirá que pasemos className y aria-hidden
+      {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M5 12h14" />

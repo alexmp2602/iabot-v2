@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
-import { Modal, ModalHeader, ModalBody, ModalFooter, ModalContent } from "@nextui-org/modal";
-import { Button } from "@nextui-org/react";
-import { useDisclosure } from "@nextui-org/react";
+import { useState } from 'react';
+import Image from 'next/image';
+import { Modal, ModalBody, ModalFooter, ModalContent } from '@nextui-org/modal';
+import { Button } from '@nextui-org/react';
+import { useDisclosure } from '@nextui-org/react';
 
 const Reels = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [currentReel, setCurrentReel] = useState("");
+  const [currentReel, setCurrentReel] = useState('');
 
   const openModal = (reelId: string) => {
     setCurrentReel(reelId);
@@ -17,10 +17,10 @@ const Reels = () => {
 
   const closeModal = () => {
     onOpenChange();
-    setCurrentReel("");
+    setCurrentReel('');
   };
 
-  const reels = ["C_3-X3WObC1", "C_VcwxURmat", "C-BjNgqub5U", "C_MTDYOO40T"];
+  const reels = ['C_3-X3WObC1', 'C_VcwxURmat', 'C-BjNgqub5U', 'C_MTDYOO40T'];
 
   return (
     <>
@@ -30,7 +30,7 @@ const Reels = () => {
             <div
               key={index}
               className="relative flex justify-center cursor-pointer"
-              style={{ maxWidth: "250px", maxHeight: "250px" }}
+              style={{ maxWidth: '250px', maxHeight: '250px' }}
               onClick={() => openModal(reelId)}
             >
               <Image
@@ -52,7 +52,11 @@ const Reels = () => {
                   stroke="currentColor"
                   className="w-12 h-12 text-white opacity-80 hover:opacity-100 transition-opacity duration-300"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"
+                  />
                 </svg>
               </div>
             </div>
@@ -68,7 +72,6 @@ const Reels = () => {
         className="rounded-lg shadow-lg"
       >
         <ModalContent className="p-4">
-          <ModalHeader className="text-center">Reel de Instagram</ModalHeader>
           <ModalBody className="flex justify-center items-center">
             {currentReel ? (
               <iframe
@@ -85,9 +88,9 @@ const Reels = () => {
             )}
           </ModalBody>
           <ModalFooter className="flex justify-center">
-            <Button 
-              onPress={closeModal} 
-              className="bg-[#78eb2c] text-black hover:bg-[#32cddb] focus:ring" 
+            <Button
+              onPress={closeModal}
+              className="bg-[#78eb2c] text-black hover:bg-[#32cddb] focus:ring"
               aria-label="Cerrar el modal de reel de Instagram"
             >
               Cerrar

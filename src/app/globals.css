@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -51,7 +50,6 @@
     --ring: 142.4 71.8% 29.2%;
   }
 }
-
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -102,4 +100,3 @@ body {
   opacity: 1 !important;
   z-index: 9999 !important;
 }
-

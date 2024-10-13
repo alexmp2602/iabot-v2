@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 interface SvgProps {
   className?: string;
@@ -63,17 +63,17 @@ export default function Navbar() {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     }
   }, [isMobileMenuOpen]);
 
   const linkClass =
-    "text-green-600 transition-colors duration-300 py-2 hover:text-green-700";
+    'text-gray-900 transition-colors duration-300 py-2 hover:text-primary'; // Cambié el color a un gris oscuro por defecto para mayor legibilidad
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#f8f8f8] px-4 py-2 shadow-md">
+    <nav className="sticky top-0 z-50 bg-lightGray px-4 py-2 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link
@@ -125,7 +125,7 @@ export default function Navbar() {
         {/* Menú móvil */}
         <div className="md:hidden">
           <button
-            className="text-primary transition-transform duration-300 hover:text-secondary hover:bg-darkBackground"
+            className="text-gray-900 transition-transform duration-300 hover:text-primary"
             onClick={toggleMobileMenu}
             aria-label="Abrir menú"
             aria-expanded={isMobileMenuOpen}
@@ -136,7 +136,7 @@ export default function Navbar() {
             <div className="absolute right-0 top-0 z-10 h-screen w-full bg-white p-4 shadow-lg transition-transform duration-300">
               <div className="flex justify-end">
                 <button
-                  className="mb-4 text-green-600 hover:text-green-700"
+                  className="mb-4 text-gray-900 hover:text-primary"
                   onClick={closeMobileMenu}
                   aria-label="Cerrar menú"
                 >
