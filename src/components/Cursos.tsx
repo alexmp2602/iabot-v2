@@ -60,7 +60,7 @@ const cursos = [
 
 export default function Cursos() {
   return (
-    <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-8 pb-4 md:grid-cols-2 lg:grid-cols-3">
       {cursos.map((curso, index) => (
         <Card
           key={index}
