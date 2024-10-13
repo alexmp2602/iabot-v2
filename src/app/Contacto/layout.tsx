@@ -1,12 +1,6 @@
 import '@/app/globals.css';
-import { Bruno_Ace } from 'next/font/google';
-import { Metadata } from 'next';
 
-const brunoAce = Bruno_Ace({
-  subsets: ['latin'],
-  weight: ['400'],
-  display: 'swap',
-});
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'IABOT - Contacto',
@@ -53,7 +47,7 @@ interface RootLayoutProps {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <>
-      <main className={brunoAce.className}>{children}</main>
+      <main>{children}</main>
     </>
   );
 };

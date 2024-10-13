@@ -14,12 +14,12 @@ export default function Contacto() {
   }, []);
 
   return (
-    <div className="bg-lightGray text-black min-h-screen">
+    <div className="bg-lightGray text-gray-900 min-h-screen">
       <header className="bg-primary py-20 text-center">
-        <h2 className="font-bruno text-4xl font-bold text-gray-900">
+        <h1 className="mb-10 font-bruno text-4xl font-bold text-gray-900">
           CONTÁCTANOS
-        </h2>
-        <p className="mt-4 text-2xl text-gray-900">
+        </h1>
+        <p className="font-bruno text-2xl text-gray-900">
           ¿Tienes alguna duda o consulta? Escríbenos y te responderemos a la
           brevedad.
         </p>

@@ -1,14 +1,7 @@
 import '@/app/globals.css';
 
-import { Bruno_Ace } from 'next/font/google';
 import { Metadata } from 'next';
 import type { Viewport } from 'next';
-
-const brunoAce = Bruno_Ace({
-  subsets: ['latin'],
-  weight: ['400'],
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: 'IABOT - Cursos',
@@ -33,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <main className={brunoAce.className}>{children}</main>
+      <main>{children}</main>
     </>
   );
 }

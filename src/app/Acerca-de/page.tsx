@@ -18,24 +18,23 @@ export default function About() {
   }, []);
 
   return (
-    <div className="bg-lightGray text-gray-900 text-lg">
+    <div className="bg-lightGray text-gray-900 min-h-screen">
       {' '}
-      {/* Ajuste general del tamaño del texto */}
       <header className="bg-primary py-16 text-center">
         <h2 className="mb-4 font-bruno text-4xl font-bold text-gray-900">
           ACERCA DE
         </h2>
-        <h1 className="mb-4 font-bruno text-6xl font-bold text-gray-900">
+        <h1 className="mb-10 font-bruno text-4xl font-bold text-gray-900">
           IABOT
         </h1>
-        <p className="font-bruno text-2xl font-semibold text-gray-900">
+        <p className="font-bruno text-2xl text-gray-900">
           CONOCE MÁS SOBRE NOSOTROS
         </p>
       </header>
       <main>
         <section>
           <div className="bg-lightGray">
-            <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-primary">
+            <h2 className="py-12 text-center font-bruno text-4xl font-bold text-primary">
               Nuestra Misión y Valores
             </h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 lg:grid-cols-4">
@@ -76,7 +75,6 @@ export default function About() {
                   <p className="text-xl lg:pb-12 text-gray-700">
                     {value.description}
                   </p>{' '}
-                  {/* Texto más grande */}
                 </div>
               ))}
             </div>
@@ -84,7 +82,7 @@ export default function About() {
         </section>
 
         <section className="bg-lightGray">
-          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-primary">
+          <h2 className="py-12 text-center font-bruno text-3xl font-bold text-primary">
             CONOCE A NUESTRO EQUIPO
           </h2>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -103,19 +101,19 @@ export default function About() {
                 {
                   name: 'Franco',
                   title:
-                    'Técnico en Informática. Profesor de Tecnología, (Postítulo en Programación y Robótica Educativa, UNER).',
+                    'Técnico en Informática y Profesor de Tecnología. Especializado en la enseñanza de robótica educativa a nivel básico y avanzado, con un enfoque en el desarrollo de habilidades prácticas en los estudiantes. (Postítulo en Programación y Robótica Educativa, UNER).',
                   image: '/assets/img/equipo/fran-modified.png',
                 },
                 {
                   name: 'Adrián',
                   title:
-                    'Profesor de Matemática y Tecnología, (Postítulo en Programación y Robótica Educativa, UNER).',
+                    'Profesor de Matemática y Tecnología. Enfocado en la enseñanza de robótica educativa, combinando sus conocimientos matemáticos con la robótica para crear un aprendizaje integral. (Postítulo en Programación y Robótica Educativa, UNER).',
                   image: '/assets/img/equipo/adri-modified.png',
                 },
                 {
                   name: 'Alex',
                   title:
-                    'Desarrollador Web, (Certificaciones Lego Education Academy).',
+                    'Desarrollador Web y Profesor de Robótica Educativa. Especializado en la enseñanza de programación y robótica con kits LEGO, integrando tecnologías digitales en el aula. (Certificación en LEGO Education Academy).',
                   image: '/assets/img/equipo/alex-modified.png',
                 },
               ].map((member) => (
@@ -137,13 +135,12 @@ export default function About() {
                       }}
                       width={200}
                     />
-                    <h3 className="mt-4 text-center text-lg font-medium leading-6 text-gray-900">
+                    <h3 className="my-4 text-center text-2xl font-bruno leading-6 text-gray-900">
                       {member.name}
                     </h3>
                     <p className="mt-2 text-center text-xl text-gray-700">
                       {member.title}
                     </p>{' '}
-                    {/* Texto más grande */}
                   </CardContent>
                 </Card>
               ))}
@@ -152,7 +149,7 @@ export default function About() {
         </section>
 
         <section className="bg-lightGray py-12">
-          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-primary">
+          <h2 className="py-12 text-center font-bruno text-4xl font-bold text-primary">
             Testimonios
           </h2>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

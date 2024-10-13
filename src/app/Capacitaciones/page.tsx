@@ -13,12 +13,12 @@ export default function Capacitaciones() {
   }, []);
 
   return (
-    <div className="bg-lightGray text-black min-h-screen">
+    <div className="bg-lightGray text-gray-900 min-h-screen">
       <header className="text-dark bg-primary px-4 py-20 text-center">
-        <h2 className="mb-4 font-bruno text-4xl font-bold text-black">
+        <h1 className="mb-10 font-bruno text-3xl font-bold text-gray-900">
           CAPACITACIONES
-        </h2>
-        <p className="text-2xl font-semibold text-black">
+        </h1>
+        <p className="font-bruno text-xl text-gray-900">
           Transforma la educación con nuestro servicio de asesoramiento y
           capacitación en robótica educativa.
         </p>
@@ -76,9 +76,9 @@ export default function Capacitaciones() {
           </div>
 
           <div className="container mx-auto px-4 pt-14">
-            <h1 className="mb-12 text-center font-bruno text-4xl font-bold text-primary">
+            <h2 className="mb-12 text-center font-bruno text-4xl font-bold text-primary">
               Beneficios para las Instituciones
-            </h1>
+            </h2>
             <ul className="mb-4 list-disc pl-5 text-xl">
               {[
                 {

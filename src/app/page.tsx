@@ -25,12 +25,12 @@ export default function Home() {
           muted
           loop
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
           aria-label="Video de bienvenida a IABOT mostrando escenas de robótica"
         >
           <source src="/assets/video-header.webm" type="video/webm" />
         </video>
-        <div className="relative z-10 flex flex-col items-center space-y-2 pt-12 pb-8">
+        <div className="relative z-10 flex flex-col items-center space-y-2 pt-14 pb-8">
           <h2 className="text-center font-bruno text-3xl md:text-4xl font-bold text-primary">
             BIENVENIDOS A
           </h2>
@@ -47,7 +47,7 @@ export default function Home() {
 
       <main className="bg-lightGray">
         {/* Sección de Presentación */}
-        <section className="pb-8 pt-12">
+        <section className="pt-12">
           <div className="container mx-auto px-6">
             <p className="mb-6 text-center text-xl md:text-2xl font-avenir text-gray-800">
               En IABOT, exploramos el emocionante mundo de la Robótica Educativa
@@ -91,16 +91,16 @@ export default function Home() {
         </section>
 
         {/* Sección de Reels */}
-        <section className="py-6">
-          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-primary">
+        <section>
+          <h2 className="py-12 text-center font-bruno text-4xl font-bold text-primary">
             ¡Mira Nuestros Reels!
           </h2>
           <Reels />
         </section>
 
         {/* Sección de Recursos Didácticos */}
-        <section className="py-6 bg-lightGray">
-          <h2 className="mb-6 py-12 text-center font-bruno text-4xl font-bold text-primary">
+        <section className=" bg-lightGray">
+          <h2 className="py-12 text-center font-bruno text-4xl font-bold text-primary">
             Recursos Didácticos y Capacitaciones
           </h2>
           <Cursos />

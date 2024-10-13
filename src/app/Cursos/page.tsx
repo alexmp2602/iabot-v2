@@ -69,19 +69,19 @@ export default function Component() {
   };
 
   return (
-    <div className="bg-lightGray text-gray-800">
+    <div className="bg-lightGray text-gray-900 min-h-screen">
       <header className="bg-primary px-4 py-20 text-center">
-        <h2 className="mb-4 font-bruno text-4xl font-bold text-gray-900">
+        <h1 className="mb-10 font-bruno text-4xl font-bold text-gray-900">
           NUESTROS CURSOS
-        </h2>
-        <p className="font-bruno text-2xl font-semibold text-gray-700">
+        </h1>
+        <p className="font-bruno text-2xl text-gray-900">
           Explora nuestros cursos y encuentra el que más te interesa
         </p>
       </header>
 
       <main>
         <section>
-          <h2 className="mb-6 py-12 text-center font-bruno text-5xl font-bold text-primary">
+          <h2 className="py-12 text-center font-bruno text-5xl font-bold text-primary">
             Descubre Nuestros Cursos
           </h2>
           <p className="mb-12 text-center text-xl text-gray-600">
@@ -92,11 +92,11 @@ export default function Component() {
           <Cursos />
         </section>
 
-        <section className="bg-lightGray py-12">
-          <h2 className="mb-6 py-12 text-center font-bruno text-5xl font-bold text-primary">
+        <section className="bg-lightGray">
+          <h2 className="py-12 text-center font-bruno text-5xl font-bold text-primary">
             Preguntas Frecuentes
           </h2>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="pb-4 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4">
                 <button
