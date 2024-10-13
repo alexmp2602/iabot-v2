@@ -53,7 +53,7 @@ const faqs = [
   },
 ];
 
-export default function Component() {
+export default function CursosComponent() {
   useEffect(() => {
     const link = document.createElement('link');
     link.href =
@@ -68,32 +68,34 @@ export default function Component() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const commonClasses =
+    'rounded-lg bg-light-gray dark:bg-dark-gray border border-gray-700 dark:border-gray-300 p-4 shadow-md';
+
   return (
-    <div className="bg-lightGray text-gray-900 min-h-screen">
+    <div className="bg-light-gray dark:bg-dark-bg text-gray-900 dark:text-gray-900 min-h-screen">
       <header className="bg-primary px-4 py-20 text-center">
-        <h1 className="mb-10 font-bruno text-4xl  text-gray-900">
+        <h1 className="mb-10 font-bruno text-4xl text-gray-900 dark:text-gray-900">
           NUESTROS CURSOS
         </h1>
-        <p className="font-bruno text-2xl text-gray-900">
+        <p className="font-bruno text-2xl text-gray-900 dark:text-gray-900">
           Explora nuestros cursos y encuentra el que más te interesa
         </p>
       </header>
 
       <main>
         <section>
-          <h2 className="py-12 text-center font-bruno text-5xl  text-primary">
+          <h2 className="py-12 text-center font-bruno text-5xl text-primary">
             Descubre Nuestros Cursos
           </h2>
-          <p className="mb-12 text-center text-xl text-gray-600">
+          <p className="mb-12 text-center text-xl text-gray-900 dark:text-white">
             Cada uno de nuestros cursos está diseñado para brindar la mejor
-            experiencia de aprendizaje, adaptándose a las necesidades y niveles
-            de cada estudiante.
+            experiencia de aprendizaje.
           </p>
           <Cursos />
         </section>
 
-        <section className="bg-lightGray">
-          <h2 className="py-12 text-center font-bruno text-5xl  text-primary">
+        <section className="bg-light-gray dark:bg-dark-bg">
+          <h2 className="py-12 text-center font-bruno text-5xl text-primary">
             Preguntas Frecuentes
           </h2>
           <div className="pb-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -101,16 +103,21 @@ export default function Component() {
               <div key={index} className="mb-4">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="flex w-full justify-between rounded-lg bg-white p-4 shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-secondary"
+                  className={`flex w-full justify-between ${commonClasses} hover:bg-gray-100 dark:hover:bg-dark-gray dark:text-white focus:outline-none focus:ring-2 focus:ring-secondary`}
                   aria-expanded={openIndex === index}
+                  aria-controls={`faq-${index}`}
+                  aria-live="polite"
                 >
-                  <span className="text-left font-semibold text-lg text-gray-900">
+                  <span className="text-left text-lg text-gray-900 dark:text-white">
                     {faq.question}
                   </span>
                   <span>{openIndex === index ? '-' : '+'}</span>
                 </button>
                 {openIndex === index && (
-                  <div className="mt-2 rounded-lg bg-gray-100 p-4 text-lg text-gray-700">
+                  <div
+                    id={`faq-${index}`}
+                    className="mt-2 rounded-lg bg-gray-100 dark:bg-dark-gray p-4 text-lg text-gray-700 dark:text-gray-300"
+                  >
                     <p>{faq.answer}</p>
                   </div>
                 )}

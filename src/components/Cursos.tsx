@@ -71,7 +71,6 @@ export default function Cursos() {
               <Image
                 src={curso.imgSrc}
                 alt={curso.alt}
-                layout="responsive"
                 width={400}
                 height={400}
                 sizes="(max-width: 600px) 100vw, 400px"
@@ -85,7 +84,7 @@ export default function Cursos() {
               </p>
             </div>
             <a href={curso.formLink} target="_blank" rel="noopener noreferrer">
-              <Button className="mt-4 bg-primary text-dark dark:text-white text-lg transition-colors duration-200 hover:bg-secondary dark:bg-primary dark:hover:bg-secondary">
+              <Button className="mt-4 bg-primary text-dark dark:text-black text-lg transition-colors duration-200 hover:bg-secondary dark:bg-primary dark:hover:bg-secondary">
                 {curso.title === 'Capacitación para Docentes' ||
                 curso.title.startsWith('Family Day')
                   ? 'Consúltanos'

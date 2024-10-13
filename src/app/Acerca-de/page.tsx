@@ -18,7 +18,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="bg-lightGray dark:bg-dark-gray text-gray-900 dark:text-gray-900 min-h-screen">
+    <div className="bg-light-gray dark:bg-dark-gray text-gray-900 dark:text-gray-900 min-h-screen">
       <header className="bg-primary py-16 text-center">
         <h2 className="mb-4 font-bruno text-4xl  text-gray-900 dark:text-gray-900">
           ACERCA DE
@@ -32,7 +32,7 @@ export default function About() {
       </header>
       <main>
         <section>
-          <div className="bg-lightGray dark:bg-dark-bg">
+          <div className="bg-light-gray dark:bg-dark-bg">
             <h2 className="py-12 text-center font-bruno text-4xl  text-primary">
               Nuestra Misión y Valores
             </h2>
@@ -68,7 +68,7 @@ export default function About() {
                   className="flex flex-col items-center text-center"
                 >
                   {value.icon}
-                  <h3 className="mb-4 font-bruno text-2xl font-semibold text-gray-900 dark:text-white">
+                  <h3 className="mb-4 font-bruno text-2xl  text-gray-900 dark:text-white">
                     {value.title}
                   </h3>
                   <p className="text-xl lg:pb-12 text-gray-700 dark:text-gray-300">
@@ -80,7 +80,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="bg-lightGray dark:bg-dark-bg">
+        <section className="bg-light-gray dark:bg-dark-bg">
           <h2 className="py-12 text-center font-bruno text-3xl  text-primary">
             CONOCE A NUESTRO EQUIPO
           </h2>
@@ -142,7 +142,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="bg-lightGray dark:bg-dark-bg py-12">
+        <section className="bg-light-gray dark:bg-dark-bg py-12">
           <h2 className="py-12 text-center font-bruno text-4xl  text-primary">
             Testimonios
           </h2>
@@ -167,7 +167,7 @@ export default function About() {
                   <p className="text-xl italic text-gray-800 dark:text-gray-300">
                     &quot;{testimonial.quote}&quot;
                   </p>
-                  <p className="mt-4 text-right text-sm font-semibold text-gray-900 dark:text-white">
+                  <p className="mt-4 text-right text-sm  text-gray-900 dark:text-white">
                     - {testimonial.author}
                   </p>
                 </div>

@@ -39,7 +39,7 @@ export default function Home() {
             BIENVENIDOS A
           </h2>
           <Image
-            src="/assets/img/logo/PNG/edits/iabot-PNG-06.webp"
+            src="/assets/img/logo/edits/iabot-webp-06.webp"
             alt="Logo de IABOT - Robótica Educativa"
             width={231}
             height={115}
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="bg-lightGray dark:bg-dark-bg">
+      <main className="bg-light-gray dark:bg-dark-bg">
         {/* Sección de Presentación */}
         <section className="pt-12">
           <div className="container mx-auto px-6">
@@ -86,7 +86,7 @@ export default function Home() {
         </section>
 
         {/* Sección de Reels */}
-        <section className="bg-lightGray dark:bg-dark-bg">
+        <section className="bg-light-gray dark:bg-dark-bg">
           <h2 className="py-12 text-center font-bruno text-4xl  text-primary dark:text-dark-primary">
             ¡Mira Nuestros Reels!
           </h2>
@@ -94,7 +94,7 @@ export default function Home() {
         </section>
 
         {/* Sección de Recursos Didácticos */}
-        <section className=" bg-lightGray dark:bg-dark-bg">
+        <section className=" bg-light-gray dark:bg-dark-bg">
           <h2 className="py-12 text-center font-bruno text-4xl  text-primary dark:text-dark-primary">
             Recursos Didácticos y Capacitaciones
           </h2>

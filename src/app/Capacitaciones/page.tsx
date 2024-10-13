@@ -13,7 +13,7 @@ export default function Capacitaciones() {
   }, []);
 
   return (
-    <div className="bg-lightGray dark:bg-dark-bg text-gray-900 dark:text-gray-900 min-h-screen">
+    <div className="bg-light-gray dark:bg-dark-bg text-gray-900 dark:text-gray-900 min-h-screen">
       <header className="text-dark bg-primary px-4 py-20 text-center">
         <h1 className="mb-10 font-bruno text-3xl  text-gray-900 dark:text-gray-900">
           CAPACITACIONES
@@ -65,7 +65,7 @@ export default function Capacitaciones() {
             ].map((service, index) => (
               <Card
                 key={index}
-                className="border border-gray-700 dark:border-gray-300 transform overflow-hidden rounded-lg dark:bg-dark-gray bg-lightGray shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                className="border border-gray-700 dark:border-gray-300 transform overflow-hidden rounded-lg dark:bg-dark-gray bg-light-gray shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
               >
                 <CardContent className="p-6 text-black dark:text-white">
                   <h3 className="mb-6 text-2xl ">{service.title}</h3>

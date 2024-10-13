@@ -62,7 +62,7 @@ export default function Data() {
   }, []);
 
   return (
-    <div className="bg-lightGray dark:bg-dark-bg">
+    <div className="bg-light-gray dark:bg-dark-bg">
       <section className="py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
