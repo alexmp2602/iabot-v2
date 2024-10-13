@@ -17,7 +17,7 @@ function AnimatedCount({
 
   useEffect(() => {
     if (isVisible) {
-      springValue.set(targetNumber); // Inicia la animación solo si el elemento es visible
+      springValue.set(targetNumber); // Inicia la animación solo si es visible
       springValue.onChange((latest) => {
         setCount(Math.round(latest)); // Actualiza el estado con el valor animado
       });
@@ -35,34 +35,34 @@ export default function Data() {
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.5, // El 50% del elemento debe estar visible para que se active
+      threshold: 0.5, // El 50% del elemento debe estar visible para activarse
     };
-
-    const currentAlumnosRef = alumnosRef.current;
-    const currentInicioRef = inicioRef.current;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.target === currentAlumnosRef) {
+        if (entry.target === alumnosRef.current) {
           setIsVisibleAlumnos(entry.isIntersecting);
         }
-        if (entry.target === currentInicioRef) {
+        if (entry.target === inicioRef.current) {
           setIsVisibleInicio(entry.isIntersecting);
         }
       });
     }, observerOptions);
 
-    if (currentAlumnosRef) observer.observe(currentAlumnosRef);
-    if (currentInicioRef) observer.observe(currentInicioRef);
+    const alumnosNode = alumnosRef.current;
+    const inicioNode = inicioRef.current;
+
+    if (alumnosNode) observer.observe(alumnosNode);
+    if (inicioNode) observer.observe(inicioNode);
 
     return () => {
-      if (currentAlumnosRef) observer.unobserve(currentAlumnosRef);
-      if (currentInicioRef) observer.unobserve(currentInicioRef);
+      if (alumnosNode) observer.unobserve(alumnosNode);
+      if (inicioNode) observer.unobserve(inicioNode);
     };
   }, []);
 
   return (
-    <div className="bg-lightGray">
+    <div className="bg-lightGray dark:bg-dark-bg">
       <section className="py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -74,18 +74,17 @@ export default function Data() {
               <div className="flex items-center space-x-2 mb-2">
                 <UsersIcon
                   aria-label="Número de alumnos"
-                  className="h-12 w-12 text-primary"
+                  className="h-12 w-12 text-primary dark:text-dark-primary"
                 />
-                <h3 className="text-5xl font-bold text-primary">
+                <h3 className="text-5xl  text-primary dark:text-dark-primary">
                   +
                   <AnimatedCount
                     targetNumber={300}
                     isVisible={isVisibleAlumnos}
                   />{' '}
-                  {/* Contador animado con + */}
                 </h3>
               </div>
-              <p className="text-lg text-gray-800">
+              <p className="text-lg text-foreground dark:text-white">
                 Alumnos pasaron por nuestros talleres desde nuestros comienzos
               </p>
             </div>
@@ -98,17 +97,16 @@ export default function Data() {
               <div className="flex items-center space-x-2 mb-2">
                 <CalendarIcon
                   aria-label="Año de inicio"
-                  className="h-12 w-12 text-primary"
+                  className="h-12 w-12 text-primary dark:text-dark-primary"
                 />
-                <h3 className="text-5xl font-bold text-primary">
+                <h3 className="text-5xl  text-primary dark:text-dark-primary">
                   <AnimatedCount
                     targetNumber={2021}
                     isVisible={isVisibleInicio}
                   />{' '}
-                  {/* Contador animado para el año de inicio */}
                 </h3>
               </div>
-              <p className="text-lg text-gray-800">
+              <p className="text-lg text-foreground dark:text-white">
                 Año en el que dimos inicio a nuestra academia educativa
               </p>
             </div>

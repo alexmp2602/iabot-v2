@@ -18,23 +18,22 @@ export default function About() {
   }, []);
 
   return (
-    <div className="bg-lightGray text-gray-900 min-h-screen">
-      {' '}
+    <div className="bg-lightGray dark:bg-dark-gray text-gray-900 dark:text-gray-900 min-h-screen">
       <header className="bg-primary py-16 text-center">
-        <h2 className="mb-4 font-bruno text-4xl font-bold text-gray-900">
+        <h2 className="mb-4 font-bruno text-4xl  text-gray-900 dark:text-gray-900">
           ACERCA DE
         </h2>
-        <h1 className="mb-10 font-bruno text-4xl font-bold text-gray-900">
+        <h1 className="mb-10 font-bruno text-4xl  text-gray-900 dark:text-gray-900">
           IABOT
         </h1>
-        <p className="font-bruno text-2xl text-gray-900">
+        <p className="font-bruno text-2xl text-gray-900 dark:text-gray-900">
           CONOCE MÁS SOBRE NOSOTROS
         </p>
       </header>
       <main>
         <section>
-          <div className="bg-lightGray">
-            <h2 className="py-12 text-center font-bruno text-4xl font-bold text-primary">
+          <div className="bg-lightGray dark:bg-dark-bg">
+            <h2 className="py-12 text-center font-bruno text-4xl  text-primary">
               Nuestra Misión y Valores
             </h2>
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 lg:grid-cols-4">
@@ -69,10 +68,10 @@ export default function About() {
                   className="flex flex-col items-center text-center"
                 >
                   {value.icon}
-                  <h3 className="mb-4 font-bruno text-2xl font-semibold text-gray-900">
+                  <h3 className="mb-4 font-bruno text-2xl font-semibold text-gray-900 dark:text-white">
                     {value.title}
                   </h3>
-                  <p className="text-xl lg:pb-12 text-gray-700">
+                  <p className="text-xl lg:pb-12 text-gray-700 dark:text-gray-300">
                     {value.description}
                   </p>{' '}
                 </div>
@@ -81,20 +80,15 @@ export default function About() {
           </div>
         </section>
 
-        <section className="bg-lightGray">
-          <h2 className="py-12 text-center font-bruno text-3xl font-bold text-primary">
+        <section className="bg-lightGray dark:bg-dark-bg">
+          <h2 className="py-12 text-center font-bruno text-3xl  text-primary">
             CONOCE A NUESTRO EQUIPO
           </h2>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="mb-12 text-center text-xl text-gray-700">
-              {' '}
-              {/* Ajuste del tamaño del texto */}
+            <p className="mb-12 text-center text-xl text-gray-700 dark:text-gray-300">
               En IABOT, contamos con un equipo altamente capacitado y
               comprometido con la educación y la robótica. Nos capacitamos
-              continuamente en nuevas tecnologías. Además, nuestros cursos se
-              planifican por edades y niveles, buscando proporcionar una óptima
-              experiencia educativa a cada alumno. Siempre trabajamos de manera
-              transversal con otras áreas para enriquecer el aprendizaje.
+              continuamente en nuevas tecnologías...
             </p>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {[
@@ -118,7 +112,7 @@ export default function About() {
                 },
               ].map((member) => (
                 <Card
-                  className="w-full transform dark:bg-white bg-white py-8 transition-transform hover:scale-105"
+                  className="border border-gray-700 dark:border-gray-300 w-full transform bg-white dark:bg-dark-gray py-8 transition-transform hover:scale-105"
                   key={member.name}
                 >
                   <CardContent>
@@ -135,10 +129,10 @@ export default function About() {
                       }}
                       width={200}
                     />
-                    <h3 className="my-4 text-center text-2xl font-bruno leading-6 text-gray-900">
+                    <h3 className="my-4 text-center text-2xl font-bruno leading-6 text-gray-900 dark:text-white">
                       {member.name}
                     </h3>
-                    <p className="mt-2 text-center text-xl text-gray-700">
+                    <p className="mt-6 text-center text-xl text-gray-700 dark:text-gray-300">
                       {member.title}
                     </p>{' '}
                   </CardContent>
@@ -148,8 +142,8 @@ export default function About() {
           </div>
         </section>
 
-        <section className="bg-lightGray py-12">
-          <h2 className="py-12 text-center font-bruno text-4xl font-bold text-primary">
+        <section className="bg-lightGray dark:bg-dark-bg py-12">
+          <h2 className="py-12 text-center font-bruno text-4xl  text-primary">
             Testimonios
           </h2>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -157,7 +151,7 @@ export default function About() {
               {[
                 {
                   quote:
-                    'Las clases de robótica son espectaculares! Mi hijo empezó con 5 años. Es la única actividad de la semana que espera con tanto entusiasmo! El profe es una masa, todas las clases vuelve con nuevas ideas, feliz de participar. Recomiendo! 👏',
+                    'Las clases de robótica son espectaculares! Mi hijo empezó con 5 años. Es la única actividad de la semana que espera con tanto entusiasmo! El profe es una masa, todas las clases vuelve con nuevas ideas, feliz de participar. ¡Recomiendo! 👏',
                   author: 'Sara, Madre de Estudiante',
                 },
                 {
@@ -166,11 +160,14 @@ export default function About() {
                   author: 'María, Docente de Primaria',
                 },
               ].map((testimonial, index) => (
-                <div key={index} className="rounded-lg border bg-white p-6">
-                  <p className="text-xl italic text-gray-800">
+                <div
+                  key={index}
+                  className="rounded-lg border border-gray-700 dark:border-gray-300 bg-white dark:bg-dark-gray p-6"
+                >
+                  <p className="text-xl italic text-gray-800 dark:text-gray-300">
                     &quot;{testimonial.quote}&quot;
                   </p>
-                  <p className="mt-4 text-right text-sm font-semibold text-gray-900">
+                  <p className="mt-4 text-right text-sm font-semibold text-gray-900 dark:text-white">
                     - {testimonial.author}
                   </p>
                 </div>

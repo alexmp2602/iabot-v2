@@ -28,7 +28,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoalGray py-6 text-white">
+    <footer className="bg-dark-gray dark:bg-dark-gray py-6 text-black dark:text-white">
       <div className="container mx-auto px-4 text-center">
         {/* Sección de Redes Sociales */}
         <div className="mb-4 flex justify-center space-x-6">
@@ -39,7 +39,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="transition-colors duration-300 hover:text-primary"
+              className="text-white transition-colors duration-300 hover:text-primary dark:hover:text-dark-primary"
             >
               <Icon className="h-6 w-6" aria-hidden="true" />
             </a>
@@ -52,7 +52,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Dirección de Iabot"
-          className="text-white transition-colors duration-300 hover:text-primary"
+          className="text-white transition-colors duration-300 hover:text-primary dark:hover:text-dark-primary"
         >
           Estamos en C. 9 N 374, Mercedes, Provincia de Buenos Aires
         </a>

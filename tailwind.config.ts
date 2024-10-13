@@ -3,6 +3,7 @@ import tailwindcssAnimate from 'tailwindcss-animate';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,19 +13,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Modo claro
         primary: '#78eb2c',
         secondary: '#32cddb',
         text: '#000000',
-        softWhite: '#f9f9f9', // Blanco suave
-        lightGray: '#e6e6e6', // Gris claro
-        charcoalGray: '#4A4A4A', // Gris oscuro
-        softGreen: '#f0f8f0', // Verde suave
-        softBlue: '#f0f8ff', // Azul suave
-        paleBlue: '#e0f7fa', // Otro azul suave
-      },
-      backgroundImage: {
-        'custom-radial':
-          'radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0))',
+        // Punto medio
+        'light-gray': '#f9f9f9',
+        // Modo oscuro
+        'dark-primary': '#78eb2c',
+        'dark-secondary': '#32cddb',
+        'dark-bg': '#0d0d0d',
+        'dark-text': '#f9f9f9',
+        'dark-gray': '#282828',
       },
       fontFamily: {
         bruno: ['"Bruno Ace"', 'sans-serif'],

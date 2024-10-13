@@ -38,19 +38,20 @@ const Reels = () => {
                 alt={`Reel ${index + 1}`}
                 width={250}
                 height={250}
-                className="rounded-lg shadow-md object-cover opacity-95 hover:opacity-70 transition-opacity duration-300"
-                onError={(e) => {
-                  e.currentTarget.src = '/assets/img/reels/default.jpg'; // Imagen predeterminada si no se encuentra la imagen
-                }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 250px"
+                className="rounded-lg shadow-md object-cover hover:opacity-70 transition-opacity duration-300"
+                priority={index === 0} // Prioriza la primera imagen
+                loading={index === 0 ? 'eager' : 'lazy'} // Carga lenta para imágenes secundarias
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 rounded-lg">
+
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-12 h-12 text-white opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="w-12 h-12 text-white hover:opacity-100 transition-opacity duration-300"
                 >
                   <path
                     strokeLinecap="round"

@@ -1,21 +1,22 @@
-import { Metadata, Viewport } from 'next';
-import { Bruno_Ace } from 'next/font/google';
-import { Roboto } from 'next/font/google';
+import { Metadata } from 'next';
+import { Bruno_Ace, Roboto } from 'next/font/google';
 import '@/app/globals.css';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Inscription from '@/components/Inscription';
 import Data from '@/components/Data';
+import { ThemeProvider } from 'next-themes'; // Importación de ThemeProvider
 
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const brunoAce = Bruno_Ace({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: '400',
   display: 'swap',
 });
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: '400',
   display: 'swap',
 });
 
@@ -57,12 +58,14 @@ export const metadata: Metadata = {
       },
     ],
   },
-};
-
-// Definición del viewport
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
+  twitter: {
+    card: 'summary_large_image',
+    site: '@iabot',
+    title: 'IABOT - Robótica Educativa y Capacitaciones para Docentes',
+    description:
+      'Descubre IABOT, una empresa líder en robótica educativa que ofrece capacitación y recursos innovadores.',
+    images: '/assets/img/logo/JPG/iabot.jpg',
+  },
 };
 
 export default function RootLayout({
@@ -73,14 +76,19 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Los metadatos se aplican automáticamente en la nueva versión de Next*/}
+        {/* Metadatos adicionales */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
       </head>
-      <body className={`${roboto.className} ${brunoAce.className}`}>
-        <Navbar />
-        {children}
-        <Inscription />
-        <Data />
-        <Footer />
+      <body className={roboto.className}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <Navbar />
+          <main className="font-roboto">{children}</main>
+          <Inscription />
+          <Data />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

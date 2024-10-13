@@ -71,7 +71,7 @@ export default function Component() {
   return (
     <div className="bg-lightGray text-gray-900 min-h-screen">
       <header className="bg-primary px-4 py-20 text-center">
-        <h1 className="mb-10 font-bruno text-4xl font-bold text-gray-900">
+        <h1 className="mb-10 font-bruno text-4xl  text-gray-900">
           NUESTROS CURSOS
         </h1>
         <p className="font-bruno text-2xl text-gray-900">
@@ -81,7 +81,7 @@ export default function Component() {
 
       <main>
         <section>
-          <h2 className="py-12 text-center font-bruno text-5xl font-bold text-primary">
+          <h2 className="py-12 text-center font-bruno text-5xl  text-primary">
             Descubre Nuestros Cursos
           </h2>
           <p className="mb-12 text-center text-xl text-gray-600">
@@ -93,7 +93,7 @@ export default function Component() {
         </section>
 
         <section className="bg-lightGray">
-          <h2 className="py-12 text-center font-bruno text-5xl font-bold text-primary">
+          <h2 className="py-12 text-center font-bruno text-5xl  text-primary">
             Preguntas Frecuentes
           </h2>
           <div className="pb-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

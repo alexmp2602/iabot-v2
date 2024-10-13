@@ -3,77 +3,41 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-
-interface SvgProps {
-  className?: string;
-  style?: React.CSSProperties;
-}
-
-function MenuIcon(props: SvgProps) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  );
-}
-
-function PanelTopCloseIcon(props: SvgProps) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="18" x2="6" y1="6" y2="18" />
-      <line x1="6" x2="18" y1="6" y2="18" />
-    </svg>
-  );
-}
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark'); // Tema predeterminado oscuro
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Verifica el modo de tema almacenado
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme as 'light' | 'dark');
+      document.documentElement.classList.toggle('dark', storedTheme === 'dark'); // Aplica la clase 'dark' según el tema
+    }
+  }, []);
+
+  const handleThemeChange = (newTheme: 'light' | 'dark') => {
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme); // Almacena el tema
+    document.documentElement.classList.toggle('dark', newTheme === 'dark'); // Cambia la clase 'dark' en <html>
+  };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
-
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  }, [isMobileMenuOpen]);
+  const logoSrc =
+    theme === 'light'
+      ? '/assets/img/logo/edits/iabot-webp-06.webp' // Logo para modo claro
+      : '/assets/img/logo/edits/iabot-webp-09.webp'; // Logo para modo oscuro
 
   const linkClass =
-    'text-gray-900 transition-colors duration-300 py-2 hover:text-primary'; // Cambié el color a un gris oscuro por defecto para mayor legibilidad
+    'text-black dark:text-white transition-colors duration-300 py-2 hover:text-primary dark:hover:text-dark-primary';
 
   return (
-    <nav className="sticky top-0 z-50 bg-lightGray px-4 py-2 shadow-md">
+    <nav className="sticky top-0 z-50 bg-light-gray dark:bg-dark-bg px-4 py-2 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link
@@ -83,7 +47,7 @@ export default function Navbar() {
         >
           <Image
             alt="IA Bot Logo"
-            src="/assets/img/logo/PNG/iabot-PNG-06.png"
+            src={logoSrc} // Cambia el logo dinámicamente según el tema
             width={100}
             height={40}
             priority={true}
@@ -91,100 +55,145 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Links del menú en versión de escritorio */}
-        <div className="hidden md:flex md:items-center md:space-x-4">
-          <Link className={linkClass} href="/" aria-label="Ir a inicio">
-            INICIO
-          </Link>
-          <Link
-            className={linkClass}
-            href="/Acerca-de"
-            aria-label="Ir a Acerca de"
-          >
-            ACERCA DE
-          </Link>
-          <Link className={linkClass} href="/Cursos" aria-label="Ir a Cursos">
-            CURSOS
-          </Link>
-          <Link
-            className={linkClass}
-            href="/Capacitaciones"
-            aria-label="Ir a Capacitaciones"
-          >
-            CAPACITACIONES
-          </Link>
-          <Link
-            className={linkClass}
-            href="/Contacto"
-            aria-label="Ir a Contacto"
-          >
-            CONTACTO
-          </Link>
+        {/* Toggle del tema */}
+        <ThemeToggle onThemeChange={handleThemeChange} />
+
+        {/* Links del menú y toggle del tema alineados a la derecha */}
+        <div className="flex items-center justify-end space-x-6">
+          <div className="hidden md:flex md:items-center md:space-x-4">
+            <Link className={linkClass} href="/" aria-label="Ir a inicio">
+              INICIO
+            </Link>
+            <Link
+              className={linkClass}
+              href="/Acerca-de"
+              aria-label="Ir a Acerca de"
+            >
+              ACERCA DE
+            </Link>
+            <Link className={linkClass} href="/Cursos" aria-label="Ir a Cursos">
+              CURSOS
+            </Link>
+            <Link
+              className={linkClass}
+              href="/Capacitaciones"
+              aria-label="Ir a Capacitaciones"
+            >
+              CAPACITACIONES
+            </Link>
+            <Link
+              className={linkClass}
+              href="/Contacto"
+              aria-label="Ir a Contacto"
+            >
+              CONTACTO
+            </Link>
+          </div>
         </div>
 
         {/* Menú móvil */}
         <div className="md:hidden">
           <button
-            className="text-gray-900 transition-transform duration-300 hover:text-primary"
             onClick={toggleMobileMenu}
-            aria-label="Abrir menú"
-            aria-expanded={isMobileMenuOpen}
+            aria-label="Abrir menú móvil"
+            className="text-black dark:text-white"
           >
-            <MenuIcon className="h-6 w-6" />
+            {isMobileMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 6.75h16.5m-16.5 6.75h16.5"
+                />
+              </svg>
+            )}
           </button>
+
+          {/* Panel del menú móvil */}
           {isMobileMenuOpen && (
-            <div className="absolute right-0 top-0 z-10 h-screen w-full bg-white p-4 shadow-lg transition-transform duration-300">
-              <div className="flex justify-end">
-                <button
-                  className="mb-4 text-gray-900 hover:text-primary"
-                  onClick={closeMobileMenu}
-                  aria-label="Cerrar menú"
+            <div className="absolute right-0 top-0 w-full h-screen bg-light-gray dark:bg-dark-bg p-4 flex flex-col items-end space-y-4">
+              <button
+                onClick={toggleMobileMenu}
+                aria-label="Cerrar menú móvil"
+                className="self-end text-black dark:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
                 >
-                  <PanelTopCloseIcon className="h-6 w-6" />
-                </button>
-              </div>
-              <div className="flex flex-col items-end space-y-4">
-                <Link
-                  className={linkClass}
-                  href="/"
-                  onClick={closeMobileMenu}
-                  aria-label="Ir a inicio"
-                >
-                  INICIO
-                </Link>
-                <Link
-                  className={linkClass}
-                  href="/Acerca-de"
-                  onClick={closeMobileMenu}
-                  aria-label="Ir a Acerca de"
-                >
-                  ACERCA DE
-                </Link>
-                <Link
-                  className={linkClass}
-                  href="/Cursos"
-                  onClick={closeMobileMenu}
-                  aria-label="Ir a Cursos"
-                >
-                  CURSOS
-                </Link>
-                <Link
-                  className={linkClass}
-                  href="/Capacitaciones"
-                  onClick={closeMobileMenu}
-                  aria-label="Ir a Capacitaciones"
-                >
-                  CAPACITACIONES
-                </Link>
-                <Link
-                  className={linkClass}
-                  href="/Contacto"
-                  onClick={closeMobileMenu}
-                  aria-label="Ir a Contacto"
-                >
-                  CONTACTO
-                </Link>
-              </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+              <Link
+                className={linkClass}
+                href="/"
+                onClick={toggleMobileMenu}
+                aria-label="Ir a inicio"
+              >
+                INICIO
+              </Link>
+              <Link
+                className={linkClass}
+                href="/Acerca-de"
+                onClick={toggleMobileMenu}
+                aria-label="Ir a Acerca de"
+              >
+                ACERCA DE
+              </Link>
+              <Link
+                className={linkClass}
+                href="/Cursos"
+                onClick={toggleMobileMenu}
+                aria-label="Ir a Cursos"
+              >
+                CURSOS
+              </Link>
+              <Link
+                className={linkClass}
+                href="/Capacitaciones"
+                onClick={toggleMobileMenu}
+                aria-label="Ir a Capacitaciones"
+              >
+                CAPACITACIONES
+              </Link>
+              <Link
+                className={linkClass}
+                href="/Contacto"
+                onClick={toggleMobileMenu}
+                aria-label="Ir a Contacto"
+              >
+                CONTACTO
+              </Link>
             </div>
           )}
         </div>
