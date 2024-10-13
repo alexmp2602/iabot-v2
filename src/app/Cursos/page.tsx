@@ -96,7 +96,7 @@ export default function Component() {
           <h2 className="py-12 text-center font-bruno text-5xl font-bold text-primary">
             Preguntas Frecuentes
           </h2>
-          <div className="pb-4 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="pb-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4">
                 <button
