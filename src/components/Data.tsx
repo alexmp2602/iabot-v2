@@ -18,11 +18,15 @@ function AnimatedCount({
   useEffect(() => {
     if (isVisible) {
       springValue.set(targetNumber); // Inicia la animación solo si es visible
-      springValue.onChange((latest) => {
-        setCount(Math.round(latest)); // Actualiza el estado con el valor animado
-      });
     }
   }, [targetNumber, isVisible, springValue]);
+
+  // Cambia el manejo de onChange a usar un efecto basado en el valor de springValue
+  useEffect(() => {
+    return springValue.onChange((latest) => {
+      setCount(Math.round(latest)); // Actualiza el estado con el valor animado
+    });
+  }, [springValue]);
 
   return <span>{count}</span>;
 }
@@ -62,7 +66,7 @@ export default function Data() {
   }, []);
 
   return (
-    <div className="bg-light-gray dark:bg-dark-bg">
+    <div className="bg-lightGray dark:bg-dark-bg">
       <section className="py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -76,7 +80,7 @@ export default function Data() {
                   aria-label="Número de alumnos"
                   className="h-12 w-12 text-primary dark:text-dark-primary"
                 />
-                <h3 className="text-5xl  text-primary dark:text-dark-primary">
+                <h3 className="text-5xl text-primary dark:text-dark-primary">
                   +
                   <AnimatedCount
                     targetNumber={300}
@@ -99,7 +103,7 @@ export default function Data() {
                   aria-label="Año de inicio"
                   className="h-12 w-12 text-primary dark:text-dark-primary"
                 />
-                <h3 className="text-5xl  text-primary dark:text-dark-primary">
+                <h3 className="text-5xl text-primary dark:text-dark-primary">
                   <AnimatedCount
                     targetNumber={2021}
                     isVisible={isVisibleInicio}

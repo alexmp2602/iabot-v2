@@ -74,17 +74,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es" className="scroll-smooth">
       <head>
-        {/* Metadatos adicionales */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
       </head>
-      <body className={roboto.className}>
+      <body className={`${roboto.className} bg-light-gray dark:bg-dark-bg`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
-          <main className="font-roboto">{children}</main>
+          <main className="font-roboto relative z-10">{children}</main>
           <Inscription />
           <Data />
           <Footer />

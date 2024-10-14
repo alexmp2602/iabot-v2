@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const cursos = [
   {
-    imgSrc: '/assets/img/cursos/webp/lego-wedo.webp',
+    imgSrc: '/assets/img/cursos/webp/400x400/lego-wedo.webp',
     alt: 'Introducción a la Robótica con LEGO WeDo 2.0',
     title: 'Introducción a la Robótica con LEGO WeDo 2.0',
     requisitos:
@@ -13,7 +13,7 @@ const cursos = [
       'https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform',
   },
   {
-    imgSrc: '/assets/img/cursos/webp/lego-spike-essential.webp',
+    imgSrc: '/assets/img/cursos/webp/400x400/lego-spike-essential.webp',
     alt: 'Robótica Avanzada con LEGO Spike Essential',
     title: 'Robótica Avanzada con LEGO Spike Essential',
     requisitos:
@@ -22,7 +22,7 @@ const cursos = [
       'https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform',
   },
   {
-    imgSrc: '/assets/img/cursos/webp/lego-spike-prime.webp',
+    imgSrc: '/assets/img/cursos/webp/400x400/lego-spike-prime.webp',
     alt: 'Robótica Experta con LEGO Spike Prime',
     title: 'Robótica Experta con LEGO Spike Prime',
     requisitos: 'Requisitos: Robótica Avanzada con LEGO Spike Essential',
@@ -30,7 +30,7 @@ const cursos = [
       'https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform',
   },
   {
-    imgSrc: '/assets/img/cursos/webp/lego-ev3.webp',
+    imgSrc: '/assets/img/cursos/webp/400x400/lego-ev3.webp',
     alt: 'Robótica Aplicada con Lego EV3',
     title: 'Robotica Aplicada con Lego EV3',
     requisitos:
@@ -39,7 +39,7 @@ const cursos = [
       'https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform',
   },
   {
-    imgSrc: '/assets/img/cursos/webp/capacitaciones.webp',
+    imgSrc: '/assets/img/cursos/webp/400x400/capacitaciones.webp',
     alt: 'Capacitación para Docentes',
     title: 'Capacitación para Docentes',
     requisitos:
@@ -48,7 +48,7 @@ const cursos = [
       'https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20quiero%20consultar%20por%20las%20capacitaciones%20para%20docentes.%20¿Podrías%20darme%20más%20información%20sobre%20los%20cursos%20disponibles?%20¡Gracias!',
   },
   {
-    imgSrc: '/assets/img/cursos/webp/family-day.webp',
+    imgSrc: '/assets/img/cursos/webp/400x400/family-day.webp',
     alt: 'Family Day: Experiencia de Robótica Educativa para Empresas',
     title: 'Family Day: Experiencia de Robótica Educativa para Empresas',
     requisitos:

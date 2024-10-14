@@ -1,6 +1,6 @@
 import '@/app/globals.css';
-
 import { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes'; // Importamos ThemeProvider para gestionar los temas
 
 export const metadata: Metadata = {
   title: 'IABOT - Acerca de | Robótica Educativa y Capacitación',
@@ -40,21 +40,18 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-};
-
 interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+const AboutLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
-    <>
-      <div>{children}</div>
-    </>
+    <ThemeProvider attribute="class" defaultTheme="dark">
+      <div className="font-roboto bg-light-gray dark:bg-dark-bg min-h-screen relative z-10">
+        <main>{children}</main>
+      </div>
+    </ThemeProvider>
   );
 };
 
-export default RootLayout;
+export default AboutLayout;

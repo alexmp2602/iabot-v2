@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import AnimatedButton from '@/components/AnimatedButton';
+import Background from '@/components/Background';
 
-// Importaciones dinámicas
 const Reels = dynamic(() => import('@/components/Reels'), { ssr: false });
 const Cursos = dynamic(() => import('@/components/Cursos'), { ssr: false });
 
@@ -19,15 +19,17 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className="min-h-screen relative">
+      <Background />
+
       {/* Video de Presentación */}
-      <section className="relative flex items-center justify-center overflow-hidden h-[40vh] bg-dark-gray dark:bg-dark-gray">
+      <section className="bg-dark-gray relative flex items-center justify-center overflow-hidden h-[40vh]">
         <video
           autoPlay
           muted
           loop
           preload="metadata"
-          poster="/assets/img/logo/PNG/edits/iabot-PNG-04.webp"
+          poster="/assets/img/logo/edits/iabot-webp-04.webp"
           className="absolute inset-0 w-full h-full object-cover opacity-20"
           aria-label="Video de bienvenida a IABOT mostrando escenas de robótica"
         >
@@ -35,21 +37,21 @@ export default function Home() {
         </video>
 
         <div className="relative z-10 flex flex-col items-center space-y-2 pt-14 pb-8">
-          <h2 className="text-center font-bruno text-3xl md:text-4xl  text-primary dark:text-dark-primary">
+          <h2 className="text-center font-bruno text-3xl md:text-4xl text-primary dark:text-dark-primary">
             BIENVENIDOS A
           </h2>
           <Image
             src="/assets/img/logo/edits/iabot-webp-06.webp"
             alt="Logo de IABOT - Robótica Educativa"
-            width={231}
-            height={115}
+            width={256}
+            height={128}
             priority={true}
             className="focus:outline-none object-contain"
           />
         </div>
       </section>
 
-      <main className="bg-light-gray dark:bg-dark-bg">
+      <main className="relative z-10">
         {/* Sección de Presentación */}
         <section className="pt-12">
           <div className="container mx-auto px-6">
@@ -86,21 +88,21 @@ export default function Home() {
         </section>
 
         {/* Sección de Reels */}
-        <section className="bg-light-gray dark:bg-dark-bg">
-          <h2 className="py-12 text-center font-bruno text-4xl  text-primary dark:text-dark-primary">
+        <section>
+          <h2 className="py-12 text-center font-bruno text-4xl text-primary dark:text-dark-primary">
             ¡Mira Nuestros Reels!
           </h2>
           <Reels />
         </section>
 
         {/* Sección de Recursos Didácticos */}
-        <section className=" bg-light-gray dark:bg-dark-bg">
-          <h2 className="py-12 text-center font-bruno text-4xl  text-primary dark:text-dark-primary">
+        <section>
+          <h2 className="py-12 text-center font-bruno text-4xl text-primary dark:text-dark-primary">
             Recursos Didácticos y Capacitaciones
           </h2>
           <Cursos />
         </section>
       </main>
-    </>
+    </div>
   );
 }

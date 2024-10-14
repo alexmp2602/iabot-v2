@@ -34,7 +34,7 @@ const Reels = () => {
               onClick={() => openModal(reelId)}
             >
               <Image
-                src={`/assets/img/reels/${reelId}.jpg`}
+                src={`/assets/img/reels/250x250/${reelId}.jpg`}
                 alt={`Reel ${index + 1}`}
                 width={250}
                 height={250}
