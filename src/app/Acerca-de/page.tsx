@@ -22,7 +22,7 @@ export default function About() {
     <div className="min-h-screen relative">
       <Background />
 
-      <header className="bg-primary dark:bg-transparent py-16 text-center">
+      <header className="bg-primary dark:bg-primary py-16 text-center">
         <h2 className="mb-4 font-bruno text-4xl text-gray-900 dark:text-gray-900">
           ACERCA DE
         </h2>
