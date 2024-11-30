@@ -83,8 +83,12 @@ export default function Navbar() {
           >
             ACERCA DE
           </Link>
-          <Link className={linkClass} href="/Cursos" aria-label="Ir a Cursos">
-            CURSOS
+          <Link
+            className={linkClass}
+            href="/Talleres"
+            aria-label="Ir a Talleres"
+          >
+            TALLERES
           </Link>
           <Link
             className={linkClass}
@@ -174,10 +178,10 @@ export default function Navbar() {
             </Link>
             <Link
               className={linkClass}
-              href="/Cursos"
+              href="/Talleres"
               onClick={toggleMobileMenu}
             >
-              CURSOS
+              TALLERES
             </Link>
             <Link
               className={linkClass}

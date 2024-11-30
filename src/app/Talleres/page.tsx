@@ -1,13 +1,13 @@
 'use client';
 
-import Cursos from '@/components/Cursos';
+import Talleres from '@/components/Talleres';
 import { useState, useEffect } from 'react';
 
 const faqs = [
   {
-    question: '¿Qué cursos ofrecen?',
+    question: '¿Qué talleres ofrecen?',
     answer:
-      'Ofrecemos cursos de robótica, programación y STEM para todas las edades.',
+      'Ofrecemos talleres de robótica, programación y STEM para todas las edades.',
   },
   {
     question: '¿Cómo puedo inscribirme?',
@@ -15,23 +15,23 @@ const faqs = [
       'Puedes inscribirte completando el formulario de inscripción en nuestra página web. También puedes contactarnos por correo electrónico o teléfono para más información.',
   },
   {
-    question: '¿Cuál es la duración de los cursos?',
+    question: '¿Cuál es la duración de los talleres?',
     answer:
-      'La duración de nuestros cursos varía según el nivel y la temática.',
+      'La duración de nuestros talleres varía según el nivel y la temática.',
   },
   {
-    question: '¿Cuál es la edad mínima para participar en los cursos?',
-    answer: 'La edad mínima para participar en nuestros cursos es de 6 años.',
+    question: '¿Cuál es la edad mínima para participar en los talleres?',
+    answer: 'La edad mínima para participar en nuestros talleres es de 6 años.',
   },
   {
-    question: '¿Qué materiales necesito para los cursos?',
+    question: '¿Qué materiales necesito para los talleres?',
     answer:
-      'Proporcionamos todos los materiales necesarios para nuestros cursos. No necesitas traer nada.',
+      'Proporcionamos todos los materiales necesarios para nuestros talleres. No necesitas traer nada.',
   },
   {
-    question: '¿Cuál es el horario de los cursos?',
+    question: '¿Cuál es el horario de los talleres?',
     answer:
-      'Los horarios de los cursos varían según el nivel y la temática. Consulta por los horarios disponibles.',
+      'Los horarios de los talleres varían según el nivel y la temática. Consulta por los horarios disponibles.',
   },
   {
     question: '¿Hay descuentos para grupos?',
@@ -42,9 +42,9 @@ const faqs = [
     answer: 'Aceptamos pagos en efectivo y transferencias bancarias.',
   },
   {
-    question: '¿Ofrecen cursos para docentes?',
+    question: '¿Ofrecen talleres para docentes?',
     answer:
-      'Sí, ofrecemos cursos de capacitación en robótica y programación para docentes.',
+      'Sí, ofrecemos talleres de capacitación en robótica y programación para docentes.',
   },
   {
     question: '¿Otorgan algún tipo de certificado?',
@@ -53,7 +53,7 @@ const faqs = [
   },
 ];
 
-export default function CursosComponent() {
+export default function TalleresComponent() {
   useEffect(() => {
     const link = document.createElement('link');
     link.href =
@@ -85,23 +85,23 @@ export default function CursosComponent() {
 
       <header className="bg-primary py-20 text-center">
         <h1 className="mb-10 font-bruno text-4xl text-gray-900 dark:text-gray-900">
-          NUESTROS CURSOS
+          NUESTROS TALLERES
         </h1>
         <p className="font-bruno text-2xl text-gray-900 dark:text-gray-900">
-          Explora nuestros cursos y encuentra el que más te interesa
+          Explora nuestros talleres y encuentra el que más te interesa
         </p>
       </header>
 
       <main>
         <section>
           <h2 className="py-12 text-center font-bruno text-5xl text-primary">
-            Descubre Nuestros Cursos
+            Descubre Nuestros talleres
           </h2>
           <p className="mb-12 text-center text-xl text-gray-900 dark:text-white">
-            Cada uno de nuestros cursos está diseñado para brindar la mejor
+            Cada uno de nuestros talleres está diseñado para brindar la mejor
             experiencia de aprendizaje.
           </p>
-          <Cursos />
+          <Talleres />
         </section>
 
         <section className="bg-transparent dark:bg-transparent">

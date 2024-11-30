@@ -8,7 +8,7 @@ const cursos = [
     alt: 'Introducción a la Robótica con LEGO WeDo 2.0',
     title: 'Introducción a la Robótica con LEGO WeDo 2.0',
     requisitos:
-      'Requisitos: 6 años de edad o experiencia en clases de Robótica básica',
+      'Requisitos: Tener 6 años o experiencia previa en Robótica Básica',
     formLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSdOqv7K6jisyiLCJLVaXudGCL6BHCZAoo2DCNjW-XlSP99MwQ/viewform',
   },
@@ -43,7 +43,7 @@ const cursos = [
     alt: 'Capacitación para Docentes',
     title: 'Capacitación para Docentes',
     requisitos:
-      'Capacitación y asesoramiento especializado para docentes de instituciones',
+      'Capacitación y Asesoramiento Especializado para Docentes de Instituciones',
     formLink:
       'https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20quiero%20consultar%20por%20las%20capacitaciones%20para%20docentes.%20¿Podrías%20darme%20más%20información%20sobre%20los%20cursos%20disponibles?%20¡Gracias!',
   },
@@ -52,7 +52,7 @@ const cursos = [
     alt: 'Family Day: Experiencia de Robótica Educativa para Empresas',
     title: 'Family Day: Experiencia de Robótica Educativa para Empresas',
     requisitos:
-      'Una jornada donde empleados y sus familias disfrutan creando y programando robots con kits LEGO, promoviendo el trabajo en equipo y la diversión en un ambiente innovador.',
+      'Una jornada en la que empleados y sus familias disfrutan creando y programando robots con kits LEGO, fomentando el trabajo en equipo y la diversión en un ambiente innovador',
     formLink:
       'https://api.whatsapp.com/send?phone=5492324468366&text=Hola,%20quiero%20consultar%20por%20el%20Family%20Day.%20%C2%BFPodr%C3%ADas%20darme%20más%20informaci%C3%B3n%20sobre%20esta%20experiencia?%20%C2%A1Gracias!',
   },

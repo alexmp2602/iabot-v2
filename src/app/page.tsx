@@ -7,7 +7,7 @@ import AnimatedButton from '@/components/AnimatedButton';
 import Background from '@/components/Background';
 
 const Reels = dynamic(() => import('@/components/Reels'), { ssr: false });
-const Cursos = dynamic(() => import('@/components/Cursos'), { ssr: false });
+const Talleres = dynamic(() => import('@/components/Talleres'), { ssr: false });
 
 export default function Home() {
   useEffect(() => {
@@ -56,21 +56,16 @@ export default function Home() {
         <section className="pt-12">
           <div className="container mx-auto px-6">
             <p className="mb-6 text-center text-xl font-avenir text-text dark:text-dark-text">
-              En IABOT, exploramos el emocionante mundo de la Robótica Educativa
-              a través de los innovadores kits de LEGO, líderes en la industria.
-              Estos kits no solo desatan la creatividad de los alumnos, sino que
-              también les permiten desarrollar habilidades esenciales al
-              construir y programar robots.
+              En IABOT, exploramos el mundo de la Robótica Educativa utilizando
+              pedagogía y robots de <b>LEGO Education</b>, líderes en la
+              industria. Estos recursos fomentan la creatividad y desarrollan
+              habilidades STEAM (Ciencia, Tecnología, Ingeniería, Arte y
+              Matemáticas) clave para el presente y el futuro. Nuestra misión es
+              preparar a los alumnos con clases educativas de alta calidad.
             </p>
-            <p className="mb-6 text-center text-xl font-avenir text-text dark:text-dark-text">
-              Nuestra misión es cultivar destrezas clave para el futuro a través
-              de clases educativas de alta calidad. Utilizamos los recursos
-              pedagógicos e innovadores de LEGO EDUCATION como nuestra
-              herramienta principal.
-            </p>
-            <p className="mb-6 text-center text-xl font-avenir text-text dark:text-dark-text">
-              ¡Unite a nosotros y descubrí el fascinante universo de la Robótica
-              Educativa!
+            <p className="mb-6 text-center text-l font-avenir text-text dark:text-dark-text">
+              ¡Unite a nuestros talleres y descubrí el fascinante universo de la
+              Robótica Educativa!
             </p>
             <div className="container mx-auto max-w-2xl text-center">
               <div className="mt-8 flex justify-center">
@@ -98,9 +93,9 @@ export default function Home() {
         {/* Sección de Recursos Didácticos */}
         <section>
           <h2 className="py-12 text-center font-bruno text-4xl text-primary dark:text-dark-primary">
-            Recursos Didácticos y Capacitaciones
+            Recursos Didácticos y Talleres
           </h2>
-          <Cursos />
+          <Talleres />
         </section>
       </main>
     </div>
