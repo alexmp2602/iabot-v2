@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Inscription from '@/components/Inscription';
 import Data from '@/components/Data';
-import { ThemeProvider } from 'next-themes'; // Importación de ThemeProvider
+import { ThemeProvider } from 'next-themes';
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const brunoAce = Bruno_Ace({
@@ -74,14 +74,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" suppressHydrationWarning className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
       </head>
       <body className={`${roboto.className} bg-light-gray dark:bg-dark-bg`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        {/* 
+          `enableSystem` permite que el tema siga la configuración del sistema operativo.
+          `attribute="class"` asegura que TailwindCSS pueda trabajar con los temas.
+        */}
+        <ThemeProvider attribute="class" enableSystem defaultTheme="dark">
           <Navbar />
           <main className="font-roboto relative z-10">{children}</main>
           <Inscription />
