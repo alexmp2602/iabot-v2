@@ -20,9 +20,8 @@ const roboto = Roboto({
   display: 'swap',
 });
 
-// Definición de metadatos
 export const metadata: Metadata = {
-  title: 'IABOT - Robótica Educativa y Soluciones Tecnológicas Educativas',
+  title: 'IABOT – Robótica Educativa y Soluciones Tecnológicas Educativas',
   description:
     'Somos una empresa dedicada a la robótica educativa y al desarrollo de soluciones tecnológicas personalizadas para instituciones y empresas.',
   keywords: [
@@ -44,9 +43,9 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   metadataBase: new URL('https://www.iabot.com.ar'),
   openGraph: {
-    title: 'IABOT - Robótica Educativa y Capacitaciones para Docentes',
+    title: 'IABOT – Robótica Educativa y Soluciones Tecnológicas Educativas',
     description:
-      'IABOT es una empresa dedicada a la robótica educativa y a la capacitación de docentes.',
+      'Somos una empresa dedicada a la robótica educativa y al desarrollo de soluciones tecnológicas personalizadas para instituciones y empresas.',
     url: 'https://www.iabot.com.ar',
     type: 'website',
     images: [
@@ -61,9 +60,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@iabot',
-    title: 'IABOT - Robótica Educativa y Capacitaciones para Docentes',
+    title: 'IABOT – Robótica Educativa y Soluciones Tecnológicas Educativas',
     description:
-      'Descubre IABOT, una empresa líder en robótica educativa que ofrece capacitación y recursos innovadores.',
+      'Somos una empresa dedicada a la robótica educativa y al desarrollo de soluciones tecnológicas personalizadas para instituciones y empresas.',
     images: '/assets/img/logo/JPG/iabot.jpg',
   },
 };
