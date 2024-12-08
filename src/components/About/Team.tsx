@@ -1,3 +1,5 @@
+'use client';
+
 import { CardContent, Card } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -24,20 +26,20 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section className="bg-transparent dark:bg-transparent">
-      <h2 className="py-12 text-center font-bruno text-3xl text-primary">
+    <section className="py-16 bg-transparent dark:bg-transparent">
+      <h2 className="pb-8 text-center font-bruno text-4xl text-primary dark:text-dark-primary">
         CONOCE A NUESTRO EQUIPO
       </h2>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-8 sm:px-12">
         <p className="mb-12 text-center text-xl text-gray-700 dark:text-gray-300">
           En IABOT, contamos con un equipo altamente capacitado y comprometido
           con la educación y la robótica. Nos capacitamos continuamente en
-          nuevas tecnologías...
+          nuevas tecnologías para ofrecer siempre lo mejor a nuestros alumnos.
         </p>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 sm:gap-16 md:grid-cols-3">
           {teamMembers.map((member) => (
             <Card
-              className="border border-gray-700 dark:border-gray-300 w-full transform bg-white dark:bg-gray-800 py-8 transition-transform hover:scale-105 hover:shadow-lg"
+              className="border border-gray-700 dark:border-gray-300 w-full transform bg-gray-100 dark:bg-gray-900 p-8 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               key={member.name}
             >
               <CardContent>
@@ -57,7 +59,7 @@ const Team = () => {
                 <h3 className="my-4 text-center text-2xl font-bruno leading-6 text-gray-900 dark:text-white">
                   {member.name}
                 </h3>
-                <p className="mt-4 px-4 text-center text-lg text-gray-700 dark:text-gray-300">
+                <p className="px-4 text-center text-lg text-gray-700 dark:text-gray-300">
                   {member.title}
                 </p>
               </CardContent>

@@ -1,22 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import { Modal, ModalBody, ModalFooter, ModalContent } from '@nextui-org/modal';
-import { Button } from '@nextui-org/react';
-import { useDisclosure } from '@nextui-org/react';
 
 const Reels = () => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isOpen, setIsOpen] = useState(false);
   const [currentReel, setCurrentReel] = useState('');
 
   const openModal = (reelId: string) => {
     setCurrentReel(reelId);
-    onOpen();
+    setIsOpen(true);
   };
 
   const closeModal = () => {
-    onOpenChange();
+    setIsOpen(false);
     setCurrentReel('');
   };
 
@@ -24,7 +20,7 @@ const Reels = () => {
 
   return (
     <>
-      <div className="container mx-auto flex justify-center">
+      <div className="container mx-auto flex justify-center py-12">
         <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-2 lg:grid-cols-4">
           {reels.map((reelId, index) => (
             <div
@@ -33,15 +29,10 @@ const Reels = () => {
               style={{ maxWidth: '250px', maxHeight: '250px' }}
               onClick={() => openModal(reelId)}
             >
-              <Image
+              <img
                 src={`/assets/img/reels/250x250/${reelId}.jpg`}
                 alt={`Reel ${index + 1}`}
-                width={250}
-                height={250}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 250px"
                 className="rounded-lg shadow-md object-cover hover:opacity-70 transition-opacity duration-300"
-                priority={index === 0} // Prioriza la primera imagen
-                loading={index === 0 ? 'eager' : 'lazy'} // Carga lenta para imágenes secundarias
               />
 
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-lg">
@@ -65,15 +56,9 @@ const Reels = () => {
         </div>
       </div>
 
-      {/* Modal */}
-      <Modal
-        backdrop="blur"
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        className="rounded-lg shadow-lg"
-      >
-        <ModalContent className="p-4">
-          <ModalBody className="flex justify-center items-center">
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white rounded-lg shadow-lg p-4 max-w-md w-full">
             {currentReel ? (
               <iframe
                 src={`https://www.instagram.com/reel/${currentReel}/embed`}
@@ -87,18 +72,16 @@ const Reels = () => {
             ) : (
               <p className="text-center">Cargando contenido...</p>
             )}
-          </ModalBody>
-          <ModalFooter className="flex justify-center">
-            <Button
-              onPress={closeModal}
-              className="bg-[#78eb2c] text-black hover:bg-[#32cddb] focus:ring"
-              aria-label="Cerrar el modal de reel de Instagram"
+            <button
+              onClick={closeModal}
+              className="mt-4 px-4 py-2 bg-primary text-white rounded-lg hover:bg-dark-primary"
+              aria-label="Cerrar modal"
             >
               Cerrar
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

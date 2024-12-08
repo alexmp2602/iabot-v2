@@ -36,7 +36,7 @@ export default function Home() {
           <source src="/assets/video-header.webm" type="video/webm" />
         </video>
 
-        <div className="relative z-10 flex flex-col items-center space-y-2 pt-14 pb-8">
+        <div className="relative z-10 flex flex-col items-center space-y-2 pt-14 pb-6">
           <h2 className="text-center font-bruno text-3xl md:text-4xl text-primary dark:text-dark-primary">
             BIENVENIDOS A
           </h2>
@@ -53,7 +53,7 @@ export default function Home() {
 
       <main className="relative z-10">
         {/* Sección de Presentación */}
-        <section className="pt-12">
+        <section className="pt-10">
           <div className="container mx-auto px-6">
             <p className="mb-6 text-center text-xl font-avenir text-text dark:text-dark-text">
               En IABOT, exploramos el mundo de la Robótica Educativa utilizando
@@ -83,7 +83,7 @@ export default function Home() {
         </section>
 
         {/* Sección de Reels */}
-        <section>
+        <section className="py-12">
           <h2 className="py-12 text-center font-bruno text-4xl text-primary dark:text-dark-primary">
             ¡Mira Nuestros Reels!
           </h2>

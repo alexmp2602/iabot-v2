@@ -1,26 +1,22 @@
-// next.config.mjs
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**.cdninstagram.com',
+        hostname: '**.instagram.com',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'instagram.f**.fbcdn.net',
+        hostname: '**.fbcdn.net',
         port: '',
         pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.instagram.com',
-        port: '',
-        pathname: '/p/**',
       },
     ],
+    minimumCacheTTL: 60, // Cachea las imágenes durante 60 segundos
+    deviceSizes: [640, 768, 1024, 1280, 1600],
+    imageSizes: [16, 32, 48, 64, 96],
   },
 };
 

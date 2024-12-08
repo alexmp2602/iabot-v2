@@ -22,9 +22,9 @@ const roboto = Roboto({
 
 // Definición de metadatos
 export const metadata: Metadata = {
-  title: 'IABOT - Robótica Educativa y Capacitaciones para Docentes',
+  title: 'IABOT - Robótica Educativa y Soluciones Tecnológicas Educativas',
   description:
-    'IABOT es una empresa dedicada a la robótica educativa y a la capacitación de docentes.',
+    'Somos una empresa dedicada a la robótica educativa y al desarrollo de soluciones tecnológicas personalizadas para instituciones y empresas.',
   keywords: [
     'robótica',
     'educación',
@@ -81,11 +81,7 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
       </head>
       <body className={`${roboto.className} bg-light-gray dark:bg-dark-bg`}>
-        {/* 
-          `enableSystem` permite que el tema siga la configuración del sistema operativo.
-          `attribute="class"` asegura que TailwindCSS pueda trabajar con los temas.
-        */}
-        <ThemeProvider attribute="class" enableSystem defaultTheme="dark">
+        <ThemeProvider attribute="class" enableSystem defaultTheme="light">
           <Navbar />
           <main className="font-roboto relative z-10">{children}</main>
           <Inscription />

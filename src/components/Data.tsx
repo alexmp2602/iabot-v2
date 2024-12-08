@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { useSpring } from 'framer-motion';
 import CalendarIcon from './icons/Calendar';
 import UsersIcon from './icons/Users';
 
@@ -13,20 +12,27 @@ function AnimatedCount({
   isVisible: boolean;
 }) {
   const [count, setCount] = useState(0);
-  const springValue = useSpring(0, { stiffness: 100, damping: 20 });
 
   useEffect(() => {
-    if (isVisible) {
-      springValue.set(targetNumber); // Inicia la animación solo si es visible
-    }
-  }, [targetNumber, isVisible, springValue]);
+    if (!isVisible) return;
 
-  // Cambia el manejo de onChange a usar un efecto basado en el valor de springValue
-  useEffect(() => {
-    return springValue.onChange((latest) => {
-      setCount(Math.round(latest)); // Actualiza el estado con el valor animado
-    });
-  }, [springValue]);
+    const duration = 1000; // Duración de la animación en milisegundos
+    const start = 0;
+    const startTime = performance.now();
+
+    const animate = (currentTime: number) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      const currentValue = Math.round(progress * targetNumber);
+      setCount(currentValue);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isVisible, targetNumber]);
 
   return <span>{count}</span>;
 }

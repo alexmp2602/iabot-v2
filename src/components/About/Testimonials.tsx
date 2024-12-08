@@ -1,3 +1,5 @@
+'use client';
+
 const testimonials = [
   {
     quote:
@@ -13,21 +15,21 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-transparent dark:bg-transparent py-12">
-      <h2 className="py-12 text-center font-bruno text-4xl text-primary">
+    <section className="py-16 bg-transparent dark:bg-transparent">
+      <h2 className="pb-8 text-center font-bruno text-4xl text-primary dark:text-dark-primary">
         Testimonios
       </h2>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-8 sm:px-12">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="rounded-lg border border-gray-700 dark:border-gray-300 bg-transparent dark:bg-transparent p-6"
+              className="rounded-lg border border-gray-700 dark:border-gray-300 bg-gray-100 dark:bg-gray-900 p-8 shadow-lg transition-transform duration-300 hover:scale-105"
             >
-              <p className="text-xl italic text-gray-800 dark:text-gray-300">
+              <p className="mb-4 text-xl italic text-gray-800 dark:text-gray-300">
                 &quot;{testimonial.quote}&quot;
               </p>
-              <p className="mt-4 text-right text-sm text-gray-900 dark:text-white">
+              <p className="text-right text-sm font-medium text-gray-900 dark:text-white">
                 - {testimonial.author}
               </p>
             </div>

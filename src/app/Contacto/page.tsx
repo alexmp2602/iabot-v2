@@ -23,7 +23,7 @@ export default function Contacto() {
           CONTÁCTANOS
         </h1>
         <p className="font-bruno text-2xl text-gray-900 dark:text-gray-900">
-          ¿Tienes alguna duda o consulta? Escríbenos y te responderemos a la
+          ¿Tienes alguna duda o consulta? Escríbinos y te responderemos a la
           brevedad.
         </p>
       </header>
