@@ -4,10 +4,10 @@ import { Metadata } from 'next';
 import type { Viewport } from 'next';
 
 export const metadata: Metadata = {
-  title: 'IABOT - Cursos',
+  title: 'IABOT - Talleres',
   description:
-    'Descubre nuestros cursos de robótica educativa en IABOT, diseñados para capacitar docentes y estudiantes con las últimas tecnologías.',
-  keywords: ['cursos', 'robótica educativa', 'capacitación docente', 'IABOT'],
+    'Descubre nuestros talleres de robótica educativa en IABOT, diseñados para capacitar docentes y estudiantes con las últimas tecnologías.',
+  keywords: ['talleres', 'robótica educativa', 'capacitación docente', 'IABOT'],
   authors: [{ name: 'IABOT Team', url: 'https://www.iabot.com.ar' }],
   robots: 'index, follow',
   metadataBase: new URL('https://www.iabot.com.ar'),

@@ -17,7 +17,6 @@ function AnimatedCount({
     if (!isVisible) return;
 
     const duration = 1000; // Duración de la animación en milisegundos
-    const start = 0;
     const startTime = performance.now();
 
     const animate = (currentTime: number) => {

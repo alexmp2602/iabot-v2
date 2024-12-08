@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const Reels = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +30,15 @@ const Reels = () => {
               style={{ maxWidth: '250px', maxHeight: '250px' }}
               onClick={() => openModal(reelId)}
             >
-              <img
+              <Image
                 src={`/assets/img/reels/250x250/${reelId}.jpg`}
                 alt={`Reel ${index + 1}`}
+                width={250}
+                height={250}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 250px"
                 className="rounded-lg shadow-md object-cover hover:opacity-70 transition-opacity duration-300"
+                priority={index === 0} // Prioriza la primera imagen
+                loading={index === 0 ? 'eager' : 'lazy'} // Carga lenta para imágenes secundarias
               />
 
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-lg">
