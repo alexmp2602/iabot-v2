@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import Background from '@/components/Background';
-import Solutions from '@/components/Servicios/Solutions'; 
+import Solutions from '@/components/Servicios/Solutions';
 import TrustedBrands from '@/components/TrustedBrands';
 
 export default function Services() {
