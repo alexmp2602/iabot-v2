@@ -37,11 +37,11 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        setVisible(false); // Ocultar menú al desplazarse hacia abajo
+        setVisible(false);
       } else if (window.scrollY < lastScrollY) {
-        setVisible(true); // Mostrar menú al desplazarse hacia arriba
+        setVisible(true);
       }
-      setLastScrollY(window.scrollY); // Actualizar la última posición de desplazamiento
+      setLastScrollY(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -69,7 +69,6 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Toggle del tema */}
         <ThemeToggle onThemeChange={handleThemeChange} />
 
         <div className="hidden md:flex md:items-center md:space-x-4">
@@ -82,6 +81,13 @@ export default function Navbar() {
             aria-label="Ir a Acerca de"
           >
             ACERCA DE
+          </Link>
+          <Link
+            className={linkClass}
+            href="/Servicios"
+            aria-label="Ir a Servicios"
+          >
+            SERVICIOS
           </Link>
           <Link
             className={linkClass}
@@ -106,7 +112,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Menú móvil */}
         <button
           onClick={toggleMobileMenu}
           aria-label="Abrir menú móvil"
@@ -142,7 +147,6 @@ export default function Navbar() {
           )}
         </button>
 
-        {/* Menú móvil expandido */}
         {isMobileMenuOpen && (
           <div
             ref={menuRef}
@@ -175,6 +179,13 @@ export default function Navbar() {
               onClick={toggleMobileMenu}
             >
               ACERCA DE
+            </Link>
+            <Link
+              className={linkClass}
+              href="/Servicios"
+              onClick={toggleMobileMenu}
+            >
+              SERVICIOS
             </Link>
             <Link
               className={linkClass}

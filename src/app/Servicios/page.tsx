@@ -2,11 +2,10 @@
 
 import { useEffect } from 'react';
 import Background from '@/components/Background';
-import MissionAndValues from '@/components/About/MissionAndValues';
-import Team from '@/components/About/Team';
-import Testimonials from '@/components/About/Testimonials';
+import Solutions from '@/components/Servicios/Solutions'; 
+import TrustedBrands from '@/components/TrustedBrands';
 
-export default function About() {
+export default function Services() {
   useEffect(() => {
     const link = document.createElement('link');
     link.href =
@@ -19,29 +18,24 @@ export default function About() {
     <div className="min-h-screen relative">
       <Background />
 
-      {/* Header */}
       <header className="bg-primary dark:bg-primary py-12 text-center">
         <h2 className="mb-4 font-bruno text-4xl text-gray-900 dark:text-gray-900">
-          ACERCA DE
+          SERVICIOS
         </h2>
         <h1 className="mb-10 font-bruno text-4xl text-gray-900 dark:text-gray-900">
-          IABOT
+          ¿QUÉ OFRECEMOS?
         </h1>
         <p className="font-bruno text-2xl text-gray-900 dark:text-gray-900">
-          CONOCE MÁS SOBRE NOSOTROS
+          Descubre nuestras soluciones tecnológicas y educativas.
         </p>
       </header>
 
-      {/* Main Content */}
       <main>
-        {/* Nuestra Misión y Valores */}
-        <MissionAndValues />
+        {/* Soluciones en Tecnología Educativa */}
+        <Solutions />
 
-        {/* Testimonios */}
-        <Testimonials />
-
-        {/* Equipo */}
-        <Team />
+        {/* Marcas que confían en nosotros */}
+        <TrustedBrands />
       </main>
     </div>
   );
