@@ -116,7 +116,7 @@ export default function Data() {
                 </h3>
               </div>
               <p className="text-lg text-foreground dark:text-white">
-                Año en el que dimos inicio a nuestra academia educativa
+                Año en el que dimos inicio a nuestra Academia de Robótica Educativa
               </p>
             </div>
           </div>
