@@ -21,8 +21,8 @@ const Reels = () => {
 
   return (
     <>
-      <div className="container mx-auto flex justify-center py-12">
-        <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container mx-auto flex justify-center px-6">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {reels.map((reelId, index) => (
             <div
               key={index}

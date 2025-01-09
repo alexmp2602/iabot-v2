@@ -54,8 +54,8 @@ export default function Home() {
 
       <main className="relative z-10">
         {/* Sección de Presentación */}
-        <section className="pt-12">
-          <div className="container mx-auto px-6">
+        <section>
+          <div className="container mx-auto px-6 pt-12">
             <p className="mb-6 text-center text-xl font-avenir text-text dark:text-dark-text">
               En IABOT, exploramos el mundo de la Robótica Educativa utilizando
               pedagogía y robots de <b>LEGO Education</b>, líderes en la
@@ -100,7 +100,12 @@ export default function Home() {
         </section>
 
         {/* Sección de Marcas */}
-        <TrustedBrands />
+        <section id="trusted-brands">
+          <h2 className="py-12 text-center font-bruno text-4xl text-primary dark:text-dark-primary">
+            Marcas que Confían en Nosotros
+          </h2>
+          <TrustedBrands />
+        </section>
       </main>
     </div>
   );
