@@ -3,8 +3,6 @@ import { Bruno_Ace, Roboto } from 'next/font/google';
 import '@/app/globals.css';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import Inscription from '@/components/Inscription';
-import Data from '@/components/Data';
 import { ThemeProvider } from 'next-themes';
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */

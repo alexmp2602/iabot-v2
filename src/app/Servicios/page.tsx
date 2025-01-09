@@ -38,7 +38,7 @@ export default function Services() {
 
         {/* Marcas que confían en nosotros */}
         <TrustedBrands />
-        
+
         {/* Sección de Inscripción */}
         <Inscription />
 
