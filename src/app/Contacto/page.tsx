@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import Background from '@/components/Background';
 import { CardContent, Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import Inscription from '@/components/Inscription';
+import Data from '@/components/Data';
 
 export default function Contacto() {
   useEffect(() => {
@@ -84,6 +86,11 @@ export default function Contacto() {
             </div>
           </CardContent>
         </Card>
+        {/* Sección de Inscripción */}
+        <Inscription />
+
+        {/* Sección de Datos */}
+        <Data />
       </main>
     </div>
   );

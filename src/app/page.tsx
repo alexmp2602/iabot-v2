@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic';
 import AnimatedButton from '@/components/AnimatedButton';
 import Background from '@/components/Background';
 import TrustedBrands from '@/components/TrustedBrands';
+import Inscription from '@/components/Inscription';
+import Data from '@/components/Data';
 
 const Reels = dynamic(() => import('@/components/Reels'), { ssr: false });
 const Talleres = dynamic(() => import('@/components/Talleres'), { ssr: false });
@@ -106,6 +108,12 @@ export default function Home() {
           </h2>
           <TrustedBrands />
         </section>
+
+        {/* Sección de Inscripción */}
+        <Inscription />
+
+        {/* Sección de Datos */}
+        <Data />
       </main>
     </div>
   );

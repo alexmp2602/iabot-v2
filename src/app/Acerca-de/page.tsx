@@ -5,6 +5,8 @@ import Background from '@/components/Background';
 import MissionAndValues from '@/components/About/MissionAndValues';
 import Team from '@/components/About/Team';
 import Testimonials from '@/components/About/Testimonials';
+import Inscription from '@/components/Inscription';
+import Data from '@/components/Data';
 
 export default function About() {
   useEffect(() => {
@@ -42,6 +44,12 @@ export default function About() {
 
         {/* Equipo */}
         <Team />
+
+        {/* Sección de Inscripción */}
+        <Inscription />
+
+        {/* Sección de Datos */}
+        <Data />
       </main>
     </div>
   );

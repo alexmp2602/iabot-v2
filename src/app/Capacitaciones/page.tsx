@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import Background from '@/components/Background';
 import Services from '@/components/Services';
 import Benefits from '@/components/Benefits';
+import Inscription from '@/components/Inscription';
+import Data from '@/components/Data';
 
 export default function Capacitaciones() {
   useEffect(() => {
@@ -41,6 +43,12 @@ export default function Capacitaciones() {
         </section>
         <Services />
         <Benefits />
+
+        {/* Sección de Inscripción */}
+        <Inscription />
+
+        {/* Sección de Datos */}
+        <Data />
       </main>
     </div>
   );

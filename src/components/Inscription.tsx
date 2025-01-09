@@ -2,7 +2,7 @@ import AnimatedButton from './AnimatedButton';
 
 export default function Inscription() {
   return (
-    <section className="bg-light-gray dark:bg-dark-bg text-text dark:text-dark-text">
+    <section className="text-text dark:text-dark-text z-10">
       <div className="container mx-auto max-w-2xl text-center">
         {/* Título */}
         <h2 className="py-12 text-2xl">

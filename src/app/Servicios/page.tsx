@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import Background from '@/components/Background';
 import Solutions from '@/components/Servicios/Solutions';
 import TrustedBrands from '@/components/TrustedBrands';
+import Inscription from '@/components/Inscription';
+import Data from '@/components/Data';
 
 export default function Services() {
   useEffect(() => {
@@ -36,6 +38,12 @@ export default function Services() {
 
         {/* Marcas que confían en nosotros */}
         <TrustedBrands />
+        
+        {/* Sección de Inscripción */}
+        <Inscription />
+
+        {/* Sección de Datos */}
+        <Data />
       </main>
     </div>
   );

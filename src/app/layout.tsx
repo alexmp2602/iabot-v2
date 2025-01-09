@@ -83,8 +83,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class" enableSystem defaultTheme="light">
           <Navbar />
           <main className="font-roboto relative z-10">{children}</main>
-          <Inscription />
-          <Data />
           <Footer />
         </ThemeProvider>
       </body>
