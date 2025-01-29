@@ -49,8 +49,8 @@ export default function Contacto() {
                 {
                   icon: <FaEnvelope className="text-2xl text-primary" />,
                   title: 'Correo Electrónico',
-                  detail: 'iabot.robotica@gmail.com',
-                  link: 'mailto:iabot.robotica@gmail.com',
+                  detail: 'info@iabot.com.ar',
+                  link: 'mailto:info@iabot.com.ar',
                 },
                 {
                   icon: <FaMapMarkerAlt className="text-2xl text-primary" />,

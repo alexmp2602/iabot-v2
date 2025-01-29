@@ -88,7 +88,7 @@ export default function Data() {
                 <h3 className="text-5xl text-primary dark:text-dark-primary">
                   +
                   <AnimatedCount
-                    targetNumber={300}
+                    targetNumber={500}
                     isVisible={isVisibleAlumnos}
                   />{' '}
                 </h3>
