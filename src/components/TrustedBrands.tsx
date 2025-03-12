@@ -8,7 +8,10 @@ import { Autoplay } from 'swiper/modules';
 
 export default function TrustedBrands() {
   const brands = [
-    { src: '/assets/img/marcas/colegio-los-robles-logo.png', alt: 'Colegio Los Robles' },
+    {
+      src: '/assets/img/marcas/colegio-los-robles-logo.png',
+      alt: 'Colegio Los Robles',
+    },
     { src: '/assets/img/marcas/colegio-sm.png', alt: 'Colegio Santa María' },
     { src: '/assets/img/marcas/swiss-medical-logo.png', alt: 'Swiss Medical' },
     { src: '/assets/img/marcas/medife.png', alt: 'Medife' },
