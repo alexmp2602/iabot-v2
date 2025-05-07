@@ -6,20 +6,23 @@ import Image from 'next/image';
 const teamMembers = [
   {
     name: 'Franco',
+    subtitle: 'CTO & Co-Founder',
     title:
-      'Técnico en Informática y Profesor de Tecnología especializado en robótica educativa, aplicando tecnología y creatividad en sus clases. Postítulo en Programación y Robótica Educativa (UNER).',
+      'Técnico en Informática y Profesor de Tecnología. Postítulo en Programación y Robótica Educativa (UNER).',
     image: '/assets/img/equipo/fran-modified.png',
   },
   {
     name: 'Adrián',
+    subtitle: 'Client Project Manager & Co-Founder',
     title:
-      'Profesor de Matemática y Tecnología especializado en robótica educativa, integrando matemática con robótica para un aprendizaje completo. Postítulo en Programación y Robótica Educativa (UNER).',
+      'Profesor de Matemática y Tecnología. Postítulo en Programación y Robótica Educativa (UNER).',
     image: '/assets/img/equipo/adri-modified.png',
   },
   {
     name: 'Alex',
+    subtitle: 'Coordinador Académico & Profesor',
     title:
-      'Desarrollador Web y Profesor de Robótica Educativa especializado en la enseñanza de programación y robótica, aplicando tecnologías digitales en el aula. Tecnicatura en Programación (UTN).',
+      'Desarrollador Web y Profesor de Robótica Educativa. Tecnicatura en Programación (UTN).',
     image: '/assets/img/equipo/alex-modified.png',
   },
 ];
@@ -32,9 +35,10 @@ const Team = () => {
       </h2>
       <div className="mx-auto max-w-7xl px-8 sm:px-12">
         <p className="mb-12 text-center text-xl text-gray-700 dark:text-gray-300">
-          En IABOT, contamos con un equipo altamente capacitado y comprometido
-          con la educación y la robótica. Nos capacitamos continuamente en
-          nuevas tecnologías para ofrecer siempre lo mejor a nuestros alumnos.
+          En IABOT contamos con un equipo docente capacitado y en constante
+          formación, comprometido con la educación y la robótica. Adaptamos cada
+          propuesta a las edades y necesidades de nuestros grupos, integrando
+          siempre tecnología y calidad.
         </p>
         <div className="grid grid-cols-1 gap-12 sm:gap-16 md:grid-cols-3">
           {teamMembers.map((member) => (
@@ -59,6 +63,9 @@ const Team = () => {
                 <h3 className="my-4 text-center text-2xl font-bruno leading-6 text-gray-900 dark:text-white">
                   {member.name}
                 </h3>
+                <p className="mb-2 text-center text-sm font-medium text-gray-600 dark:text-gray-400">
+                  {member.subtitle}
+                </p>
                 <p className="px-4 text-center text-lg text-gray-700 dark:text-gray-300">
                   {member.title}
                 </p>

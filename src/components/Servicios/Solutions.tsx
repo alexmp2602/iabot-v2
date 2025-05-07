@@ -13,7 +13,7 @@ export default function Solutions() {
     {
       title: 'Kits de Robótica y Programación',
       description:
-        'Diseñados para niños desde los 6 años, nuestros kits fomentan el aprendizaje práctico y divertido de la robótica y la programación. Compatibles con dispositivos Android, tablets y celulares, ideales para escuelas, jardines de infantes y familias. Trabajamos con kits de marcas reconocidas como LEGO Education y desarrollos propios.',
+        'Kits para niños desde los 5 años. Aprendizaje práctico con tablets, celulares y computadoras. Usamos robots de LEGO Education y desarrollos propios.',
       icon: (
         <PuzzlePieceIcon
           aria-label="Kits de Robótica y Programación"
@@ -24,7 +24,7 @@ export default function Solutions() {
     {
       title: 'Capacitaciones Virtuales',
       description:
-        'Ofrecemos formación online especializada para instituciones educativas, enfocándonos en pensamiento computacional e inteligencia artificial. Diseñamos experiencias prácticas y adaptadas a las necesidades de docentes y alumnos.',
+        'Formación online en pensamiento computacional, robótica, programación e inteligencia artificial. Prácticas, dinámicas y adaptadas a cada institución.',
       icon: (
         <AcademicCapIcon
           aria-label="Capacitaciones Virtuales"
@@ -35,7 +35,7 @@ export default function Solutions() {
     {
       title: 'Estrategias Educativas Personalizadas',
       description:
-        'Colaboramos con jardines, colegios y empresas para desarrollar estrategias tecnológicas adaptadas a sus objetivos educativos. Diseñamos propuestas que integran recursos innovadores y plataformas digitales, garantizando experiencias de aprendizaje efectivas y atractivas.',
+        'Diseñamos propuestas tecnológicas a medida para jardines, escuelas y empresas. Innovación aplicada a tus objetivos educativos.',
       icon: (
         <CogIcon
           aria-label="Estrategias Educativas Personalizadas"
@@ -46,7 +46,7 @@ export default function Solutions() {
     {
       title: 'Capacitación y Asesoramiento',
       description:
-        'Brindamos formación especializada para docentes y equipos educativos que buscan incorporar herramientas tecnológicas en sus aulas. Desde talleres prácticos hasta asesoramiento en la implementación de programas STEAM.',
+        'Formación docente en herramientas digitales y programas STEAM. Acompañamiento desde la práctica.',
       icon: (
         <BookOpenIcon
           aria-label="Capacitación y Asesoramiento"
@@ -57,10 +57,21 @@ export default function Solutions() {
     {
       title: 'Proyectos a Medida',
       description:
-        '¿Tenés una idea? ¡Nosotros la hacemos realidad! Creamos soluciones a medida, desde kits personalizados hasta desarrollos tecnológicos únicos, adaptados a las necesidades específicas de cada cliente.',
+        'Desarrollamos kits y soluciones tecnológicas según tus necesidades, con el material que posean en su institución. Hacemos realidad tus ideas.',
       icon: (
         <WrenchIcon
           aria-label="Proyectos a Medida"
+          className="h-12 w-12 text-primary"
+        />
+      ),
+    },
+    {
+      title: 'Marketing de Fidelidad',
+      description:
+        'Impulsamos relaciones duraderas con alumnos y familias. Beneficios, promociones y comunicación personalizada.',
+      icon: (
+        <CogIcon
+          aria-label="Marketing de Fidelidad"
           className="h-12 w-12 text-primary"
         />
       ),
