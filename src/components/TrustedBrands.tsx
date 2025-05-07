@@ -9,6 +9,10 @@ import { Autoplay } from 'swiper/modules';
 export default function TrustedBrands() {
   const brands = [
     {
+      src: '/assets/img/marcas/cole-nuevo.png',
+      alt: 'Colegio Nuevo',
+    },
+    {
       src: '/assets/img/marcas/colegio-los-robles-logo.png',
       alt: 'Colegio Los Robles',
     },
@@ -25,20 +29,20 @@ export default function TrustedBrands() {
   return (
     <div className="w-full py-6 bg-white">
       <Swiper
-        loop={true} // Animación infinita
+        loop={true}
         autoplay={{
-          delay: 0, // Desplazamiento continuo
-          disableOnInteraction: false, // Sigue moviéndose después de interacción
+          delay: 0,
+          disableOnInteraction: false,
         }}
-        speed={1500} // Velocidad del desplazamiento
-        spaceBetween={20} // Espaciado entre logos
-        centeredSlides={false} // Evita acumulación a la izquierda
+        speed={1500}
+        spaceBetween={20}
+        centeredSlides={false}
         breakpoints={{
-          320: { slidesPerView: 3 }, // 3 logos en móviles pequeños
-          480: { slidesPerView: 3 }, // 3 logos en móviles medianos
-          768: { slidesPerView: 4 }, // 4 logos en tablets
-          1024: { slidesPerView: 5 }, // 5 logos en pantallas grandes
-          1280: { slidesPerView: 6 }, // 6 logos en pantallas extra grandes
+          320: { slidesPerView: 3 },
+          480: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 },
+          1280: { slidesPerView: 6 },
         }}
         modules={[Autoplay]}
         className="w-full"
