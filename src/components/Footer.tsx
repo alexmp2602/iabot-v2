@@ -54,7 +54,7 @@ export default function Footer() {
           aria-label="Dirección de Iabot"
           className="text-white transition-colors duration-300 hover:text-primary dark:hover:text-dark-primary"
         >
-          SEDE CENTRAL: C. 9 Nº 374, Mercedes, Provincia de Buenos Aires.
+          SEDE CENTRAL: C. 9 Nº 374, Mercedes, Provincia de Buenos Aires.
         </a>
       </div>
     </footer>
