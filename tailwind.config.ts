@@ -30,6 +30,20 @@ const config: Config = {
         bruno: ['"Bruno Ace"', 'sans-serif'],
         avenir: ['Avenir LT Std', 'sans-serif'],
       },
+      keyframes: {
+        expand: {
+          '0%': { height: '0' },
+          '100%': { height: 'var(--radix-accordion-content-height)' },
+        },
+        collapse: {
+          '0%': { height: 'var(--radix-accordion-content-height)' },
+          '100%': { height: '0' },
+        },
+      },
+      animation: {
+        expand: 'expand 300ms ease-out',
+        collapse: 'collapse 300ms ease-out',
+      },
     },
   },
   plugins: [tailwindcssAnimate, nextui()],
