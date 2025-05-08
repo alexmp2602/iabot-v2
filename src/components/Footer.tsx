@@ -48,13 +48,13 @@ export default function Footer() {
 
         {/* Dirección */}
         <a
-          href="https://www.google.com.ar/maps/place/C.+9+374,+Mercedes,+Provincia+de+Buenos+Aires/@-34.6555113,-59.4235156,19z/data=!3m1!4b1!4m6!3m5!1s0x95bc73a126fdd949:0xfd5456eb2b3bd4f7!8m2!3d-34.6555124!4d-59.4228719!16s%2Fg%2F11gbl3jz4b?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+          href="https://maps.app.goo.gl/xBv4jHXZpVAT2HH96"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Dirección de Iabot"
           className="text-white transition-colors duration-300 hover:text-primary dark:hover:text-dark-primary"
         >
-          Estamos en C. 9 N 374, Mercedes, Provincia de Buenos Aires
+          SEDE CENTRAL: C. 9 Nº 374, Mercedes, Provincia de Buenos Aires.
         </a>
       </div>
     </footer>
