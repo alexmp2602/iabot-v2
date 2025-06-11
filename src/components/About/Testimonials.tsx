@@ -4,12 +4,12 @@ const testimonials = [
   {
     quote:
       'Las clases de robótica son espectaculares! Mi hijo empezó con 5 años. Es la única actividad de la semana que espera con tanto entusiasmo! El profe es una masa, todas las clases vuelve con nuevas ideas, feliz de participar. ¡Recomiendo! 👏',
-    author: 'Sara, Madre de Estudiante.',
+    author: 'Sara, (Madre de Alumno).',
   },
   {
     quote:
       'Fue una experiencia excelente. Aprendí a integrar la robótica en mis clases de manera práctica y creativa. Los recursos y la metodología son geniales, y me ayudaron a fomentar habilidades clave en mis estudiantes. ¡Recomiendo totalmente esta capacitación docente!',
-    author: 'Rosana, Docente de Nivel Secundario.',
+    author: 'Rosana, (Docente de Nivel Secundario).',
   },
 ];
 

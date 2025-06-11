@@ -40,6 +40,25 @@ const Team = () => {
           propuesta a las edades y necesidades de nuestros grupos, integrando
           siempre tecnología y calidad.
         </p>
+        <p className="mb-12 text-center text-xl text-gray-700 dark:text-gray-300">
+          Nuestro equipo está compuesto por profesores de Tecnología,
+          Matemática, Educación Inicial y Primaria, lo que nos permite abordar
+          cada taller con una mirada pedagógica integral y especializada según
+          el nivel de los alumnos.
+        </p>
+        <p className="mb-12 text-center text-xl text-gray-700 dark:text-gray-300">
+          En la actualidad, contamos con 3 sedes donde, con mucho esfuerzo y
+          dedicación, brindamos talleres semanales para niños y niñas de
+          diferentes edades.
+        </p>
+        <p className="mb-12 text-center text-xl text-gray-700 dark:text-gray-300">
+          Desde nuestros inicios, hace ya 5 años, hemos acompañado a cientos de
+          alumnos en el camino del aprendizaje, fomentando la creatividad, el
+          pensamiento lógico y el entusiasmo por la tecnología.
+        </p>
+        Nos dedicamos a brindar un servicio excepcional, cuidando cada detalle,
+        desde el diseño del curso hasta la atención a nuestros estudiantes y sus
+        familias.
         <div className="grid grid-cols-1 gap-12 sm:gap-16 md:grid-cols-3">
           {teamMembers.map((member) => (
             <Card
