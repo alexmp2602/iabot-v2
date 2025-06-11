@@ -1,14 +1,8 @@
 import InstagramIcon from './icons/Instagram';
-import FacebookIcon from './icons/Facebook';
 import WhatsappIcon from './icons/Whatsapp';
 import LinkedInIcon from './icons/LinkedIn';
 
 const socialLinks = [
-  /*{
-    href: 'https://www.facebook.com/iabot.robotica/',
-    Icon: FacebookIcon,
-    label: 'Facebook',
-  },*/
   {
     href: 'https://www.instagram.com/iabot.robotica/',
     Icon: InstagramIcon,
